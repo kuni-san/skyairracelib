@@ -1,0 +1,269 @@
+@charset "utf-8";
+
+@use "../../global/forwards" as fw;
+
+.toranoko {
+    .common__index {
+        i {
+            margin-right: 1px;
+            width: 15px;
+            text-align: center;
+            font-size: 0.675rem;
+        }
+    }
+
+    &__index {
+        padding: 15px 15px 5px;
+    }
+
+    &__title {
+        color: #FFF;
+        margin: 0;
+        font-size: 1.5rem;
+        font-weight: bold;
+
+        &--crs {
+            display: block;
+            font-size: 1.25rem;
+        }
+        &--no {
+            font-size: 1.4rem;
+            padding: 0 3px;
+        }
+    }
+
+    &__about {
+        text-align: right;
+
+        p {
+            font-size: 0.8rem;
+            margin: 5px;
+        }
+    }
+
+    &__contents-wrap {
+        padding: 20px;
+        padding-bottom: 0;
+    }
+
+    &__video-wrap {
+        position: relative;
+        padding-bottom: 56.25%;
+        height: 0;
+        overflow: hidden;
+        width: 100%;
+        margin: auto;
+    }
+
+    &__video-content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__KK-wrap {
+        position: relative;
+        padding-top: 30px;
+    }
+
+    &__KK-title {
+        text-align: center;
+        margin: 0 0 3px;
+    }
+
+    &__KK-text {
+        position: absolute;
+        width: 30%;
+        top: 0;
+    }
+
+    &__KK-caption {
+        .nicosan {
+            width: 13px;
+            display: inline;
+            vertical-align: -2px;
+        }
+    }
+
+    &__tech {
+        margin-bottom: 60px;
+    }
+
+    &__tech-index {
+        background-color: rgba(37, 89, 139, 0.4);
+        border-radius: 5px;
+        border: 1px solid rgba(37, 89, 139, 0.4);
+        box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.25), inset 0px 10px 10px 0px rgba(255, 255, 255, 0.25);
+        text-align: center;
+    }
+
+    &__tech-contents {
+        a {
+            text-decoration: underline;
+        }
+    }
+
+    &__list {
+        counter-reset: number 0;
+        position: relative;
+
+        &--child {
+            padding-left: 2.4em;
+            background-image: url("../img/KAZAMIDORI.png");
+            background-size: 30px;
+            background-repeat: no-repeat;
+            background-position-y: center;
+            margin-left: -5px !important;
+            margin-top: 20px !important;
+            position: relative;
+
+            &::before{
+                counter-increment: number 1;      /* number カウンタを増加 */
+                content:counter(number)".";      /* 表示形式を指定 */
+                position: absolute;
+                left: 0.8em;
+                top: calc(50% - 0.9em);
+                font-size: 1.1rem;
+                text-shadow: 0px 0px 3px rgba(255, 255, 255, 1);
+            }
+
+            .note {
+                font-size: 0.9rem;
+            }
+        }
+
+        .mark {
+            background-color: #84D1C9;
+            border-radius: 3px;
+            font-size: 0.7rem;
+            color: #FFFF;
+            padding: 1px 3px;
+        }
+    }
+
+    &__point {
+        text-align: center;
+        text-decoration: underline;
+
+        span {
+            font-size: 1rem;
+            vertical-align: text-bottom;
+        }
+    }
+
+    &__side-note {
+        border: 1px solid rgba(37, 89, 139, 0.4);
+        border-radius: 5px;
+        margin: 20px 15px 15px;
+        position: relative;
+        padding: 20px 0 10px;
+
+        &--title {
+            border-right: 1px solid rgba(37, 89, 139, 0.4);
+            border-bottom: 1px solid rgba(37, 89, 139, 0.4);
+            border-radius: 0 0 5px 0;
+            display: inline;
+            padding: 1px 6px;
+            font-size: 0.8rem;
+            position: absolute;
+            top: 0;
+        }
+        
+        p {
+            padding: 0 15px 0 calc(12px + 1em);
+            font-size: 0.8rem;
+            text-indent: -1em;
+            margin: 5px 0;
+        }
+    }
+}
+
+.ac-course {
+    &__index {
+        position: relative;
+        cursor: pointer;
+        font-size: 1.2rem;
+        font-weight: bold;
+        padding: 5% 3%;
+        transition: all 0.5s ease;
+        background-color: mix(fw.$base_color, #FFF, 80%);
+        color: #FFF;
+        text-align: center;
+        margin-top: 30px;
+        margin-left: -20px;
+        margin-right: -20px;
+        border-radius: 0px 0px 10px 10px;
+
+        /*アイコン*/
+        &::before{
+            position: absolute;
+            content:'';
+            width: 20px;
+            height: 20px;
+            background-image: url("../img/chevron-down-solid-white.svg");
+            background-repeat: no-repeat;
+            background-position: center;
+            top: 20px;
+            left: 20px;
+            margin-left: 6px;
+            transform: rotate(-90deg);
+        }
+
+        /*　closeというクラスがついたら形状変化　*/
+        &.close {
+            background-color: transparent;
+            color: fw.$base_color;
+
+            &::before{
+                transform: rotate(180deg);
+                background-image: url("../img/chevron-down-solid.svg");
+            }
+        }
+    }
+
+    &__contents {
+        display: none;
+        padding-bottom: 20px;
+    }
+}
+
+.ac-tech {
+    &__index {
+        position: relative;/*+マークの位置基準とするためrelative指定*/
+        cursor: pointer;
+        font-size:1rem;
+        font-weight: normal;
+        padding: 3% 20px 3% 5px;
+        transition: all .5s ease;
+
+        /*アイコン*/
+        &::after{
+            position: absolute;
+            content:'';
+            width: 18px;
+            height: 18px;
+            background-image: url("../img/chevron-down-solid.svg");
+            background-repeat: no-repeat;
+            background-position: center;
+            top: 14px;
+            margin: 0 10px;
+            transform: rotate(-90deg);
+            transition: all .5s ease;
+        }
+
+        /*　closeというクラスがついたら形状変化　*/
+        &.close::after{
+            transform: rotate(0deg);
+        }
+    }
+
+    &__contents {
+        padding: 3% 3% 3% 30px;
+        border: 1px solid rgba(37, 89, 139, 0.4);
+        border-radius: 0 0 5px 5px;
+        border-top: none;
+        display: none;
+    }
+}

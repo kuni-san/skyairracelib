@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="16×16" href="/img/favicon_16_16.png">
+    <link rel="icon" type="image/png" sizes="32×32" href="/img/favicon_32_32.png">
+    
+    <link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css"/><!-- reset.css modern-css-reset -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" /> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Courgette&family=Noto+Sans+JP:wght@300;500&family=WindSong:wght@400;500&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Courgette&family=Kavivanar&family=Noto+Sans+JP:wght@300;500&family=WindSong:wght@400;500&display=swap">
+    <link rel="stylesheet" href="css/uikit.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/g-nav.css">
+    <link rel="stylesheet" href="css/p-top.css" />
+    <title>エアレライブラリ</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="skyエアレ―スの情報まとめサイトです。" />
+</head>
+<body>
+    <header class="l-header">
+        <div class="uk-flex uk-flex-between uk-flex-middle l-header__wrap">
+            <h1 class="uk-margin-remove"><a href="/"><img src="https://placehold.jp/200x45.png" alt="エアレライブラリ"></a></h1>
+            <div class="openbtn"><span></span><span></span><span></span></div>
+            <nav id="g-nav">
+                <div id="g-nav-list"><!--ナビの数が増えた場合縦スクロールするためのdiv※不要なら削除-->
+                    <ul>
+                        <div>
+                            <p>飛</p>
+                            <li><a class="g-nav-link" href="/original.html"><i class="fas fa-caret-right"></i>本家コース</a></li>
+                            <li><span class="g-nav-link">レギュレーション</span></li>
+                            <li><a class="g-nav-link uk-margin-left" href="/regulation.html#rule"><i class="fas fa-caret-right"></i>基本ルール</a></li>
+                            <li><a class="g-nav-link uk-margin-left" href="/regulation.html#entry"><i class="fas fa-caret-right"></i>予選方法</a></li>
+                        </div>
+                        <div>
+                            <p>知</p>
+                            <li><a class="g-nav-link" href="#"><i class="fas fa-caret-right"></i>過去大会</a></li>
+                            <li><a class="g-nav-link" href="#"><i class="fas fa-caret-right"></i>技術・基礎知識</a></li>
+                        </div>
+                        <div>
+                            <p>探</p>
+                            <li><a class="g-nav-link" href="#"><i class="fas fa-caret-right"></i>エアレ関連タグ</a></li>
+                            <li><a class="g-nav-link" href="#"><i class="fas fa-caret-right"></i>各種リンク</a></li>
+                        </div>
+                        <div>
+                            <p>催</p>
+                            <li><a class="g-nav-link" href="#"><i class="fas fa-caret-right"></i>企画者向け情報ページ</a></li>
+                            <li><a class="g-nav-link" href="#"><i class="fas fa-caret-right"></i>エアレ理念 -とらのこ</a></li>
+                        </div>
+                        <div class="uk-margin-large-top">
+                            <li class="uk-padding-remove"><a class="g-nav-link" href="#"><i class="fas fa-caret-right"></i>Special Thanks</a></li>
+                            <li class="uk-padding-remove"><a class="g-nav-link" href="#"><i class="fas fa-caret-right"></i>サイト概要・ポリシー・挨拶</a></li>
+                            <li class="uk-padding-remove"><a class="g-nav-link" href="#"><i class="fas fa-caret-right"></i>お問い合わせ</a></li>
+                            <li class="uk-padding-remove"><a class="g-nav-link" href="#"><i class="fas fa-caret-right"></i>利用規約</a></li>
+                        </div>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main class="main top">
+        <section class="kv">
+            <p class="kv__text">ようこそ、<br>#skyairraceの世界へ。</p>
+            <img src="img/symbol.png" alt="" class="kv__symbol">
+            <div id="video-area" class="kv__movie">
+                <div class="kv__iframe-wrapper">
+                    <iframe class="kv__iframe" src="https://www.youtube.com/embed/Xi3Ffm82vlU?autoplay=0&amp;showinfo=0&amp;rel=0&amp;modestbranding=1&amp;playsinline=1&amp;loop=1&amp;playlist=Xi3Ffm82vlU" allowfullscreen uk-responsive uk-video="automute: true"></iframe>
+                </div>
+            </div><!--/video-area-->
+        </section>
+        <div class="top__contents">
+            <section class="info">
+                <img class="info__cloud" src="img/cloud07_2.png" alt="">
+                <p class="info__en-catchcopy" style="display: none;">We want to fly Freely<br>in the sky</p>
+                <p class="info__text" style="display: none;">みんなで憧れた空へ、少しでも高く手を伸ばそう。<br>
+                    ここでしか見れない景色を、一緒に。</p>
+                <img class="info__img" src="https://placehold.jp/200x180.png" alt="">
+                <p class="info__text">SKY AIR RACEは、<br>
+                    "空を自由に飛ぶこと"を目的とした、<br>
+                    Sky*非公式レース大会です。</p>
+                <div class="info__link-wrapper uk-margin-small-bottom">
+                    <a class="info__link" href="https://skyairrace.amebaownd.com/" target="_blank" rel="noopener noreferrer">SKYAIRRACE HP<span class="material-symbols-outlined">open_in_new</span></a>
+                </div>
+                <div class="info__link-wrapper">
+                    <a class="info__link" href="https://www.thatskygame.com/ja/" target="_blank" rel="noopener noreferrer">*ゲーム Sky星を紡ぐ子どもたち 公式サイト<span class="material-symbols-outlined">open_in_new</span></a>
+                </div>
+                <div class="info__teaser">
+                    <p class="media__title">ティザーPV<span class="material-symbols-outlined">volume_up</span>(音が流れます)</p>
+                    <div class="info__teaser-wrapper">
+                        <iframe class="info__teaser-content" src="https://drive.google.com/file/d/13VKg3Vq2SwITU7nJxyDQPmh8KazRW5Cv/preview" allow="autoplay"></iframe>
+                    </div>
+                    <p class="media__author">（作成：miroh）</p>
+                </div>
+            </section>
+            <section class="info--about">
+                <h2 class="common__title">About Here</h2>
+                <p class="info__text">このサイトは、<br>「エアレに興味があるけど<br>何から始めたらいいか分からない」<br>そんな星の子のための情報サイトです。</p>
+                <p class="info__text">本家エアレのコースや飛行技術などを<br>初心者向けにまとめました。</p>
+                <p class="info__text--small">もっともっと深く知りたい！という星の子は、<br>
+                    <a class="info__link-wiki" href="https://wikiwiki.jp/sky_airrace/" target="_blank" rel="noopener noreferrer">エアレwiki<span class="material-symbols-outlined">open_in_new</span></a>をご覧ください。
+                </p>
+                <img class="info__img" src="https://placehold.jp/250x200.png" alt="">
+                <p class="info__text info__scroll">このサイトが、<br>空を翔けるあなたの羽の一部に<br>なれますように。</p>
+            </section>
+            <section class="index">
+                <h2 class="common__title">Contents List</h2>
+                <div>
+                    <h3 class="index__title"><span class="index__mark">飛</span>自分の可能性に挑戦する</h3>
+                    <div class="index__wrapper index__wrapper--fly">
+                        <div class="index__contents">
+                            <a href="/original.html" class="index__a">
+                                <img src="https://placehold.jp/30x30.png" alt="" class="index__icon">
+                                <h4 class="index__name">本家コース<span class="material-symbols-outlined common__arrow-left">arrow_right</span></h4>
+                                <p class="index__text">既存の本家エアレコース解説、飛行技術の紹介</p>
+                                <img src="img/top-arrow.png" alt="" class="index__icon">
+                            </a>
+                        </div>
+                        <div class="index__contents">
+                            <a href="/regulation.html" class="index__a">
+                                <img src="https://placehold.jp/30x30.png" alt="" class="index__icon">
+                                <h4 class="index__name">レギュレーション<span class="material-symbols-outlined common__arrow-left">arrow_right</span></h4>
+                                <p class="index__text">本家で共通の基本ルール、予選方法</p>
+                                <img src="img/top-arrow.png" alt="" class="index__icon">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="index__title"><span class="index__mark">知</span>先人の記憶を辿る</h3>
+                    <div class="index__wrapper index__wrapper--know">
+                        <div class="index__contents">
+                            <a href="/past.html" class="index__a">
+                                <img src="https://placehold.jp/30x30.png" alt="" class="index__icon">
+                                <h4 class="index__name">過去大会<span class="material-symbols-outlined common__arrow-left">arrow_right</span></h4>
+                                <p class="index__text">本家エアレコース他、関連大会の紹介</p>
+                                <img src="img/top-arrow.png" alt="" class="index__icon">
+                            </a>
+                        </div>
+                        <div class="index__contents">
+                            <a href="/technique.html" class="index__a">
+                                <img src="https://placehold.jp/30x30.png" alt="" class="index__icon">
+                                <h4 class="index__name">技術・基礎知識<span class="material-symbols-outlined common__arrow-left">arrow_right</span></h4>
+                                <p class="index__text">速く飛ぶ技術や知識、エリアをもっと知る豆知識</p>
+                                <img src="img/top-arrow.png" alt="" class="index__icon">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="index__title"><span class="index__mark">探</span>エアレの世界を渡り歩く</h3>
+                    <div class="index__wrapper index__wrapper--find">
+                        <div class="index__contents">
+                            <a href="/tag.html" class="index__a">
+                                <img src="https://placehold.jp/30x30.png" alt="" class="index__icon">
+                                <h4 class="index__name">エアレ関連タグ<span class="material-symbols-outlined common__arrow-left">arrow_right</span></h4>
+                                <p class="index__text">Xで使われているハッシュタグ一覧</p>
+                                <img src="img/top-arrow.png" alt="" class="index__icon">
+                            </a>
+                        </div>
+                        <div class="index__contents">
+                            <a href="/related-sites.html" class="index__a">
+                                <img src="https://placehold.jp/30x30.png" alt="" class="index__icon">
+                                <h4 class="index__name">各種リンク<span class="material-symbols-outlined common__arrow-left">arrow_right</span></h4>
+                                <p class="index__text">エアレ公式サイトやwiki等の外部リンク</p>
+                                <img src="img/top-arrow.png" alt="" class="index__icon">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="index__title"><span class="index__mark">催</span>これからのエアレを創る</h3>
+                    <div class="index__wrapper index__wrapper--hold">
+                        <div class="index__contents">
+                            <a href="/documents.html" class="index__a">
+                                <img src="https://placehold.jp/30x30.png" alt="" class="index__icon">
+                                <h4 class="index__name">企画者向け情報ページ<span class="material-symbols-outlined common__arrow-left">arrow_right</span></h4>
+                                <p class="index__text">運営向け資料等をまとめた情報置き場</p>
+                                <img src="img/top-arrow.png" alt="" class="index__icon">
+                            </a>
+                        </div>
+                        <div class="index__contents">
+                            <a href="/belief.html" class="index__a">
+                                <img src="https://placehold.jp/30x30.png" alt="" class="index__icon">
+                                <h4 class="index__name">エアレ理念 -とらのこ<span class="material-symbols-outlined common__arrow-left">arrow_right</span></h4>
+                                <p class="index__text">本家エアレ主催者の理念</p>
+                                <img src="img/top-arrow.png" alt="" class="index__icon">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer class="l-footer">
+        <ul class="l-footer__list">
+            <li><a href="#">このサイトについて</a></li>
+            <li><a href="#">利用規約</a></li>
+            <li><a href="#">Special Thanks</a></li>
+        </ul>
+        <div class="l-footer__logo">
+            <a href="#"><img src="https://placehold.jp/200x45.png" alt="エアレライブラリ"></a>
+        </div>
+    </footer>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script src="js/uikit.min.js"></script>
+    <script src="js/g-nav.js"></script>
+</body>
+</html>
