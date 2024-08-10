@@ -1,0 +1,27 @@
+@charset "utf-8";
+
+@use "../global/forwards" as fw;
+
+.l-header {
+    background-color: fw.$base_color;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+
+    @include fw.mq(sp) {
+        // position: fixed;
+    }
+
+    &__wrap {
+        // >* {
+        //     flex: 1;
+        // }
+    }
+}
+
+#g-nav {
+    background-color: fw.$base_color;
+}
