@@ -213,13 +213,7 @@
 
         /*　closeというクラスがついたら形状変化　*/
         &.close {
-            background-color: transparent;
-            color: fw.$base_color;
-
-            &::before{
-                transform: rotate(180deg);
-                background-image: url("../img/chevron-down-solid.svg");
-            }
+            display: none;
         }
     }
 
