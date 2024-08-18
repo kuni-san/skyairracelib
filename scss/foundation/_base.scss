@@ -225,7 +225,46 @@
           color: #FFFF;
           padding: 1px 3px;
       }
-  }
+    }
+
+    &__list-simple {
+      position: relative;
+      border: 1px solid rgb(206, 230, 242);
+      padding: 5px 20px;
+      border-radius: 5px;
+      margin-top: 20px;
+
+      &--child {
+          padding-left: 1em;
+          background-image: url("../img/common_hishi.png");
+          background-size: 8px;
+          background-repeat: no-repeat;
+          background-position-y: center;
+          margin-left: -5px !important;
+          margin-top: 15px !important;
+          position: relative;
+
+          &::before{
+              position: absolute;
+              left: 0.8em;
+              top: calc(50% - 0.9em);
+              font-size: 1.1rem;
+              text-shadow: 0px 0px 3px rgba(255, 255, 255, 1);
+          }
+
+          .note {
+              font-size: 0.9rem;
+          }
+      }
+
+      .mark {
+          background-color: #84D1C9;
+          border-radius: 3px;
+          font-size: 0.7rem;
+          color: #FFFF;
+          padding: 1px 3px;
+      }
+    }
   }
 
   .media { 
