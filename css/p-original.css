@@ -209,6 +209,11 @@
   justify-content: flex-end;
   margin: 0;
 }
+.qa__moth-icon img {
+  width: 70px;
+  border-radius: 35px;
+  border: 5px solid #CEE5F2;
+}
 .qa__moth-text {
   margin: 10px 0 10px 5px;
   background-color: #CEE5F2;
@@ -223,6 +228,11 @@
   display: flex;
   justify-content: flex-start;
   margin: 0;
+}
+.qa__eagle-icon img {
+  width: 70px;
+  border-radius: 35px;
+  border: 5px solid #CEE5F2;
 }
 .qa__eagle-text {
   margin: 10px 5px 10px 0;
