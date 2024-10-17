@@ -3,9 +3,11 @@
 @use "../global/forwards" as fw;
 
 .l-footer {
-    // background-color: rgba(fw.$base_color, 0.6);
     background-color: fw.$base_color;
-    height: 120px;
+    height: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
     &__list {
         padding: 10px;
@@ -23,24 +25,12 @@
 
     &__logo {
         display: flex;
-        margin: 10px 0 40px;
+        margin: 1.5vh 0 40px;
 
         a {
             margin: auto;
+            width: 40%;
+            padding-right: 10px;
         }
     }
-
-    // &__logo-area {
-    //     text-align: center;
-    //     font-size: 20px;
-    //     padding-top: 10px;
-
-    //     @include fw.mq(sp) {
-    //         font-size: 1rem;
-    //     }
-
-    //     a {
-    //         color: #FFF;
-    //     }
-    // }
 }

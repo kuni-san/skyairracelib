@@ -228,6 +228,8 @@
             display: inline-block;
             vertical-align: top;
             margin-right: 8px;
+            background-size: cover;
+            background-position: center;
         }
 
         &::after {
@@ -239,14 +241,44 @@
             background-color: fw.$base_color;
             margin: 0 8px 0 20px;
         }
+
+        &--fly {
+            &::before {
+                background-image: url("../img/icon-fly.png");
+            }
+        }
+
+        &--know {
+            &::before {
+                background-image: url("../img/icon-know.png");
+            }
+        }
+
+        &--find {
+            &::before {
+                background-image: url("../img/icon-find.png");
+            }
+        }
+
+        &--hold {
+            &::before {
+                background-image: url("../img/icon-hold.png");
+            }
+        }
     }
 
     &__icon {
         display: inline;
+
+        &--index {
+            width: 40px;
+            margin-bottom: 3px;
+            opacity: .7;
+        }
     }
 
     &__name {
-        margin: 5px 0 0;
+        margin: 5px 0 0 1rem;
         font-weight: bold;
         font-size: 1rem;
     }

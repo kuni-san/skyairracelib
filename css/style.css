@@ -11,7 +11,7 @@ a:hover {
 
 .main {
   position: relative;
-  padding-top: 65px;
+  padding-top: 50px;
   padding-bottom: 20px;
   background: rgb(206, 230, 242);
   background: linear-gradient(0deg, rgb(242, 221, 179) 20%, rgb(218, 241, 239) 42%, rgb(218, 241, 239) 50%, rgb(206, 230, 242) 60%);
@@ -240,14 +240,27 @@ a:hover {
   width: 100%;
   position: fixed;
   z-index: 100;
+  height: 50px;
 }
+.l-header__wrap {
+  height: 30px;
+}
+.l-header__logo {
+  width: 78%;
+  display: block;
+  padding-left: 5px;
+}
+
 #g-nav {
   background-color: #25598B;
 }
 
 .l-footer {
   background-color: #25598B;
-  height: 120px;
+  height: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .l-footer__list {
   padding: 10px;
@@ -262,10 +275,12 @@ a:hover {
 }
 .l-footer__logo {
   display: flex;
-  margin: 10px 0 40px;
+  margin: 1.5vh 0 40px;
 }
 .l-footer__logo a {
   margin: auto;
+  width: 40%;
+  padding-right: 10px;
 }
 
 .kv {
