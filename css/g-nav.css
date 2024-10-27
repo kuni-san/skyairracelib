@@ -3,10 +3,10 @@
     position:fixed;
     z-index: 999;
     /*ナビのスタート位置と形状*/
-	top: 65px;
+	top: 50px;
     right: -80%;
     width: 70%;
-    height: 80vh;/*ナビの高さ*/
+    height: 100%;/*ナビの高さ*/
     /*動き*/
 	transition: all 0.6s;
 }
@@ -22,7 +22,7 @@
     position: fixed;
     z-index: 999; 
     width: 70%;
-    height: 78vh;/*表示する高さ*/
+    height: 90vh;/*表示する高さ*/
     overflow: auto;
     -webkit-overflow-scrolling: touch;
 }

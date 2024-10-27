@@ -1,12 +1,25 @@
-//本家ページアコーディオン（コース詳細）をクリックした時の動作
+//本家ページアコーディオン（コース詳細を見る）をクリックした時の動作
 $('.ac-course__index').on('click', function() {//タイトル要素をクリックしたら
     var findElm = $(this).next(".ac-course__contents");//直後のアコーディオンを行うエリアを取得し
+    $(findElm).slideToggle();//アコーディオンの上下動作
+    $(this).parent('.ac-course').find('.ac-course__index--close').removeClass('close');
+      
+    if($(this).hasClass('close')){//タイトル要素にクラス名closeがあれば
+      $(this).removeClass('close');//クラス名を除去し
+    }else{//それ以外は
+      $(this).addClass('close');//クラス名closeを付与
+    }
+  });
+//本家ページアコーディオン（コース詳細を閉じる）をクリックした時の動作
+$('.ac-course__index--close').on('click', function() {//タイトル要素をクリックしたら
+    var findElm = $(this).prev(".ac-course__contents");//直後のアコーディオンを行うエリアを取得し
     $(findElm).slideToggle();//アコーディオンの上下動作
       
     if($(this).hasClass('close')){//タイトル要素にクラス名closeがあれば
       $(this).removeClass('close');//クラス名を除去し
     }else{//それ以外は
       $(this).addClass('close');//クラス名closeを付与
+      $(findElm).parent('.ac-course').find('.ac-course__index').removeClass('close');
     }
   });
 
@@ -30,15 +43,17 @@ $('.ac-tech__index').on('click', function() {//タイトル要素をクリック
             }
         });//アコーディオンを開く
     }
+});
 
-    // if ($element.is(':visible')) {
-    //     $element.slideUp();
-    // }
-    // else {
-    //     $element.slideDown({
-    //         start: function() {
-    //           $(this).css('display','grid');
-    //         }
-    //     });
-    // }
-  });
+jQuery(function(){
+  var windowWidth = $(window).width();
+  var headerHight = 50; 
+  jQuery('a[href^=#]').click(function() {
+  var speed = 1000;
+  var href= jQuery(this).attr("href");
+  var target = jQuery(href == "#" || href == "" ? 'html' : href);
+  var position = target.offset().top-headerHight;
+  jQuery('body,html').animate({scrollTop:position}, speed, 'swing');
+  return false;
+ });
+});
