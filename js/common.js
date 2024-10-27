@@ -45,14 +45,16 @@ $('.ac-tech__index').on('click', function() {//タイトル要素をクリック
     }
 });
 
-jQuery(function(){
+$(function(){
   var windowWidth = $(window).width();
   var headerHight = 50; 
-  jQuery('a[href^=#]').click(function() {
+  $('a[href^=#]').click(function() {
+    console.log('てすと１');
   var speed = 1000;
   var href= jQuery(this).attr("href");
   var target = jQuery(href == "#" || href == "" ? 'html' : href);
   var position = target.offset().top-headerHight;
+  console.log('てすと２');
   jQuery('body,html').animate({scrollTop:position}, speed, 'swing');
   return false;
  });
