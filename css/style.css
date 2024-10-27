@@ -27,6 +27,12 @@ a:hover {
 .common__contents {
   margin: 10px 5vw;
 }
+.common__contents-title {
+  color: #FFF;
+  margin: 20px 0 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
 .common__title {
   font-size: 1.8rem;
   display: flex;
