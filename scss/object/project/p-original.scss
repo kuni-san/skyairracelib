@@ -21,7 +21,7 @@
     }
 
     &__index {
-        padding: 15px 15px 5px;
+        padding: 15px 10px 5px;
     }
 
     &__title {
@@ -45,7 +45,7 @@
 
         p {
             font-size: 0.8rem;
-            margin: 5px;
+            margin: 5px 0 5px 5px;
         }
     }
 
@@ -151,12 +151,11 @@
 }
 
 .ac-course {
-    &__index {
+    &__index {//「詳細を見る」
         position: relative;
         cursor: pointer;
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         font-weight: bold;
-        padding: 5% 3%;
         transition: all 0.5s ease;
         background-color: mix(fw.$base_color, #FFF, 80%);
         color: #FFF;
@@ -165,19 +164,22 @@
         margin-left: -20px;
         margin-right: -20px;
         border-radius: 0px 0px 10px 10px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
         /*アイコン*/
         &::before{
             position: absolute;
-            content:'';
-            width: 20px;
-            height: 20px;
+            content: "";
+            width: 15px;
+            height: 15px;
             background-image: url("../img/chevron-down-solid-white.svg");
             background-repeat: no-repeat;
             background-position: center;
-            top: 20px;
-            left: 20px;
-            margin-left: 6px;
+            top: 37%;
+            left: calc(50% - 90px);
             transform: rotate(-90deg);
         }
 
@@ -185,11 +187,48 @@
         &.close {
             display: none;
         }
+
+        &--close {//「詳細を閉じる」
+            position: relative;
+            cursor: pointer;
+            font-size: 1.1rem;
+            font-weight: bold;
+            transition: all 0.5s ease;
+            background-color: mix(fw.$base_color, #FFF, 80%);
+            color: #FFF;
+            text-align: center;
+            margin-left: -20px;
+            margin-right: -20px;
+            border-radius: 0px 0px 10px 10px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+    
+            /*アイコン*/
+            &::before{
+                position: absolute;
+                content: "";
+                width: 15px;
+                height: 15px;
+                background-image: url("../img/chevron-down-solid-white.svg");
+                background-repeat: no-repeat;
+                background-position: center;
+                top: 37%;
+                left: calc(50% - 110px);
+                transform: rotate(180deg);
+            }
+    
+            /*　closeというクラスがついたら形状変化　*/
+            &.close {
+                display: none;
+            }
+        }
     }
 
     &__contents {
         display: none;
-        padding-bottom: 20px;
+        padding-bottom: 40px;
     }
 }
 
