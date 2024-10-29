@@ -57,7 +57,8 @@ if(url.indexOf("#") != -1){
   // urlを#で分割して配列に格納
   const anchor = url.split("#"),
   // 分割した最後の文字列（#◯◯の部分）をtargetに代入
-  target = $('#' + anchor[anchor.length - 1]),
+  target_str = '#' + anchor[anchor.length - 1],
+  target = $(target_str),
   // リンク先の位置からheaderHeightの高さを引いた値をpositionに代入
   position = Math.floor(target.offset().top) - headerHeight;
   
