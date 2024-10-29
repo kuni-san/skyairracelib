@@ -49,6 +49,8 @@ $('.ac-tech__index').on('click', function() {//タイトル要素をクリック
 const url = $(location).attr('href'),
 // headerの高さを取得してそれに30px追加した値をheaderHeightに代入
 headerHeight = $('header').outerHeight() + 30;
+console.log(url);
+console.log(headerHeight);
 
 // urlに「#」が含まれていれば
 if(url.indexOf("#") != -1){
@@ -58,6 +60,9 @@ if(url.indexOf("#") != -1){
   target = $('#' + anchor[anchor.length - 1]),
   // リンク先の位置からheaderHeightの高さを引いた値をpositionに代入
   position = Math.floor(target.offset().top) - headerHeight;
+  
+  console.log(anchor);
+  console.log(target);
   // positionの位置に移動
   $("html, body").animate({scrollTop:position}, 500);
 }
