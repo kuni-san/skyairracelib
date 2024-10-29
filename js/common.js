@@ -62,6 +62,8 @@ if(url.indexOf("#") != -1){
   position = Math.floor(target.offset().top) - headerHeight;
   
   console.log(anchor);
+  console.log(anchor[anchor.length - 1]);
+  console.log(anchor[1]);
   console.log(target);
   // positionの位置に移動
   $("html, body").animate({scrollTop:position}, 500);
