@@ -45,17 +45,19 @@ $('.ac-tech__index').on('click', function() {//タイトル要素をクリック
     }
 });
 
-$(function(){
-    var windowWidth = $(window).width();
-    var headerHight = 50; 
-    $('a[href^=/]').click(function() {
-      console.log('てすと１');
-    var speed = 1000;
-    var href= jQuery(this).attr("href");
-    var target = jQuery(href == "#" || href == "" ? 'html' : href);
-    var position = target.offset().top-headerHight;
-    console.log('てすと２');
-    jQuery('body,html').animate({scrollTop:position}, speed, 'swing');
-    return false;
-  });
-});
+// ページのURLを取得
+const url = $(location).attr('href'),
+// headerの高さを取得してそれに30px追加した値をheaderHeightに代入
+headerHeight = $('header').outerHeight() + 30;
+
+// urlに「#」が含まれていれば
+if(url.indexOf("#") != -1){
+  // urlを#で分割して配列に格納
+  const anchor = url.split("#"),
+  // 分割した最後の文字列（#◯◯の部分）をtargetに代入
+  target = $('#' + anchor[anchor.length - 1]),
+  // リンク先の位置からheaderHeightの高さを引いた値をpositionに代入
+  position = Math.floor(target.offset().top) - headerHeight;
+  // positionの位置に移動
+  $("html, body").animate({scrollTop:position}, 500);
+}
