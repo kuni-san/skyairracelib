@@ -1,4 +1,24 @@
 @charset "UTF-8";
+.toranoko__muralno-wrap {
+  display: flex;
+  flex-direction: column;
+  margin: 0 20px;
+}
+.toranoko__muralno {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-bottom: 5px;
+}
+.toranoko__muralno-img {
+  width: 60px;
+}
+.toranoko__muralno-img--10 {
+  width: 75px;
+}
+.toranoko__muralno-img-empty {
+  width: 40px;
+}
 .toranoko__wrap {
   background-color: rgba(255, 255, 255, 0.8);
   border-top: 1px solid transparent;

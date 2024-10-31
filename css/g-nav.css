@@ -49,7 +49,7 @@
 
 #g-nav li{
 	list-style: none;
-    padding-left: 1em;
+    padding-left: 0.6em;
 }
 
 #g-nav li .g-nav-link{
@@ -58,6 +58,13 @@
 	padding: 5px;
 	display: block;
 	letter-spacing: 0.1em;
+}
+
+#g-nav li .g-nav-link .g-nav-contents-img {
+    display: inline;
+    width: 1.5rem;
+    margin-right: 8px;
+    vertical-align: middle;
 }
 
 #g-nav .fa-caret-right {
