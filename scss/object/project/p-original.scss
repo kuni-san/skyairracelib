@@ -3,6 +3,31 @@
 @use "../../global/forwards" as fw;
 
 .toranoko {
+    &__muralno-wrap {
+        display: flex;
+        flex-direction: column;
+        margin: 0 20px;
+    }
+
+    &__muralno {
+        display: flex;
+        justify-content: flex-end;
+        gap: 10px;
+        margin-bottom: 5px;
+    }
+
+    &__muralno-img {
+        width: 60px;
+    }
+
+    &__muralno-img--10 {
+        width: 75px;
+    }
+
+    &__muralno-img-empty {
+        width: 40px;
+    }
+
     &__wrap {
         background-color: rgba(255, 255, 255, 0.8);
         border-top: 1px solid transparent;

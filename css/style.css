@@ -24,15 +24,6 @@ a:hover {
   font-size: 10px;
 }
 
-.common__contents {
-  margin: 10px 5vw;
-}
-.common__contents-title {
-  color: #FFF;
-  margin: 20px 0 10px;
-  font-size: 1.5rem;
-  font-weight: bold;
-}
 .common__title {
   font-size: 1.8rem;
   display: flex;
@@ -51,6 +42,50 @@ a:hover {
   width: 10px;
   height: 2px;
   background-color: #25598B;
+}
+.common___img-wrap {
+  margin-bottom: 60px;
+}
+.common__mural img {
+  width: 100%;
+}
+.common__fixed--tab {
+  position: fixed;
+  right: -75vw;
+  top: 0;
+  padding-top: 50px;
+  z-index: 10;
+  transition: all 0.5s 0s ease;
+}
+.common__fixed--tab .toranoko__muralno-wrap {
+  margin: 0 !important;
+  background-color: rgb(206, 230, 242);
+  padding: 10px 10px 0 0;
+  border-radius: 0 0 0 8px;
+}
+.common__fixed--tab .common__fixed--tab-icon {
+  background-color: rgb(206, 230, 242);
+  padding: 5px;
+  border-radius: 4px 0 0 4px;
+  transition: all 0.5s 0s ease;
+  display: block;
+}
+.common__fixed--tab-icon {
+  width: 40px;
+  display: none;
+}
+.common__fixed--tab-active {
+  right: 0;
+  transition: all 0.5s 0s ease;
+}
+.common__contents {
+  margin: 10px 5vw;
+}
+.common__contents-title {
+  color: #FFF;
+  margin: 20px 0 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 .common__index {
   position: relative;

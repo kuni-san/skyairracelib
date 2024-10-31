@@ -46,26 +46,58 @@ $('.ac-tech__index').on('click', function() {//タイトル要素をクリック
 });
 
 // ページのURLを取得
-const url = $(location).attr('href'),
+var url = $(location).attr('href'),
 // headerの高さを取得してそれに30px追加した値をheaderHeightに代入
-headerHeight = $('header').outerHeight() + 30;
-console.log(url);
-console.log(headerHeight);
+headerHeight = $('header').outerHeight() + 20;
+url_scroll();
 
-// urlに「#」が含まれていれば
-if(url.indexOf("#") != -1){
-  // urlを#で分割して配列に格納
-  const anchor = url.split("#"),
-  // 分割した最後の文字列（#◯◯の部分）をtargetに代入
-  target_str = '#' + anchor[anchor.length - 1],
-  target = $(target_str),
-  // リンク先の位置からheaderHeightの高さを引いた値をpositionに代入
-  position = Math.floor(target.offset().top) - headerHeight;
-  
-  console.log(anchor);
-  console.log(anchor[anchor.length - 1]);
-  console.log(anchor[1]);
-  console.log(target);
-  // positionの位置に移動
-  $("html, body").animate({scrollTop:position}, 500);
+//ページ内リンク時
+$('a[href^="#"]').on('click', function(){
+  url = $(this).attr('href');
+  url_scroll();
+});
+
+function url_scroll(){
+  // urlに「#」が含まれていれば
+  if(url.indexOf("#") != -1){
+    // urlを#で分割して配列に格納
+    const anchor = url.split("#"),
+    // 分割した最後の文字列（#◯◯の部分）をtargetに代入
+    target_str = '#' + anchor[anchor.length - 1],
+    target = $(target_str),
+    // リンク先の位置からheaderHeightの高さを引いた値をpositionに代入
+    position = Math.floor(target.offset().top) - headerHeight;
+    // positionの位置に移動
+    $("html, body").animate({scrollTop:position}, 500);
+  }
 }
+
+
+//fixed要素を画面に追従させる
+var navPos = $( '.common__fixed' ).offset().top // 追随要素の位置
+var navHeight = $( '.common__fixed' ).outerHeight(); // 追随要素の高さ
+$( window ).on( 'scroll', function() {
+	if ( $( this ).scrollTop() > navPos ) {
+		$( '.common__mural' ).css( 'padding-bottom', navHeight );//common__fixedが消えた分の空間を補完
+		$( '.common__fixed' ).addClass( 'common__fixed--tab' );
+	} else {
+		$( '.common__mural' ).css( 'padding-bottom', 0 );
+		$( '.common__fixed' ).removeClass( 'common__fixed--tab' );
+	}
+});
+
+//tabアイコンを押したら中身のコンテンツがアクティブになるタグを付与
+$('.common__fixed--tab-icon').on('click', function() {
+  if($('.common__fixed').hasClass('common__fixed--tab-active')){//タイトル要素にクラス名common__fixed--tab-activeがあれば
+      $('.common__fixed').removeClass('common__fixed--tab-active');
+  }else{//それ以外は
+      $('.common__fixed').addClass('common__fixed--tab-active');
+  }
+});
+
+//mural-noを押したときtabをひっこめる
+$('.toranoko__muralno-img').on('click', function() {
+  if($('.common__fixed').hasClass('common__fixed--tab-active')){//タイトル要素にクラス名common__fixed--tab-activeがあれば
+      $('.common__fixed').removeClass('common__fixed--tab-active');
+  }
+});
