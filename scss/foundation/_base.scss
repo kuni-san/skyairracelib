@@ -61,10 +61,12 @@
   }
 
   &___img-wrap {
-    margin-bottom: 60px;
+    margin: 40px 0 60px;
   }
 
   &__mural {
+    margin-bottom: 10px;
+    
     img {
       width: 100%;
     }
@@ -73,7 +75,7 @@
   &__fixed {
     &--tab {
       position: fixed;
-      right: -75vw;
+      right: -280px;
       top: 0;
       padding-top: 50px;
       z-index: 10;

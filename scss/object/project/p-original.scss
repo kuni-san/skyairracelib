@@ -126,13 +126,51 @@
 
     &__tech-index {
         background-color: rgba(37, 89, 139, 0.4);
-        border-radius: 5px;
+        border-radius: 5px 5px 0px 0px;
         border: 1px solid rgba(37, 89, 139, 0.4);
         box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.25), inset 0px 10px 10px 0px rgba(255, 255, 255, 0.25);
         text-align: center;
+        padding: 3% 20px 3% 5px;
+        position: relative;
+    }
+
+    &__tech-contents-wrap {
+        position: relative;
+    }
+
+    &__tech-button-wrap {
+        width: 98%;
+        height: 96%;
+        background-color: rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(4px);
+        position: absolute;
+        left: 1%;
+        top: 1%;
+        border-radius: 0 0 5px 5px;
+        display: flex;
+        transition: all 1s ease;
+    }
+
+    &__tech-button {
+        background-color: #FFF;
+        border-radius: 25px;
+        border: 1px solid rgba(37, 89, 139, 0.4);
+        box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.25), inset 0px 10px 10px 0px rgba(255, 255, 255, 0.25);
+        display: flex;
+        width: 140px;
+        height: 50px;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        margin: auto;
     }
 
     &__tech-contents {
+        padding: 4%;
+        border: 1px solid rgba(37, 89, 139, 0.4);
+        border-radius: 0 0 5px 5px;
+        border-top: none;
+
         a {
             text-decoration: underline;
         }
