@@ -24,25 +24,30 @@ $('.ac-course__index--close').on('click', function() {//タイトル要素をク
   });
 
 //本家ページアコーディオン（技術）をクリックした時の動作
-$('.ac-tech__index').on('click', function() {//タイトル要素をクリックしたら
-    var findElm = $(this).next(".ac-tech__contents");//直後のアコーディオンを行うエリアを取得し
+// $('.ac-tech__index').on('click', function() {//タイトル要素をクリックしたら
+//     var findElm = $(this).next(".ac-tech__contents");//直後のアコーディオンを行うエリアを取得し
     
       
-    if($(this).hasClass('close')){//タイトル要素にクラス名closeがあれば
-        $(this).removeClass('close');//クラス名を除去し
-        $(findElm).slideUp({
-          start: function() {
-              $(this).parents('.ac-tech').find('.ac-tech__index').css('border-radius','5px');
-          }
-      });//アコーディオンを閉じる
-    }else{//それ以外は
-        $(this).addClass('close');//クラス名closeを付与し
-        $(findElm).slideDown({
-            start: function() {
-                $(this).parents('.ac-tech').find('.ac-tech__index').css('border-radius','5px 5px 0 0');
-            }
-        });//アコーディオンを開く
-    }
+//     if($(this).hasClass('close')){//タイトル要素にクラス名closeがあれば
+//         $(this).removeClass('close');//クラス名を除去し
+//         $(findElm).slideUp({
+//           start: function() {
+//               $(this).parents('.ac-tech').find('.ac-tech__index').css('border-radius','5px');
+//           }
+//       });//アコーディオンを閉じる
+//     }else{//それ以外は
+//         $(this).addClass('close');//クラス名closeを付与し
+//         $(findElm).slideDown({
+//             start: function() {
+//                 $(this).parents('.ac-tech').find('.ac-tech__index').css('border-radius','5px 5px 0 0');
+//             }
+//         });//アコーディオンを開く
+//     }
+// });
+
+$('.toranoko__tech-button').on('click', function() {
+  $(this).hide();
+  $(this).parents('.toranoko__tech-button-wrap').css('background-color', 'transparent').css('backdrop-filter', 'none').hide(1000);
 });
 
 // ページのURLを取得
@@ -53,6 +58,8 @@ url_scroll();
 
 //ページ内リンク時
 $('a[href^="#"]').on('click', function(){
+  console.log("ページ内リンク");
+  console.log(headerHeight);
   url = $(this).attr('href');
   url_scroll();
 });
