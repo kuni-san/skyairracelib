@@ -1,7 +1,19 @@
+// ページのURLを取得
+var url = $(location).attr('href'),
+// headerの高さを取得してそれに30px追加した値をheaderHeightに代入
+headerHeight = $('header').outerHeight() + 20;
+url_scroll();
+
+//ページ内リンク時
+$('a[href^="#"]').on('click', function(){
+  url = $(this).attr('href');
+  url_scroll();
+});
+
 //本家ページアコーディオン（コース詳細を見る）をクリックした時の動作
 $('.ac-course__index').on('click', function() {//タイトル要素をクリックしたら
     var findElm = $(this).next(".ac-course__contents");//直後のアコーディオンを行うエリアを取得し
-    $(findElm).slideToggle();//アコーディオンの上下動作
+    $(findElm).slideDown();//アコーディオンの上下動作
     $(this).parent('.ac-course').find('.ac-course__index--close').removeClass('close');
       
     if($(this).hasClass('close')){//タイトル要素にクラス名closeがあれば
@@ -10,17 +22,26 @@ $('.ac-course__index').on('click', function() {//タイトル要素をクリッ�
       $(this).addClass('close');//クラス名closeを付与
     }
   });
-//本家ページアコーディオン（コース詳細を閉じる）をクリックした時の動作
-$('.ac-course__index--close').on('click', function() {//タイトル要素をクリックしたら
-    var findElm = $(this).prev(".ac-course__contents");//直後のアコーディオンを行うエリアを取得し
-    $(findElm).slideToggle();//アコーディオンの上下動作
-      
-    if($(this).hasClass('close')){//タイトル要素にクラス名closeがあれば
-      $(this).removeClass('close');//クラス名を除去し
+//本家ページアコーディオン（コース詳細を閉じる）もしくはコンテンツ内「閉じる」をクリックした時の動作
+$('.ac-course__index--close, .toranoko__fixed-close').on('click', function() {//タイトル要素をクリックしたら
+    var findElm = $(this).attr('class') == "ac-course__index--close" ? $(this).parents('.toranoko__wrap').find(".ac-course__contents") : $(this).parents(".ac-course__contents");//直後のアコーディオンを行うエリアを取得し
+    console.log(findElm);
+    $(findElm).slideUp();//アコーディオンの上下動作
+
+    var elm = $(this).attr('class') == "ac-course__index--close" ? $(this) : $(this).parents('.toranoko__wrap').find('.ac-course__index--close');
+
+    if(elm.hasClass('close')){//タイトル要素にクラス名closeがあれば
+      elm.removeClass('close');//クラス名を除去し
     }else{//それ以外は
-      $(this).addClass('close');//クラス名closeを付与
+      elm.addClass('close');//クラス名closeを付与
       $(findElm).parent('.ac-course').find('.ac-course__index').removeClass('close');
     }
+
+    var ac_target = $(this).parents('.toranoko__wrap').offset().top;
+    // リンク先の位置からheaderHeightの高さを引いた値をpositionに代入
+    var ac_position = Math.floor(ac_target) - headerHeight;
+    // positionの位置に移動
+    $("html, body").animate({scrollTop:ac_position}, 500);
   });
 
 //本家ページアコーディオン（技術）をクリックした時の動作
@@ -48,20 +69,6 @@ $('.ac-course__index--close').on('click', function() {//タイトル要素をク
 $('.toranoko__tech-button').on('click', function() {
   $(this).hide();
   $(this).parents('.toranoko__tech-button-wrap').css('background-color', 'transparent').css('backdrop-filter', 'none').hide(1000);
-});
-
-// ページのURLを取得
-var url = $(location).attr('href'),
-// headerの高さを取得してそれに30px追加した値をheaderHeightに代入
-headerHeight = $('header').outerHeight() + 20;
-url_scroll();
-
-//ページ内リンク時
-$('a[href^="#"]').on('click', function(){
-  console.log("ページ内リンク");
-  console.log(headerHeight);
-  url = $(this).attr('href');
-  url_scroll();
 });
 
 function url_scroll(){
