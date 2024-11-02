@@ -173,6 +173,30 @@
   text-indent: -1em;
   margin: 5px 0;
 }
+.toranoko__fixed-close {
+  justify-content: space-around;
+  background-color: #517aa2;
+  display: flex;
+  width: 130px;
+  padding: 5px 6px;
+  color: #FFF;
+  border-radius: 5px;
+  align-items: center;
+  margin-left: auto;
+  margin-right: -10px;
+  position: sticky;
+  bottom: 10px;
+  margin-bottom: -80px;
+  margin-top: 40px;
+  /*　closeというクラスがついたら形状変化　*/
+}
+.toranoko__fixed-close img {
+  transform: rotate(180deg);
+  width: 15px;
+}
+.toranoko__fixed-close.close {
+  display: none;
+}
 
 .ac-course__index {
   position: relative;
