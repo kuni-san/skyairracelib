@@ -66,6 +66,7 @@ $('.ac-course__index--close, .toranoko__fixed-close').on('click', function() {//
 //     }
 // });
 
+//テクニック紹介を「見る」ボタン押下時
 $('.toranoko__tech-button').on('click', function() {
   $(this).hide();
   $(this).parents('.toranoko__tech-button-wrap').css('background-color', 'transparent').css('backdrop-filter', 'none').hide(1000);
