@@ -29,12 +29,7 @@
 
 /*ナビゲーション*/
 #g-nav ul {
-    /*ナビゲーション天地中央揃え*/
-    /* position: absolute;
-    z-index: 999;
-    top:50%;
-    left:50%;
-    transform: translate(-50%,-50%); */
+    padding-left: 25px;
 }
 
 /*リストのレイアウト設定*/
