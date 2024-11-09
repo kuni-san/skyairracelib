@@ -57,13 +57,14 @@
 
 #g-nav li .g-nav-link .g-nav-contents-img {
     display: inline;
-    width: 1.5rem;
+    width: 1.3rem;
     margin-right: 8px;
     vertical-align: middle;
 }
 
 #g-nav .fa-caret-right {
     padding-right: 8px;
+    vertical-align: middle;
 }
 
 /*========= ボタンのためのCSS ===============*/
