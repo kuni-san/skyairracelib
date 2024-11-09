@@ -243,13 +243,13 @@ a:hover {
 .common__list-simple-num {
   counter-reset: number 0;
   position: relative;
-  margin-top: 20px;
+  margin-top: 10px;
   border: 1px solid rgb(206, 230, 242);
   padding: 5px 10px;
   border-radius: 5px;
 }
 .common__list-simple-num--child {
-  padding-left: 2.4em;
+  padding-left: 2em;
   margin-left: -5px !important;
   position: relative;
 }
@@ -293,6 +293,14 @@ a:hover {
   font-size: 0.7rem;
   color: white;
   padding: 1px 3px;
+}
+.common__subtitle {
+  font-weight: bold;
+}
+.common__subtitle img {
+  width: 30px;
+  display: inline;
+  padding-right: 5px;
 }
 
 .media__title {
