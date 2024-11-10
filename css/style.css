@@ -139,6 +139,10 @@ a:hover {
   height: 12px;
   margin: 0 5px;
 }
+.common__headline--side-note {
+  margin-top: -20px;
+  text-align: center;
+}
 .common__wrap {
   background-color: rgba(255, 255, 255, 0.7);
   border-radius: 10px;

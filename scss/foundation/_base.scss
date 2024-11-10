@@ -173,6 +173,11 @@
       height: 12px;
       margin: 0 5px;
     }
+
+    &--side-note {
+      margin-top: -20px;
+      text-align: center;
+    }
   }
 
   &__wrap {
@@ -214,17 +219,6 @@
       vertical-align: middle;
       transform: rotate(-90deg);
     }
-
-    // &--bg-kazami {
-    //   padding-left: 2.4em;
-    // background-image: url(../img/KAZAMIDORI.png);
-    // background-size: 30px;
-    // background-repeat: no-repeat;
-    // background-position-y: center;
-    // margin-left: -5px !important;
-    // margin-top: 20px !important;
-    // position: relative;
-    // }
   }
 
   &__caption {
