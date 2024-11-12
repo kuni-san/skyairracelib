@@ -59,16 +59,17 @@
     display: inline;
     width: 1.3rem;
     margin-right: 8px;
+    vertical-align: sub;
+}
+
+#g-nav li .g-nav-link .fa-caret-right {
+    padding-left: 8px;
     vertical-align: middle;
 }
 
-#g-nav .fa-caret-right {
-    padding-left: 8px;
-    vertical-align: baseline;
-}
-
-#g-nav .fa-caret-right.active {
+#g-nav li .g-nav-link.active .fa-caret-right {
     padding-right: 8px;
+    padding-left: 0;
     vertical-align: middle;
 }
 
