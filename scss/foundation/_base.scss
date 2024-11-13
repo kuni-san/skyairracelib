@@ -376,7 +376,20 @@
   }
 
   &__word-link {
-    
+    text-decoration: underline;
+
+    &::after {
+      content: "";
+      background-image: url("../img/icon-word-link.png");
+      background-size: 1em;
+      background-repeat: no-repeat;
+      background-position-x: center;
+      background-position-y: top;
+      width: 1.3em;
+      height: 1em;
+      display: inline-block;
+      vertical-align: bottom;
+    }
   }
 }
 
