@@ -143,6 +143,7 @@
         width: 98%;
         height: 96%;
         background-color: rgba(255, 255, 255, 0.3);
+        -webkit-backdrop-filter: blur(4px);
         backdrop-filter: blur(4px);
         position: absolute;
         left: 1%;
