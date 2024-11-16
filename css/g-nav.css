@@ -11,6 +11,12 @@
 	transition: all 0.6s;
 }
 
+@media(min-width: 460px){
+    #g-nav{
+        width: 300px;
+    }
+}
+
 /*アクティブクラスがついたら位置を0に*/
 #g-nav.panelactive{
     right: 0;
