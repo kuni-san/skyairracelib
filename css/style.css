@@ -408,7 +408,7 @@ a:hover {
 }
 @media (min-width: 460px) {
   .l-footer__logo a {
-    width: 15%;
+    width: 140px;
   }
 }
 
