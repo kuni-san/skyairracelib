@@ -99,6 +99,12 @@ a:hover {
 .common__contents {
   margin: 10px 5vw;
 }
+@media (min-width: 768px) {
+  .common__contents {
+    width: 660px;
+    margin: 10px auto;
+  }
+}
 .common__contents-title {
   color: #FFF;
   margin: 20px 0 10px;
@@ -175,6 +181,14 @@ a:hover {
   text-align: right;
   vertical-align: middle;
   transform: rotate(-90deg);
+}
+.common__sentence--iframe {
+  margin-left: -5px;
+}
+@media (min-width: 768px) {
+  .common__sentence--iframe {
+    margin-left: 0;
+  }
 }
 .common__caption {
   font-size: 0.8rem;
@@ -393,6 +407,11 @@ a:hover {
 .kv {
   height: 82vh;
 }
+@media (min-width: 460px) {
+  .kv {
+    height: 40vh;
+  }
+}
 .kv__text {
   display: none;
   border-radius: 5px;
@@ -425,6 +444,12 @@ a:hover {
   position: fixed;
   z-index: -1;
 }
+@media (min-width: 460px) {
+  .kv__symbol {
+    width: 180px;
+    margin-left: calc(50% - 90px);
+  }
+}
 .kv__movie {
   position: fixed;
   z-index: -2; /*最背面に設定*/
@@ -444,11 +469,21 @@ a:hover {
   min-height: 100%;
   min-width: 100%;
 }
+@media (min-width: 460px) {
+  .kv__movie {
+    background-color: rgb(206, 230, 242);
+  }
+}
 .kv__iframe-wrapper {
   position: relative;
   padding-bottom: 217.8%;
   height: 0;
   overflow: hidden;
+}
+@media (min-width: 460px) {
+  .kv__iframe-wrapper {
+    display: none;
+  }
 }
 .kv__iframe {
   position: absolute;

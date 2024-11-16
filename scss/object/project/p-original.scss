@@ -104,12 +104,21 @@
     &__KK-title {
         text-align: center;
         margin: 0 0 3px;
+
+        @media(min-width: 768px){
+            margin-top: 40px;
+        }
     }
 
     &__KK-text {
         position: absolute;
-        width: 30%;
+        width: 90px;
         top: 0;
+
+        @media(min-width: 768px){
+            width: 160px;
+            top: 20px;
+        }
     }
 
     &__KK-caption {

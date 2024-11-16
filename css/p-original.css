@@ -83,10 +83,21 @@
   text-align: center;
   margin: 0 0 3px;
 }
+@media (min-width: 768px) {
+  .toranoko__KK-title {
+    margin-top: 40px;
+  }
+}
 .toranoko__KK-text {
   position: absolute;
-  width: 30%;
+  width: 90px;
   top: 0;
+}
+@media (min-width: 768px) {
+  .toranoko__KK-text {
+    width: 160px;
+    top: 20px;
+  }
 }
 .toranoko__KK-caption .nicosan {
   width: 13px;
