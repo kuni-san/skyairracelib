@@ -5,6 +5,10 @@
 .kv {
     height: 82vh;
 
+    @media(min-width: 460px){
+        height: 40vh;
+      }
+
     &__text {
         display: none;
         // position: fixed;
@@ -46,6 +50,11 @@
         margin-top: 15px;
         position: fixed;
         z-index: -1;
+
+        @media(min-width: 460px){
+            width: 180px;
+            margin-left: calc(50% - 90px);
+          }
     }
 
     &__movie {
@@ -71,6 +80,10 @@
             min-height: 100%;
             min-width: 100%;
         }
+
+        @media(min-width: 460px){
+            background-color: rgb(206, 230, 242);
+          }
     }
 
     &__iframe-wrapper {
@@ -78,6 +91,10 @@
         padding-bottom: 217.8%;
         height: 0;
         overflow: hidden;
+
+        @media(min-width: 460px){
+            display: none;
+          }
     }
 
     &__iframe {

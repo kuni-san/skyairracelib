@@ -128,6 +128,11 @@
 
   &__contents {
     margin: 10px 5vw;
+    
+    @media(min-width: 768px){
+      width: 660px;
+      margin: 10px auto;
+    }
   }
 
   &__contents-title {
@@ -218,6 +223,15 @@
       text-align: right;
       vertical-align: middle;
       transform: rotate(-90deg);
+    }
+
+    &--iframe {
+      margin-left: -5px;
+    }
+    @media(min-width: 768px){
+      &--iframe {
+        margin-left: 0;
+      }
     }
   }
 
