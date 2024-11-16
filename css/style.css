@@ -46,6 +46,12 @@ a:hover {
 .common___img-wrap {
   margin: 40px 0 60px;
 }
+@media (min-width: 768px) {
+  .common___img-wrap {
+    margin: 40px auto 60px;
+    max-width: 660px;
+  }
+}
 .common__mural {
   margin-bottom: 10px;
 }
@@ -181,14 +187,6 @@ a:hover {
   text-align: right;
   vertical-align: middle;
   transform: rotate(-90deg);
-}
-.common__sentence--iframe {
-  margin-left: -5px;
-}
-@media (min-width: 768px) {
-  .common__sentence--iframe {
-    margin-left: 0;
-  }
 }
 .common__caption {
   font-size: 0.8rem;
@@ -371,6 +369,11 @@ a:hover {
   display: block;
   padding-left: 5px;
 }
+@media (min-width: 480px) {
+  .l-header__logo {
+    width: 50%;
+  }
+}
 
 #g-nav {
   background-color: #25598B;
@@ -402,6 +405,11 @@ a:hover {
   margin: auto;
   width: 40%;
   padding-right: 10px;
+}
+@media (min-width: 460px) {
+  .l-footer__logo a {
+    width: 15%;
+  }
 }
 
 .kv {

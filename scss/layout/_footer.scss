@@ -31,6 +31,11 @@
             margin: auto;
             width: 40%;
             padding-right: 10px;
+
+            
+            @media(min-width: 460px){
+                width: 15%;
+            }
         }
     }
 }

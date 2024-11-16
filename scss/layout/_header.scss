@@ -25,6 +25,10 @@
         width: 78%;
         display: block;
         padding-left: 5px;
+
+        @media(min-width: 480px){
+            width: 50%;
+          }
     }
 }
 
