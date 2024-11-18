@@ -11,8 +11,10 @@
     <!-- End Google Tag Manager -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <link rel="icon" sizes="48×48" href="/img/favicon.ico">
     <link rel="icon" type="image/png" sizes="16×16" href="/img/favicon1.png">
     <link rel="icon" type="image/png" sizes="32×32" href="/img/favicon1.png">
+    <link rel="icon" type="image/svg+xml" sizes="any" href="/img/favicon1.svg">
     <link rel="apple-touch-icon" href="/img/apple-touch-icon.png"><!-- 180×180 -->
     
     <link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css"/><!-- reset.css modern-css-reset -->
@@ -82,11 +84,12 @@
     </header>
     <main class="main top">
         <section class="kv">
-            <p class="kv__text">ようこそ、<br>#skyairraceの世界へ。</p>
             <img src="img/symbol.png" alt="" class="kv__symbol">
+            <img src="img/symbol_pc.png" alt="" class="kv__symbol kv__symbol--pc">
             <div id="video-area" class="kv__movie">
                 <div class="kv__iframe-wrapper">
-                    <iframe class="kv__iframe" src="https://www.youtube.com/embed/Xi3Ffm82vlU?autoplay=0&amp;showinfo=0&amp;rel=0&amp;modestbranding=1&amp;playsinline=1&amp;loop=1&amp;playlist=Xi3Ffm82vlU" allowfullscreen uk-responsive uk-video="automute: true"></iframe>
+                    <!-- <iframe class="kv__iframe" src="https://www.youtube.com/embed/Xi3Ffm82vlU?autoplay=0&amp;showinfo=0&amp;rel=0&amp;modestbranding=1&amp;playsinline=1&amp;loop=1&amp;playlist=Xi3Ffm82vlU" allowfullscreen uk-responsive uk-video="automute: true"></iframe> -->
+                    <video src="video/kv.mp4" width="100%" uk-video="autoplay: inview" autoplay muted playsinline loop></video>
                 </div>
             </div><!--/video-area-->
         </section>
@@ -94,9 +97,6 @@
             <section class="info">
                 <img class="info__cloud" src="img/cloud07_2.png" alt="">
                 <p class="info__en-catchcopy common__text">Welcome to SKY AIR RACE LIBRARY.</p>
-                <p class="common__text" style="display: none;">みんなで憧れた空へ、少しでも高く手を伸ばそう。<br>
-                    ここでしか見れない景色を、一緒に。</p>
-                <!-- <img class="info__img" src="https://placehold.jp/200x180.png" alt=""> -->
                 <p class="common__text">SKY AIR RACEは、<br>
                     "空を自由に飛ぶこと"を目的とした<br>
                     「Sky 星を紡ぐ子どもたち」非公式レース大会です。</p>

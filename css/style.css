@@ -413,7 +413,7 @@ a:hover {
 }
 
 .kv {
-  height: 82vh;
+  height: 85vh;
 }
 @media (min-width: 460px) {
   .kv {
@@ -446,16 +446,27 @@ a:hover {
   left: 15px;
 }
 .kv__symbol {
-  width: 46%;
-  margin-left: 26%;
-  margin-top: 15px;
+  width: 76%;
+  margin-left: 11%;
+  margin-top: -5px;
   position: fixed;
   z-index: -1;
+  opacity: 0.7;
 }
 @media (min-width: 460px) {
   .kv__symbol {
-    width: 180px;
-    margin-left: calc(50% - 90px);
+    display: none;
+  }
+}
+.kv__symbol--pc {
+  display: none;
+}
+@media (min-width: 460px) {
+  .kv__symbol--pc {
+    display: block;
+    width: 240px;
+    margin-left: calc(50% - 120px);
+    margin-top: 15px;
   }
 }
 .kv__movie {
