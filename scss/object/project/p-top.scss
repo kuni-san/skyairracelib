@@ -58,6 +58,9 @@
 
     &__link-wiki {
         text-decoration: underline;
+        z-index: 1;
+        position: relative;
+        
         span {
             font-size: 0.7rem;
             vertical-align: -2px;
