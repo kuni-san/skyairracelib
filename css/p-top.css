@@ -51,6 +51,8 @@
 }
 .info__link-wiki {
   text-decoration: underline;
+  z-index: 1;
+  position: relative;
 }
 .info__link-wiki span {
   font-size: 0.7rem;
