@@ -2,4 +2,14 @@
 
 @use "../../global/forwards" as fw;
 
-
+.past {
+    &__index {
+        position: relative;
+        border: 1px solid fw.$base_color--op08;
+        padding: 5px 20px;
+        border-radius: 5px;
+        margin: 10px 5vw;
+        font-size: 0.9rem;
+        text-align: center;
+    }
+}
