@@ -1,0 +1,26 @@
+@charset "utf-8";
+
+@use "../../global/forwards" as fw;
+
+.thanks {
+    &__manager {
+        padding-left: 1.5em;
+        background-image: url(../img/KAZAMIDORI.png);
+        background-size: 18px;
+        background-repeat: no-repeat;
+        background-position-y: center;
+        display: inline;
+        margin-right: 15px !important;
+    }
+
+    &__position {
+        font-size: 0.9rem;
+        padding-left: 1.5em;
+        background-image: url(../img/KAZAMIDORI.png);
+        background-size: 15px;
+        background-repeat: no-repeat;
+        background-position-y: center;
+        display: inline;
+        margin-right: 15px !important;
+  }
+}
