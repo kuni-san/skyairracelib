@@ -11,5 +11,10 @@
         margin: 10px 5vw;
         font-size: 0.9rem;
         text-align: center;
+
+        @media(min-width: 768px){
+            max-width: 560px;
+            margin: auto;
+        }
     }
 }

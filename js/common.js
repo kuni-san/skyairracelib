@@ -2,13 +2,66 @@
 var url = $(location).attr('href'),
 // headerの高さを取得してそれに30px追加した値をheaderHeightに代入
 headerHeight = $('header').outerHeight() + 20;
-url_scroll();
+//#がついていたときのスクロール処理
+    var diff = 0;
+    var position = 0;
+
+$.when(
+    console.log("whenのなか"),
+    position = url_scroll(),
+    console.log(position)
+  ).done(function(){
+    if(url.indexOf("#") != -1){
+    //画像読み込み遅延等で正しいスクロールができてない場合
+      // urlを#で分割して配列に格納
+      const anchor = url.split("#"),
+      // 分割した最後の文字列（#◯◯の部分）をtargetに代入
+      target_str = '#' + anchor[anchor.length - 1],
+      target = $(target_str)
+      // リンク先の位置からheaderHeightの高さを引いた値をpositionに代入
+      diff = Math.floor(target.offset().top) - headerHeight;
+      // positionの位置に移動
+      // $("html, body").animate({scrollTop:position}, 500);
+    }
+
+        console.log(position);
+    console.log(diff);
+
+    if (diff === position) {
+      console.log("位置ずれなかったよ");
+    } else {
+      console.log("位置ずれあったよ");
+      url_scroll()
+    }
+  });
 
 //ページ内リンク時
 $('a[href^="#"]').on('click', function(){
   url = $(this).attr('href');
-  url_scroll();
+  url_scroll()
 });
+
+//↓このコードを拾ってきたけど、↑のやつとurl_scroll()との整合性をまだとってない
+// jQuery('a[href^="#"]').click(function (e) {
+//   var speed = 400,
+//     href = $(this).attr("href"),
+//     target = $(href == "#" || href == "" ? 'html' : href),
+//     position = target.offset().top;
+//   $.when(
+//     $('html,body').animate({
+//       scrollTop: position
+//     }, speed, 'swing'),
+//     e.preventDefault(),
+//   ).done(function() {
+//     var diff = target.offset().top;
+//     if (diff === position) {
+//     } else {
+//       $('html, body').animate({
+//         scrollTop: diff
+//       }, 10, 'swing');
+//     }
+//   });
+// });
 
 //本家ページアコーディオン（コース詳細を見る）をクリックした時の動作
 $('.ac-course__index').on('click', function() {//タイトル要素をクリックしたら
@@ -84,6 +137,8 @@ function url_scroll(){
     position = Math.floor(target.offset().top) - headerHeight;
     // positionの位置に移動
     $("html, body").animate({scrollTop:position}, 500);
+
+    return position;
   }
 }
 

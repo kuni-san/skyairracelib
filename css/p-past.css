@@ -6,4 +6,10 @@
   margin: 10px 5vw;
   font-size: 0.9rem;
   text-align: center;
+}
+@media (min-width: 768px) {
+  .past__index {
+    max-width: 560px;
+    margin: auto;
+  }
 }/*# sourceMappingURL=p-past.css.map */
