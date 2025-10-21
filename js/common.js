@@ -3,42 +3,48 @@ var url = $(location).attr('href'),
 // headerの高さを取得してそれに30px追加した値をheaderHeightに代入
 headerHeight = $('header').outerHeight() + 20;
 //#がついていたときのスクロール処理
-    var diff = 0;
-    var position = 0;
+    // var diff = 0;
+    // var position = 0;
 
-$.when(
-    console.log("whenのなか"),
-    position = url_scroll(),
-    console.log(position)
-  ).done(function(){
-    if(url.indexOf("#") != -1){
-    //画像読み込み遅延等で正しいスクロールができてない場合
-      // urlを#で分割して配列に格納
-      const anchor = url.split("#"),
-      // 分割した最後の文字列（#◯◯の部分）をtargetに代入
-      target_str = '#' + anchor[anchor.length - 1],
-      target = $(target_str)
-      // リンク先の位置からheaderHeightの高さを引いた値をpositionに代入
-      diff = Math.floor(target.offset().top) - headerHeight;
-      // positionの位置に移動
-      // $("html, body").animate({scrollTop:position}, 500);
-    }
+// $.when(
+//     console.log("whenのなか"),
+//     position = url_scroll(),
+//     console.log(position)
+//   ).done(function(){
+//     if(url.indexOf("#") != -1){
+//     //画像読み込み遅延等で正しいスクロールができてない場合
+//       // urlを#で分割して配列に格納
+//       const anchor = url.split("#"),
+//       // 分割した最後の文字列（#◯◯の部分）をtargetに代入
+//       target_str = '#' + anchor[anchor.length - 1],
+//       target = $(target_str)
+//       // リンク先の位置からheaderHeightの高さを引いた値をpositionに代入
+//       diff = Math.floor(target.offset().top) - headerHeight;
+//       // positionの位置に移動
+//       // $("html, body").animate({scrollTop:position}, 500);
+//     }
 
-        console.log(position);
-    console.log(diff);
+//         console.log(position);
+//         console.log(diff);
 
-    if (diff === position) {
-      console.log("位置ずれなかったよ");
-    } else {
-      console.log("位置ずれあったよ");
-      url_scroll()
-    }
-  });
+//     var count = 0;
+//     position =1;
+//     // while( count <= 5 && diff === position) {
+//       if (diff === position) {
+//         console.log("位置ずれなかったよ");
+//         console.log(count);
+//       //   break;
+//       } else {
+//         console.log("位置ずれあったよ");
+//         url_scroll()
+//       }
+//     //   count++;
+//     // }
+//   });
 
 //ページ内リンク時
 $('a[href^="#"]').on('click', function(){
   url = $(this).attr('href');
-  url_scroll()
 });
 
 //↓このコードを拾ってきたけど、↑のやつとurl_scroll()との整合性をまだとってない
@@ -126,20 +132,21 @@ $('.toranoko__tech-button').on('click', function() {
 });
 
 function url_scroll(){
-  // urlに「#」が含まれていれば
-  if(url.indexOf("#") != -1){
-    // urlを#で分割して配列に格納
-    const anchor = url.split("#"),
-    // 分割した最後の文字列（#◯◯の部分）をtargetに代入
-    target_str = '#' + anchor[anchor.length - 1],
-    target = $(target_str),
-    // リンク先の位置からheaderHeightの高さを引いた値をpositionに代入
-    position = Math.floor(target.offset().top) - headerHeight;
-    // positionの位置に移動
-    $("html, body").animate({scrollTop:position}, 500);
+  console.log("ああ");
+  // // urlに「#」が含まれていれば
+  // if(url.indexOf("#") != -1){
+  //   // urlを#で分割して配列に格納
+  //   const anchor = url.split("#"),
+  //   // 分割した最後の文字列（#◯◯の部分）をtargetに代入
+  //   target_str = '#' + anchor[anchor.length - 1],
+  //   target = $(target_str),
+  //   // リンク先の位置からheaderHeightの高さを引いた値をpositionに代入
+  //   position = Math.floor(target.offset().top) - headerHeight;
+  //   // positionの位置に移動
+  //   $("html, body").animate({scrollTop:position}, 500);
 
-    return position;
-  }
+  //   return position;
+  // }
 }
 
 

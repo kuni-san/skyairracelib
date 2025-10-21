@@ -1,5 +1,9 @@
 @charset "UTF-8";
 @font-face {}
+html {
+  scroll-padding-top: 55px;
+}
+
 body, a, h1, h2, h3, h4, h5, h6 {
   color: #25598B;
 }
@@ -119,7 +123,7 @@ a:hover {
 }
 .common__index {
   position: relative;
-  background-color: #517aa2;
+  background-color: rgb(80.6, 122.2, 162.2);
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   color: #FFF;
