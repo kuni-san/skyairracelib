@@ -7,9 +7,9 @@
     // src: url("/assets/font/nicomoji-plus-excerpt.ttf") format("truetype")
   }
 
-  // html {
-  //   font-size: 62.5%;
-  // }
+  html {
+    scroll-padding-top: 55px;
+  }
 
   body, a, h1, h2, h3, h4, h5, h6 {
     color: fw.$base_color;

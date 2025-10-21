@@ -225,7 +225,7 @@
 
     &__fixed-close {
         justify-content: space-around;
-        background-color: #517aa2;
+        background-color: mix(fw.$base_color, #FFF, 80%);
         display: flex;
         width: 130px;
         padding: 5px 6px;
