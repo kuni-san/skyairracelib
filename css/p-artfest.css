@@ -1,3 +1,15 @@
+.l-header {
+  top: 0;
+}
+
+.common__list-simple {
+  border: 1px solid rgba(37, 89, 139, 0.8);
+}
+
+.main {
+  padding-top: 0px;
+}
+
 .artfest__contents-wrap {
   padding: 20px;
   padding-bottom: 0;
@@ -37,13 +49,4 @@
     max-width: 560px;
     margin: auto;
   }
-}
-.artfest .l-header {
-  top: 0;
-}
-.artfest .common__list-simple {
-  border: 1px solid rgba(37, 89, 139, 0.8);
-}
-.artfest .main {
-  padding-top: 0px;
 }/*# sourceMappingURL=p-artfest.css.map */
