@@ -45,7 +45,15 @@
         }
     }
 
+    .l-header {
+        top: 0;
+    }
+
     .common__list-simple {
         border: 1px solid fw.$base_color--op08;
+    }
+
+    .main {
+        padding-top: 0px;
     }
 }
