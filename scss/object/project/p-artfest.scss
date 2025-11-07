@@ -1,0 +1,42 @@
+@charset "utf-8";
+
+@use "../../global/forwards" as fw;
+
+.artfest {
+    &__contents-wrap {
+        padding: 20px;
+        padding-bottom: 0;
+    }
+
+    &__video-wrap {
+        position: relative;
+        padding-bottom: 56.25%;
+        height: 0;
+        overflow: hidden;
+        width: 100%;
+        margin: auto;
+    }
+
+    &__video-content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__index {
+        position: relative;
+        border: 1px solid fw.$base_color--op08;
+        padding: 5px 20px;
+        border-radius: 5px;
+        margin: 10px 5vw;
+        font-size: 0.9rem;
+        text-align: center;
+
+        @media(min-width: 768px){
+            max-width: 560px;
+            margin: auto;
+        }
+    }
+}
