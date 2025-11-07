@@ -2,6 +2,18 @@
 
 @use "../../global/forwards" as fw;
 
+.l-header {
+        top: 0;
+    }
+
+.common__list-simple {
+    border: 1px solid fw.$base_color--op08;
+}
+
+.main {
+    padding-top: 0px;
+}
+
 .artfest {
     &__contents-wrap {
         padding: 20px;
@@ -43,17 +55,5 @@
             max-width: 560px;
             margin: auto;
         }
-    }
-
-    .l-header {
-        top: 0;
-    }
-
-    .common__list-simple {
-        border: 1px solid fw.$base_color--op08;
-    }
-
-    .main {
-        padding-top: 0px;
     }
 }
