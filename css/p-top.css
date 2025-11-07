@@ -7,6 +7,14 @@
   background: rgb(206, 230, 242);
   background: linear-gradient(0deg, rgb(242, 221, 179) 20%, rgb(218, 241, 239) 42%, rgb(218, 241, 239) 50%, rgb(206, 230, 242) 60%);
 }
+.top__artfest {
+  display: inline-block;
+  z-index: 100;
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  width: 140px;
+}
 
 .info {
   background: url("../img/cloud06.png") no-repeat;
