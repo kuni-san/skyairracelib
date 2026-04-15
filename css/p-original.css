@@ -201,11 +201,13 @@
   bottom: 10px;
   margin-bottom: -80px;
   margin-top: 40px;
-  /*　closeというクラスがついたら形状変化　*/
 }
 .toranoko__fixed-close img {
   transform: rotate(180deg);
   width: 15px;
+}
+.toranoko__fixed-close {
+  /*　closeというクラスがついたら形状変化　*/
 }
 .toranoko__fixed-close.close {
   display: none;
@@ -229,7 +231,6 @@
   justify-content: center;
   align-items: center;
   /*アイコン*/
-  /*　closeというクラスがついたら形状変化　*/
 }
 .ac-course__index::before {
   position: absolute;
@@ -242,6 +243,9 @@
   top: 37%;
   left: calc(50% - 90px);
   transform: rotate(-90deg);
+}
+.ac-course__index {
+  /*　closeというクラスがついたら形状変化　*/
 }
 .ac-course__index.close {
   display: none;
@@ -264,7 +268,6 @@
   align-items: center;
   z-index: 10;
   /*アイコン*/
-  /*　closeというクラスがついたら形状変化　*/
 }
 .ac-course__index--close::before {
   position: absolute;
@@ -277,6 +280,9 @@
   top: 37%;
   left: calc(50% - 110px);
   transform: rotate(180deg);
+}
+.ac-course__index--close {
+  /*　closeというクラスがついたら形状変化　*/
 }
 .ac-course__index--close.close {
   display: none;
@@ -294,7 +300,6 @@
   padding: 3% 20px 3% 5px;
   transition: all 0.5s ease;
   /*アイコン*/
-  /*　closeというクラスがついたら形状変化　*/
 }
 .ac-tech__index::after {
   position: absolute;
@@ -308,6 +313,9 @@
   margin: 0 10px;
   transform: rotate(-90deg);
   transition: all 0.5s ease;
+}
+.ac-tech__index {
+  /*　closeというクラスがついたら形状変化　*/
 }
 .ac-tech__index.close::after {
   transform: rotate(0deg);
