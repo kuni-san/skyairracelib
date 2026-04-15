@@ -147,6 +147,12 @@
     font-weight: bold;
   }
 
+  &__contents-subtitle {
+    color: #FFF;
+    font-size: 0.8rem;
+    margin: 0 0 10px;
+  }
+
   &__index {
     position: relative;
     background-color: mix(fw.$base_color, #FFF, 80%);
