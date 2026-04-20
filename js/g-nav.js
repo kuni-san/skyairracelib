@@ -12,5 +12,5 @@ $(".openbtn").click(function () {//ボタンがクリックされたら
 $("#g-nav a, main").click(function () {//ナビゲーションのリンクもしくはmainタグ内要素がクリックされたら
     $(".openbtn").removeClass('active');//ボタンの activeクラスを除去し
     $("#g-nav").removeClass('panelactive');//ナビゲーションのpanelactiveクラスも除去
-    $('body').css('overflow', 'initial');//開いているページのスクロールを禁止
+    $('body').css('overflow', 'initial');//開いているページのスクロール禁止を解除
 });
