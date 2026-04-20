@@ -7,6 +7,7 @@
     right: -80%;
     width: 70%;
     height: 100%;/*ナビの高さ*/
+    height: -webkit-fill-available;/*iphone safari対応*/
     /*動き*/
 	transition: all 0.6s;
 }
