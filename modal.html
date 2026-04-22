@@ -1,0 +1,36 @@
+<!-- 検索モーダル本体 -->
+<div class="search-modal" id="search-modal" aria-hidden="true">
+  <div class="search-modal-inner">
+
+    <div class="search-header">
+      <span class="search-label">SEARCH</span>
+      <button class="search-close" id="close-search" aria-label="閉じる">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+    </div>
+
+    <div class="search-input-wrap">
+      <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+      </svg>
+      <input
+        type="text"
+        class="search-input"
+        id="search-input"
+        placeholder="キーワードを入力..."
+        autocomplete="off"
+      >
+    </div>
+
+    <!-- 検索結果エリア -->
+    <div class="search-results" id="search-results">
+      <p class="search-hint">キーワードを入力して検索</p>
+    </div>
+
+  </div>
+</div>
+
+<!-- モーダル背景 -->
+<div class="modal-overlay" id="modal-overlay"></div>
