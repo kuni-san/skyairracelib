@@ -440,4 +440,15 @@
     margin: 5px 20px;
     text-align: right;
   }
+
+  &__play-placeholder {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #222;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
 }

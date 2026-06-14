@@ -178,3 +178,35 @@ $('.toranoko__muralno-img').on('click', function() {
       $('.common__fixed').removeClass('common__fixed--tab-active');
   }
 });
+
+//画像をタップしたら動画を読み込ませる処理
+function loadVideo(img) {
+  const wrapper = img.parentElement;
+  const src = img.dataset.src; // 動画のパスをdata属性に持たせる
+
+  const video = document.createElement('video');
+  video.src = src;
+  video.controls = true;
+  video.playsinline = true;
+  video.preload = 'none';
+  video.autoplay = true;
+  video.muted = true; // autoplayにはmuted必須（ブラウザ制約）
+
+  wrapper.replaceChild(video, img); // 画像を動画に差し替え
+  video.load();
+  video.play();
+}
+
+function loadVideo2(wrapper) {
+  const src = wrapper.dataset.src;
+
+  const video = document.createElement('video');
+  video.src = src;
+  video.controls = true;
+  video.playsinline = true;
+  video.preload = 'none';
+  video.autoplay = true;
+
+  wrapper.replaceChild(video, wrapper.firstElementChild);
+  video.play();
+}
