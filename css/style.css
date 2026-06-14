@@ -361,6 +361,16 @@ a:hover {
   margin: 5px 20px;
   text-align: right;
 }
+.media__play-placeholder {
+  width: 100%;
+  aspect-ratio: 16/9;
+  background: #222;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
 
 .l-header {
   background-color: #25598B;
@@ -577,4 +587,16 @@ a:hover {
 }
 .qa__eagle-img {
   margin: 0;
+}
+
+/* Drawer の背景オーバーレイ */
+.drawer-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 98;
+}
+.drawer-overlay .is-visible {
+  display: block;
 }/*# sourceMappingURL=style.css.map */
