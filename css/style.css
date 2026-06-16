@@ -364,12 +364,13 @@ a:hover {
 .media__play-placeholder {
   width: 100%;
   aspect-ratio: 16/9;
-  background: #222;
+  background: #84D1C9;
   color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  border: 3px double #25598B;
 }
 
 .l-header {
