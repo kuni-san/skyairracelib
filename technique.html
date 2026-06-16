@@ -89,10 +89,423 @@
             <div class="common___img-wrap">
                 <!-- <div class="common__mural"><img class="" src="img/mural5.png" alt=""></div> -->
                 <div class="common__mural"><img class="" src="img/kouji_maintenance.png" alt=""></div>
-                <p class="common__text">メンテナンス中です。公開をお待ちください。</p>
             </div>
 
-          
+            <!-- 技術 -->
+            <div class="common__contents common__wrap uk-margin-large-bottom">
+                <div class="common__index">
+                    <div class="uk-flex uk-flex-center">
+                        <h2 class="common__contents-title">技術</h2>
+                    </div>
+                </div>
+
+                <!-- スライド -->
+                <div id="slide" class="uk-padding-small uk-padding-remove-top">
+                    <h3 class="common__headline">スライド</h3>
+                    <div class="common__sentence">
+                        <p class="">星の子が滑りながら移動してる状態のことをスライドと言います。</p>
+                        <p class="">スライド状態から飛び立つと、通常の飛行と比較して速度と上昇力の二点が向上します。</p>
+                        <p class="">スライド状態で上昇したとき↓</p>
+                        <!-- 動画差し替え中。ここを基準にする。差し替え終わったらコメント削除すること -->
+                        <!-- <div class="uk-text-center">
+                            <video src="https://dgetgj4z7j5y.cloudfront.net/technique/yes_slide.mov" controls preload="none" poster="img/symbol.png"></video>
+                        </div> -->
+                        <!-- <div class="video-wrapper">
+                            <img src="img/symbol.png" data-src="https://dgetgj4z7j5y.cloudfront.net/technique/yes_slide.mov" class="video-thumb" onclick="loadVideo(this)">
+                        </div> -->
+                        <div class="video-wrapper" data-src="https://dgetgj4z7j5y.cloudfront.net/technique/yes_slide.mov" onclick="loadVideo2(this)">
+                            <div class="media__play-placeholder"><img src="img/video_start_btn.png" alt=""></div>
+                        </div>
+
+                        <p class="">普通の上昇↓</p>
+                         <div class="video-wrapper" data-src="https://dgetgj4z7j5y.cloudfront.net/technique/no_slide.mov" onclick="loadVideo2(this)">
+                            <div class="media__play-placeholder"><img src="img/video_start_btn.png" alt=""></div>
+                        </div>
+                        <p class="uk-margin-top">スライド状態からの飛行はエアレースにおいてはほぼ必須条件となります。</p>
+                        <p class="">オーソドックスなスライドの入れ方は以下の二点を抑えておきましょう。</p>
+                        <div>
+                            <p class="uk-margin-large-top common__subtitle"><img src="img/KAZAMIDORI.png" alt="">パワースライド</p>
+                            <p class="uk-margin-top">スライド状態に移行する方法の一つです。</p>
+                            <div class="video-wrapper" data-src="https://dgetgj4z7j5y.cloudfront.net/technique/power_slide.mov" onclick="loadVideo2(this)">
+                                <div class="media__play-placeholder"><img src="img/video_start_btn.png" alt=""></div>
+                            </div>
+                            <div class="common__list-simple-num uk-margin-top">
+                                <p class="common__list-simple-num--child">継続した前移動</p>
+                                <p class="common__list-simple-num--child">ジャンプ入力</p>
+                                <p class="common__list-simple-num--child">着地のタイミングに合わせて再びジャンプ入力</p>
+                            </div>
+                            <p class="uk-margin-top">1. での前移動は常時継続していないとスライドが失敗してしまいます。</p>
+                        </div>
+                        <div>
+                            <p class="uk-margin-large-top common__subtitle"><img src="img/KAZAMIDORI.png" alt="">ピボット滑走</p>
+                            <p class="uk-margin-top">スライド状態に移行する方法のもう一つです。</p>
+                            <div class="video-wrapper" data-src="https://dgetgj4z7j5y.cloudfront.net/technique/pivot_slide.mov" onclick="loadVideo2(this)">
+                                <div class="media__play-placeholder"><img src="img/video_start_btn.png" alt=""></div>
+                            </div>
+                            <div class="common__list-simple-num uk-margin-top">
+                                <p class="common__list-simple-num--child">星の子を長押し</p>
+                                <p class="common__list-simple-num--child">大鳴きが始まる前に、指を星の子の外にスワイプする。(この際指は離さない)</p>
+                                <p class="common__list-simple-num--child">画面左側をフリック</p>
+                                <p class="common__list-simple-num--child">1. の手を離す</p>
+                                <p class="common__list-simple-num--child">前移動</p>
+                            </div>
+                            <p class="uk-margin-top">パワースライドと異なり、狭い足場からでもスライド状態に移行できる利点があります。</p>
+                        </div>
+                        <p class="uk-margin-top">この他にも、ぴっちょむスターゲート、着地スライド(スリップスライド)といったスライド方法が存在します。→<a class="common__link-external" href="https://wikiwiki.jp/sky_airrace/%E5%9F%BA%E7%A4%8E%E7%B7%A8">wiki基礎編<span class="material-symbols-outlined common__open-in-new">open_in_new</span></a></p>
+                    </div>
+                </div>
+
+                <!-- 滑り降り -->
+                <div id="slip" class="uk-padding-small uk-padding-remove-top">
+                    <h3 class="common__headline">滑り降り</h3>
+                    <div class="video-wrapper" data-src="https://dgetgj4z7j5y.cloudfront.net/technique/slip_down.mov" onclick="loadVideo2(this)">
+                        <div class="media__play-placeholder"><img src="img/video_start_btn.png" alt=""></div>
+                    </div>
+                    <div class="common__sentence">
+                        <p class="">星の子が加速する方法です。</p>
+                        <p class="">スタート時はもちろん、コースの途中で滑り降りを挟むことでタイム短縮に繋げられます。</p>
+                        <div class="common__list-simple-num uk-margin-top">
+                            <p class="common__list-simple-num--child">スライド状態で地面から滑り降りる</p>
+                            <p class="common__list-simple-num--child">羽ばたかずグライドモードに切り替える</p>
+                        </div>
+                        <p class="uk-margin-top">飛行切り替えのアイコンが表示されるまでは通常より時間がかかります。</p>
+                        <p class="uk-margin-top">アイコンの表示まで羽ばたかないことで失敗を防げます。</p>
+                    </div>
+                </div>
+
+                <!-- ぴたとま -->
+                <div id="pitatoma" class="uk-padding-small uk-padding-remove-top">
+                    <h3 class="common__headline">ぴたとま</h3>
+                    <div class="video-wrapper" data-src="https://dgetgj4z7j5y.cloudfront.net/technique/pitatoma.mov" onclick="loadVideo2(this)">
+                        <div class="media__play-placeholder"><img src="img/video_start_btn.png" alt=""></div>
+                    </div>
+                    <div class="common__sentence">
+                        <p class="">ゴールのタイムロスをなくすために、着地と同時に静止するテクニックです。</p>
+                        <div class="common__list-simple-num uk-margin-top">
+                            <p class="common__list-simple-num--child">星の子の姿勢を下向きにする</p>
+                            <p class="common__list-simple-num--child">ホバー切り替え</p>
+                            <p class="common__list-simple-num--child">移動操作を後ろフリック</p>
+                        </div>
+                        <p class="uk-margin-top">ゴールに向かって下降するコースで特に有効です。</p>
+                    </div>
+                </div>
+
+                <!-- 補正ジャンプ -->
+                <div id="corrected-jump" class="uk-padding-small uk-padding-remove-top">
+                    <h3 class="common__headline">補正ジャンプ</h3>
+                    <div class="video-wrapper" data-src="https://dgetgj4z7j5y.cloudfront.net/technique/corrected_jump.mov" onclick="loadVideo2(this)">
+                        <div class="media__play-placeholder"><img src="img/video_start_btn.png" alt=""></div>
+                    </div>
+                    <div class="common__sentence">
+                        <p class="">前述のぴたとまと合わせて覚えておきたいゴールのテクニックです。</p>
+                        <div class="common__list-simple-num uk-margin-top">
+                            <p class="common__list-simple-num--child">着地したい足場の前でホバーモードに切り替える</p>
+                            <p class="common__list-simple-num--child">足場に対してフリック</p>
+                        </div>
+                        <p class="uk-margin-top">ゴールに向かって上昇するコースで特に有効です。</p>
+                    </div>
+                </div>
+
+                <!-- クイックターン -->
+                <div id="quick-turn" class="uk-padding-small uk-padding-remove-top">
+                    <h3 class="common__headline">クイックターン</h3>
+                    <p class="common__headline--side-note">(派生：180度ターン)</p>
+                    <div class="video-wrapper" data-src="https://dgetgj4z7j5y.cloudfront.net/technique/quickturn.mov" onclick="loadVideo2(this)">
+                        <div class="media__play-placeholder"><img src="img/video_start_btn.png" alt=""></div>
+                    </div>
+                    <div class="common__sentence">
+                        <p class="">急な方向転換を可能にするテクニックです。</p>
+                        <div class="common__list-simple-num uk-margin-top">
+                            <p class="common__list-simple-num--child">飛行モードをホバーに切り替える</p>
+                            <p class="common__list-simple-num--child">進みたい方向に画面左側を2回フリック</p>
+                            <p class="common__list-simple-num--child">飛行モードをグライドに戻す</p>
+                        </div>
+                        <p class="uk-margin-top">クイックターンを使えば90度や180度といった曲がりづらい角度でもタイムロスを抑えて飛ぶことができます。</p>
+                    </div>
+                </div>
+
+                <!-- 上向飛行 -->
+                <div id="climbing-flight" class="uk-padding-small uk-padding-remove-top">
+                    <h3 class="common__headline">上向飛行</h3>
+                    <div class="video-wrapper" data-src="https://dgetgj4z7j5y.cloudfront.net/technique/upward_flight.mov" onclick="loadVideo2(this)">
+                        <div class="media__play-placeholder"><img src="img/video_start_btn.png" alt=""></div>
+                    </div>
+                    <div class="common__sentence">
+                        <p class="">画面左側を上フリックをしながら飛ぶと、通常より高く飛ぶことができます。</p>
+                        <p class="">上スワイプよりも更に高度が出せるため、習得しているとタイム短縮に繋がります。</p>
+                    </div>
+                </div>
+
+                <!-- 水平飛行 -->
+                <div id="level-flight" class="uk-padding-small uk-padding-remove-top">
+                    <h3 class="common__headline">水平飛行</h3>
+                    <div class="video-wrapper" data-src="https://dgetgj4z7j5y.cloudfront.net/technique/horizontal_flight.mov" onclick="loadVideo2(this)">
+                        <div class="media__play-placeholder"><img src="img/video_start_btn.png" alt=""></div>
+                    </div>
+                    <div class="common__sentence">
+                        <p class="">スライド状態では上昇力が高まっているため、通常の操作では水平ではなく上向きに飛んでしまいます。</p>
+                        <p class="">画面左側を軽く下スワイプすることで高度を抑え、水平に飛ぶことができます。</p>
+                    </div>
+                </div>
+
+                <!-- 垂直飛行 -->
+                <div id="vertical-flight" class="uk-padding-small uk-padding-remove-top">
+                    <h3 class="common__headline">垂直飛行</h3>
+                    <div class="video-wrapper" data-src="https://dgetgj4z7j5y.cloudfront.net/technique/vertical_flight.mov" onclick="loadVideo2(this)">
+                        <div class="media__play-placeholder"><img src="img/video_start_btn.png" alt=""></div>
+                    </div>
+                    <div class="common__sentence">
+                        <p class="">ホバーよりも更に速く真上に飛ぶテクニックです。</p>
+                        <div class="common__list-simple-num uk-margin-top">
+                            <p class="common__list-simple-num--child">スライド状態を作る</p>
+                            <p class="common__list-simple-num--child">前移動をする</p>
+                            <p class="common__list-simple-num--child">羽ばたく</p>
+                            <p class="common__list-simple-num--child">後ろ移動をする</p>
+                            <p class="common__list-simple-num--child">飛行モードをグライドに切り替える</p>
+                        </div>
+                        <p class="uk-margin-top">操作難度が高いだけでなくエアレにおける使用場面は限定的ですが、No.7のチェックポイント2から3でのルートなどで使用するとタイムの短縮に繋がります。</p>
+                    </div>
+                </div>
+                
+                <!-- フリック減速 -->
+                <div id="flicked-deboost" class="uk-padding-small uk-padding-remove-top">
+                    <h3 class="common__headline">フリック減速</h3>
+                    <p class="common__headline--side-note">(ちょんちょん減速/左手ちょんちょん)</p>
+                    <div class="video-wrapper" data-src="https://dgetgj4z7j5y.cloudfront.net/technique/flick_decay.mov" onclick="loadVideo2(this)">
+                        <div class="media__play-placeholder"><img src="img/video_start_btn.png" alt=""></div>
+                    </div>
+                    <div class="common__sentence">
+                        <p class="">グライド状態で画面左側をフリックすると減速します。</p>
+                        <p class="">速度を維持したいときには画面左側を触らないことがポイントです。</p>
+                        <p class="">他方で、フリックをすることで意図的に減速し、オーバーランを防ぐといった飛び方もできます。</p>
+                        <p class="">※画面を触りっぱなしで移動入力を行う場合も速度は維持されます。</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 知識 -->
+            <div class="common__contents common__wrap uk-margin-large-bottom">
+                <div class="common__index">
+                    <div class="uk-flex uk-flex-center">
+                        <h2 class="common__contents-title">知識</h2>
+                    </div>
+                </div>
+
+                <!-- スライドの維持 -->
+                <div id="keep-slide" class="uk-padding-small uk-padding-remove-top">
+                    <h3 class="common__headline">スライドの維持</h3>
+                    <div class="common__sentence">
+                        <p class="uk-margin-top">スライドが切れる主な要因は二つです。</p>
+                        <div class="common__list-simple-num">
+                            <p class="common__list-simple-num--child">接地をして星の子が歩く</p>
+                            <p class="common__list-simple-num--child">空中での補正ジャンプの発生</p>
+                        </div>
+                        <p class="uk-margin-top">他方で、以下の場合にはスライドを維持することができます。</p>
+                        <div class="common__list-simple-num">
+                            <p class="common__list-simple-num--child">飛行モード切り替え</p>
+                            <p class="common__list-simple-num--child">壁への衝突</p>
+                            <p class="common__list-simple-num--child">エモートタップ</p>
+                            <p class="common__list-simple-num--child">風壁に煽られる</p>
+                            <p class="common__list-simple-num--child">接地状態のジャンプ</p>
+                            <p class="common__list-simple-num--child">接地状態での補正ジャンプの発生</p>
+                            <p class="common__list-simple-num--child">光の生き物に乗る</p>
+                            <p class="common__list-simple-num--child">ホーム帰還ボタンタップ</p>
+                            <p class="common__list-simple-num--child">エリアチェンジ</p>
+                        </div>                        
+                    </div>
+                </div>
+
+                <!-- スライド切れ状態 -->
+                <div id="remove-slide" class="uk-padding-small uk-padding-remove-top">
+                    <h3 class="common__headline">スライド切れ状態</h3>
+                    <p class="common__headline--side-note">(前傾姿勢/MAEZAWA)</p>
+                    <div class="video-wrapper" data-src="https://dgetgj4z7j5y.cloudfront.net/knowledge/MAEZAWA.mov" onclick="loadVideo2(this)">
+                        <div class="media__play-placeholder"><img src="img/video_start_btn.png" alt=""></div>
+                    </div>
+                    <div class="common__sentence">
+                        <p class="uk-margin-top">接地時間が短時間の場合、星の子が滑る挙動をしていてもスライド切れ状態になることがあります。</p>
+                        <p class="uk-margin-top">スライド切れ状態化を判断する方法は三つです。</p>
+                        <div class="common__list-simple-num">
+                            <p class="common__list-simple-num--child">飛行モード切り替えアイコンの表示が速い</p>
+                            <p class="common__list-simple-num--child">星の子が前傾姿勢になる</p>
+                            <p class="common__list-simple-num--child">下降スピードが遅くなる</p>
+                        </div>
+                        <p class="uk-margin-top">逆に</p>
+                        <div class="common__list-simple-num">
+                            <p class="common__list-simple-num--child">飛行モード切替アイコンの表示が遅い</p>
+                            <p class="common__list-simple-num--child">真っすぐな姿勢</p>
+                            <p class="common__list-simple-num--child">下降スピードが速い</p>
+                        </div>
+                        <p class="">といった場合、スライド状態が維持されてると言えます。</p>
+                        <p class=""><a class="common__word-link--tech" href="/technique.html#slip">滑り降り</a>の挙動をしていれば、スライド状態が維持されていると判断できます。</p>
+                        <p class="uk-margin-large-top">接地時にスライド切れ状態を起こしやすくなる要因もあります。</p>
+                        <div class="common__list-simple-num">
+                            <p class="common__list-simple-num--child">星の子の身長が低い(初期身長以下)</p>
+                            <p class="common__list-simple-num--child">fps設定(後述)が高い</p>
+                            <p class="common__list-simple-num--child">グライド状態での接地</p>
+                        </div>
+                        <p class="uk-margin-top">スライド切れ状態にするメリットがある場合は、意図的に上記の方法で接地してみましょう。</p>
+                    </div>
+                </div>
+
+                <!-- パフォーマンス設定 -->
+                <div id="performance" class="uk-padding-small uk-padding-remove-top">
+                    <h3 class="common__headline">パフォーマンス設定</h3>
+                    <p class="common__headline--side-note">(fps)</p>
+                    <div class="video-wrapper" data-src="https://dgetgj4z7j5y.cloudfront.net//knowledge/fps.mov" onclick="loadVideo2(this)">
+                        <div class="media__play-placeholder"><img src="img/video_start_btn.png" alt=""></div>
+                    </div>
+                    <div class="common__sentence">
+                        <p class="uk-margin-top">画面右上の歯車アイコンからパフォーマンス(画質)の設定ができます。</p>
+                        <p class="uk-margin-top">fpsという数値が高くなるほど</p>
+                        <div class="common__list-simple-num">
+                            <p class="common__list-simple-num--child">足場の接地難度が低くなる</p>
+                            <p class="common__list-simple-num--child">気流への抵抗力が高くなる</p>
+                            <p class="common__list-simple-num--child">ホバー状態での方向転換難度が低くなる</p>
+                        </div>
+                        <p class="">といったメリットがあります。</p>
+                        <p class="uk-margin-top">他方で</p>
+                        <div class="common__list-simple-num">
+                            <p class="common__list-simple-num--child">接地時のスライド状態が切れやすくなる</p>
+                            <p class="common__list-simple-num--child">ホバー状態での上昇量と上昇速度が小さくなる</p>
+                        </div>
+                        <p class="">といったデメリットもあります。</p>                     
+                    </div>
+                </div>
+
+                <!-- 風壁加速 -->
+                <div id="wind-wall-power" class="uk-padding-small uk-padding-remove-top">
+                    <h3 class="common__headline">風壁加速</h3>
+                    <div class="video-wrapper" data-src="https://dgetgj4z7j5y.cloudfront.net/knowledge/kazekabe.mov" onclick="loadVideo2(this)">
+                        <div class="media__play-placeholder"><img src="img/video_start_btn.png" alt=""></div>
+                    </div>
+                    <div class="common__sentence">
+                        <p class="uk-margin-top">エリアの外側にある風の壁に触れることで加速をするテクニックです。</p>
+                        <p class="">基本的には、風壁に触れてから離れることで風壁加速を使えます。</p>
+                        <p class="">風壁は目に見えないだけでなく凹凸のある形をしていることに留意が必要です。</p>
+                        <p class="">エアレ開催時はドリフトとの合わせ技でより加速できました。</p>
+                    </div>
+                </div>
+
+                <!-- 身長 -->
+                <div id="height" class="uk-padding-small uk-padding-remove-top">
+                    <h3 class="common__headline">身長</h3>
+                    <img src="img/height-1.jpg" alt="">
+                    <div class="common__sentence">
+                        <p class="uk-margin-top">身長に関わらず、飛行性能は同じです。</p>
+                        <p class="">身長が低いほうが速く軽やかに見えるのは、視界の広さが影響していると考えられます。</p>
+                        <p class="">また、身長に応じて当たり判定は変化します。</p>                
+                        <p class="">そのため、壁にぶつかりづらい低身長の方が基本的には有利に飛ぶことができます。</p>                
+                        <p class="">さらに、身長が低いと接地時に<a href="/technique.html#remove-slide" class="common__word-link">スライド切れ</a>が起こりやすくなります。</p>                
+                        <p class="">スライドを維持して飛びたい場合においては、高身長の方が有利と言えます。</p>                
+                    </div>
+                </div>
+
+                <!-- 下向き減速 -->
+                <div id="downward-deboost" class="uk-padding-small uk-padding-remove-top">
+                    <h3 class="common__headline">下向き羽ばたき減速</h3>
+                    <div class="common__sentence">
+                        <p class="uk-margin-top"><a href="/technique.html#keep-slide" class="common__word-link">スライドが入った状態</a>で、水平より下に向かって羽ばたくと減速します。</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- エアレ独自用語集 -->
+            <div class="common__contents common__wrap uk-margin-large-bottom">
+                <div class="common__index">
+                    <div class="uk-flex uk-flex-center">
+                        <h2 class="common__contents-title">エアレ独自用語集</h2>
+                    </div>
+                </div>
+
+                <!-- ホールインワン -->
+                <div id="hole-in-one" class="uk-padding-small uk-padding-remove-top">
+                    <h3 class="common__headline">ホールインワン</h3>
+                    <img src="img/tech-hole-in-one.jpeg" alt="">
+                    <div class="common__sentence">
+                        <p class="">No.2の最終チェックポイントとなる、小さい穴を抜けることをホールインワンと呼称しています。</p>
+                    </div>
+                </div>
+
+                <!-- MAEZAWA -->
+                <div id="maezawa" class="uk-padding-small uk-padding-remove-top">
+                    <h3 class="common__headline">MAEZAWA</h3>
+                    <div class="common__sentence">
+                        <p>→<a href="/technique.html#remove-slide" class="common__word-link">スライド切れ</a></p>
+                        <p class="">スライド切れの状態で前傾姿勢になることをMAEWZAWAと呼称します。</p>
+                        <p class="">星の子がフワフワとして無重力状態のようになることから、月に行った某社長の名前を取ってMAEZAWAと名付けられました。</p>
+                    </div>
+                </div>
+
+                <!-- 吊り革 -->
+                <div id="tsurikawa" class="uk-padding-small uk-padding-remove-top">
+                    <h3 class="common__headline">吊り革</h3>
+                    <img src="img/tech-tsurikawa.jpeg" alt="">
+                    <div class="common__sentence">
+                        <p class="">天球儀のことを吊り革と呼称します。</p>
+                        <p class="">私物の吊り革を使い天球儀の動きを解説した人がいたことからそれが定着し、吊り革と呼ばれるようになりました。</p>
+                    </div>
+                </div>
+
+                <!-- 横穴 -->
+                <div id="side-hole" class="uk-padding-small uk-padding-remove-top">
+                    <h3 class="common__headline">横穴</h3>
+                    <img src="img/tech-side-hole.jpeg" alt="">
+                    <div class="common__sentence">
+                        <p class="">鳥の巣エリアを使ったコースのNo.2のチェックポイント2やNo.6のチェックポイント3で通過する穴のことです。</p>
+                    </div>
+                </div>
+
+                <!-- 針穴スタート -->
+                <div id="needle-start" class="uk-padding-small uk-padding-remove-top">
+                    <h3 class="common__headline">針穴スタート</h3>
+                    <img src="img/tech-needle-start.jpeg" alt="">
+                    <div class="common__sentence">
+                        <p class="">No.7のチェックポイント3を針穴スタートと呼ぶことがあります。</p>
+                        <p class="">「#sky天球儀針穴チャレンジ」というXで投稿する腕試しチャレンジのスタート地点であることが由来です。</p>
+                    </div>
+                </div>
+                
+                <!-- 牢獄 -->
+                <div id="prison-gate" class="uk-padding-small uk-padding-remove-top">
+                    <h3 class="common__headline">牢獄</h3>
+                    <img src="img/tech-prison-gate.jpeg" alt="">
+                    <div class="common__sentence">
+                        <p class="">No.7のチェックポイント4を牢獄と呼ぶことがあります。連なる柱が檻に見えることが由来です。</p>
+                    </div>
+                </div>
+                
+                <!-- スラローム -->
+                <div id="slalom" class="uk-padding-small uk-padding-remove-top">
+                    <h3 class="common__headline">スラローム</h3>
+                    <img src="img/tech-slalom.jpeg" alt="">
+                    <div class="common__sentence">
+                        <p class="">No.3のチェックポイント4をスラロームと呼称します。</p>
+                        <p class="">タイムを競うスキーやモータースポーツでジグザグとする動きが語源です。</p>
+                    </div>
+                </div>
+                
+                <!-- 東屋 -->
+                <div id="azumaya" class="uk-padding-small uk-padding-remove-top">
+                    <h3 class="common__headline">東屋</h3>
+                    <img src="img/tech-azumaya.jpeg" alt="">
+                    <div class="common__sentence">
+                        <p class="">No.5のコースで通過する建物のことを東屋と呼称します。</p>
+                        <p class="">壁がなく柱と屋根で造られている建物のことを東屋と呼ぶことが由来です。</p>
+                    </div>
+                </div>
+                
+                <!-- 羽管理 -->
+                <div id="wings-management" class="uk-padding-small uk-padding-remove-top">
+                    <h3 class="common__headline">羽管理</h3>
+                    <img src="img/tech-wings-management.jpg" alt="">
+                    <div class="common__sentence">
+                        <p class="">ここでの「羽」とは画面中央上部にあるエナジーを指します。</p>
+                        <p class="">エナジーを消費して羽ばたくと加速できますが、むやみに羽ばたくとコース途中で羽が足りなくなりスピードが落ちてしまいます。</p>
+                        <p class="">コースを飛ぶ上では効果的なタイミング・回数でエナジーを消費する必要があり、その羽の配分を羽管理と呼びます。</p>
+                    </div>
+                </div>
+            </div>
             
             <!-- 雑学 -->
             <div class="common__contents common__wrap uk-margin-large-bottom">
