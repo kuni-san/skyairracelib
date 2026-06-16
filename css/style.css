@@ -365,12 +365,14 @@ a:hover {
   width: 100%;
   aspect-ratio: 16/9;
   background: #84D1C9;
-  color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   border: 3px double #25598B;
+}
+.media__play-placeholder img {
+  width: 30%;
 }
 
 .l-header {
