@@ -93,7 +93,6 @@
             <img src="img/symbol_pc.png" alt="" class="kv__symbol kv__symbol--pc">
             <div id="video-area" class="kv__movie">
                 <div class="kv__iframe-wrapper">
-                    <!-- <iframe class="kv__iframe" src="https://www.youtube.com/embed/Xi3Ffm82vlU?autoplay=0&amp;showinfo=0&amp;rel=0&amp;modestbranding=1&amp;playsinline=1&amp;loop=1&amp;playlist=Xi3Ffm82vlU" allowfullscreen uk-responsive uk-video="automute: true"></iframe> -->
                     <video src="video/kv.mp4" width="100%" uk-video="autoplay: inview" autoplay muted playsinline loop></video>
                 </div>
             </div><!--/video-area-->
@@ -114,7 +113,9 @@
                 <div class="info__teaser">
                     <p class="media__title">ティザーPV<span class="material-symbols-outlined">volume_up</span>(音が流れます)</p>
                     <div class="info__teaser-wrapper">
-                        <iframe class="info__teaser-content" src="https://drive.google.com/file/d/13VKg3Vq2SwITU7nJxyDQPmh8KazRW5Cv/preview" allow="autoplay"></iframe>
+                         <div class="video-wrapper" data-src="https://dgetgj4z7j5y.cloudfront.net/kv_teaser.MP4" onclick="loadVideo2(this)">
+                            <div class="media__play-placeholder"><img src="img/video_start_btn.png" alt=""></div>
+                        </div>
                     </div>
                     <p class="media__author">（作成：miroh）<br><a class="common__link-external" href="https://drive.google.com/file/d/13VKg3Vq2SwITU7nJxyDQPmh8KazRW5Cv/view?usp=drive_link" target="_blank" rel="noopener noreferrer">再生できない場合<span class="material-symbols-outlined common__open-in-new">open_in_new</span></a></p>
                 </div>
