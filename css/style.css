@@ -382,6 +382,12 @@ a:hover {
 }
 .media__play-btn {
   position: absolute;
+  width: 35%;
+}
+@media (min-width: 768px) {
+  .media__play-btn {
+    width: 30%;
+  }
 }
 .media video {
   width: 100%;

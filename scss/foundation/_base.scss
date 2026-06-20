@@ -463,6 +463,11 @@
 
   &__play-btn {
     position: absolute;
+    width: 35%;
+
+    @media(min-width: 768px){
+      width: 30%;
+    }
   }
 
   video {

@@ -181,6 +181,8 @@ $('.toranoko__muralno-img').on('click', function() {
 
 //画像をタップしたら動画を読み込ませる処理
 function loadVideo(wrapper) {
+  wrapper.removeAttribute('onclick'); // これ以降タップしても呼ばれなくなる
+
   const src = wrapper.dataset.src;
 
   const video = document.createElement('video');
@@ -190,6 +192,10 @@ function loadVideo(wrapper) {
   video.preload = 'none';
   video.autoplay = true;
   video.className = 'video-wrapper-inner';
+
+  video.addEventListener('error', () => {
+    wrapper.setAttribute('onclick', 'loadVideo(this)');
+  });
 
   wrapper.replaceChild(video, wrapper.firstElementChild);
   video.play();
