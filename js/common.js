@@ -206,7 +206,8 @@ function loadVideo2(wrapper) {
   video.playsinline = true;
   video.preload = 'none';
   video.autoplay = true;
-
+  video.className = 'video-wrapper-inner';
+  
   wrapper.replaceChild(video, wrapper.firstElementChild);
   video.play();
 }
