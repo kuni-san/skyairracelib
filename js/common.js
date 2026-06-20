@@ -188,7 +188,8 @@ function loadVideo(wrapper) {
   const video = document.createElement('video');
   video.src = src;
   video.controls = true;
-  video.playsinline = true;
+  video.setAttribute('playsinline', '');
+  video.setAttribute('webkit-playsinline', '');
   video.preload = 'none';
   video.autoplay = true;
   video.className = 'video-wrapper-inner';
