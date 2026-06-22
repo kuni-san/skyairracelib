@@ -113,8 +113,8 @@
                 <div class="info__teaser">
                     <p class="media__title">ティザーPV<span class="material-symbols-outlined">volume_up</span>(音が流れます)</p>
                     <div class="info__teaser-wrapper">
-                         <div class="video-wrapper" data-src="https://dgetgj4z7j5y.cloudfront.net/kv_teaser.MP4" onclick="loadVideo2(this)">
-                            <div class="media__play-placeholder"><img src="img/video_start_btn.png" alt=""></div>
+                         <div class="media media__aspect16-9" data-src="https://dgetgj4z7j5y.cloudfront.net/kv_teaser.MP4" onclick="loadVideo(this)">
+                            <div class="media__play-placeholder media__aspect16-9"><img class="media__play-thumbnail" src="img/v_thmb_kv_teaser.jpg" alt=""><img class="media__play-btn" src="img/video_start_btn.png" alt=""></div>
                         </div>
                     </div>
                     <p class="media__author">（作成：miroh）<br><a class="common__link-external" href="https://drive.google.com/file/d/13VKg3Vq2SwITU7nJxyDQPmh8KazRW5Cv/view?usp=drive_link" target="_blank" rel="noopener noreferrer">再生できない場合<span class="material-symbols-outlined common__open-in-new">open_in_new</span></a></p>
@@ -136,21 +136,32 @@
                     <div>
                         <h3 class="index__title"><span class="index__mark index__mark--fly">飛</span>自分の可能性に挑戦する</h3>
                         <div class="index__wrapper index__wrapper--fly">
-                            <div class="index__contents">
+                            <div class="index__contents uk-flex">
                                 <a href="/original.html" class="index__a">
                                     <img src="img/icon-original.svg" alt="" class="index__icon index__icon--index">
                                     <h4 class="index__name">本家コース詳細<span class="material-symbols-outlined common__arrow-left">arrow_right</span></h4>
                                     <p class="index__text">既存の本家エアレコース解説、飛行技術の紹介</p>
-                                    <img src="img/top-arrow.png" alt="" class="index__icon">
                                 </a>
+                                <div class="index__device">
+                                    <a href="/original.html" class="index__device--a">
+                                        <img src="img/icon-mobile.svg" alt="" class="index__icon">
+                                    </a>
+                                </div>
                             </div>
-                            <div class="index__contents">
+                            <div class="index__contents uk-flex">
                                 <a href="/regulation.html" class="index__a">
                                     <img src="img/icon-regulation.svg" alt="" class="index__icon index__icon--index">
                                     <h4 class="index__name">レギュレーション<span class="material-symbols-outlined common__arrow-left">arrow_right</span></h4>
                                     <p class="index__text">本家で共通の基本ルール、予選方法</p>
-                                    <img src="img/top-arrow.png" alt="" class="index__icon">
                                 </a>
+                                <div class="index__device">
+                                    <a href="/original.html" class="index__device--a">
+                                        <img src="img/icon-mobile.svg" alt="" class="index__icon">
+                                    </a>
+                                    <a href="/original.html" class="index__device--a">
+                                        <img src="img/icon-controller.svg" alt="" class="index__icon">
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>

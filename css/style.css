@@ -351,6 +351,9 @@ a:hover {
   aspect-ratio: 4/3;
   overflow: hidden;
 }
+.media__aspect16-9 {
+  aspect-ratio: 16/9 !important;
+}
 .media__title {
   margin: 0 0 5px;
   font-size: 0.8rem;
