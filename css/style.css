@@ -398,6 +398,9 @@ a:hover {
   display: block;
   object-fit: cover; /* はみ出た部分をいい感じにトリミング */
 }
+.media__bg--black {
+  background-color: #000;
+}
 
 .l-header {
   background-color: #25598B;

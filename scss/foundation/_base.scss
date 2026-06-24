@@ -480,4 +480,10 @@
     display: block;
     object-fit: cover; /* はみ出た部分をいい感じにトリミング */
   }
+
+  &__bg {
+    &--black {
+      background-color: fw.$black;
+    }
+  }
 }
