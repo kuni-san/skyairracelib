@@ -427,10 +427,10 @@
 
 .media { 
   width: 100%;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 4 / 3; /* ipadの比率 */
   overflow: hidden;
 
-  &__aspect16-9 {
+  &__aspect16-9 { /* iphoneの比率 */
       aspect-ratio: 16 / 9!important;
     }
 
@@ -438,12 +438,16 @@
       aspect-ratio: 1 / 1!important;
     }
 
-  &__aspect39-18 { /* iphone16の比率 */
+  &__aspect39-18 { /* 新しいiphoneの比率？ */
       aspect-ratio: 39 / 18!important;
     }
 
-  &__aspect13-6 { /* 志麻スマホの比率 */
+  &__aspect13-6 { /* androidの比率。ここ比率たちの中でもっとも横長 */
       aspect-ratio: 13 / 6!important;
+    }
+
+  &__aspect10-7 {
+      aspect-ratio: 10 / 7!important;
     }
 
   &__title {
