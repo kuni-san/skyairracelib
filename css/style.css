@@ -354,6 +354,9 @@ a:hover {
 .media__aspect16-9 {
   aspect-ratio: 16/9 !important;
 }
+.media__aspect1-1 {
+  aspect-ratio: 1/1 !important;
+}
 .media__title {
   margin: 0 0 5px;
   font-size: 0.8rem;
@@ -617,16 +620,4 @@ a:hover {
 }
 .qa__eagle-img {
   margin: 0;
-}
-
-/* Drawer の背景オーバーレイ */
-.drawer-overlay {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 98;
-}
-.drawer-overlay .is-visible {
-  display: block;
 }/*# sourceMappingURL=style.css.map */
