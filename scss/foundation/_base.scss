@@ -218,9 +218,24 @@
     }
   }
 
-  &__arrow-left {
-    vertical-align: -0.25em;
+  &__material-icon {
+    vertical-align: -2px;
+    width: 1rem;
+    padding-left: 2px;
+    display: inline;
+
+    &--arrow {
+      vertical-align: -6px;
+      width: 1.6rem;
+      display: inline-block;
+    }
   }
+
+  // &__arrow-left {
+  //   vertical-align: -5px;
+  //   width: 1.6rem;
+  //   display: inline-block;
+  // }
 
   &__sentence {
     padding: 0 10px;
@@ -286,13 +301,6 @@
 
   &__link-external {
     text-decoration: underline;
-  }
-
-  &__material-icon {
-    vertical-align: -2px;
-    width: 1rem;
-    padding-left: 2px;
-    display: inline;
   }
 
   &__list {
