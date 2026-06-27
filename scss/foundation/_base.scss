@@ -290,8 +290,9 @@
 
   &__open-in-new {
     vertical-align: -2px;
-    font-size: 0.8rem;
+    width: 1rem;
     padding-left: 2px;
+    display: inline;
   }
 
   &__list {
@@ -437,6 +438,10 @@
 
   &__aspect39-18 { /* iphone16の比率 */
       aspect-ratio: 39 / 18!important;
+    }
+
+  &__aspect13-6 { /* 志麻スマホの比率 */
+      aspect-ratio: 13 / 6!important;
     }
 
   &__title {
