@@ -1,0 +1,1819 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-T442XTDL');
+    </script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <link rel="icon" type="image/png" sizes="16×16" href="/img/favicon1.png">
+    <link rel="icon" type="image/png" sizes="32×32" href="/img/favicon1.png">
+    <link rel="apple-touch-icon" href="/img/apple-touch-icon.png"><!-- 180×180 -->
+    
+    <link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css"/><!-- reset.css modern-css-reset -->
+    <script src="https://kit.fontawesome.com/e6273494f4.js" crossorigin="anonymous"></script>    <!-- <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" /> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Courgette&family=Noto+Sans+JP:wght@300;500&family=WindSong:wght@400;500&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Courgette&family=Kavivanar&family=Noto+Sans+JP:wght@300;500&family=WindSong:wght@400;500&display=swap">
+    <link rel="stylesheet" href="css/uikit.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/g-nav.css">
+    <link rel="stylesheet" href="css/p-c-course.css" />
+    <title>コース解説/コントローラー | エアレライブラリ</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="skyエアレースのとらのこ作コースの解説です。" />
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T442XTDL"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <header class="l-header">
+        <div class="uk-flex uk-flex-between uk-flex-middle l-header__wrap">
+            <h1 class="uk-margin-remove"><a href="/" class="l-header__logo"><img src="img/logo.svg" alt="エアレライブラリ"></a></h1>
+            <div class="openbtn"><span></span><span></span><span></span></div>
+            <!-- ナビゲーションバー -->
+            <nav id="g-nav">
+                <div id="g-nav-list">
+                    <ul>
+                        <div class="uk-margin-small-top">
+                            <li><a class="g-nav-link" href="/">TOP<i class="fas fa-caret-right"></i></a></li>
+                        </div>
+                        <div>
+                            <p>飛</p>
+                            <li><a class="g-nav-link active" href="/original.html"><i class="fas fa-caret-right"></i><img src="img/icon-original-white.svg" alt="" class="g-nav-contents-img">本家コース詳細</a></li>
+                            <li><a class="g-nav-link" href="/regulation.html"><img src="img/icon-regulation-white.svg" alt="" class="g-nav-contents-img">レギュレーション<i class="fas fa-caret-right"></i></a></li>
+                            <li><span class="g-nav-link uk-padding-remove uk-text-small uk-margin-left">（ルール・予選方法）</span></li>
+                        </div>
+                        <div>
+                            <p>知</p>
+                            <li><a class="g-nav-link" href="/technique.html"><img src="img/icon-technique-white.svg" alt="" class="g-nav-contents-img">技術・知識<i class="fas fa-caret-right"></i></a></li>
+                            <li><a class="g-nav-link" href="/past.html"><img src="img/icon-past-white.svg" alt="" class="g-nav-contents-img">大会一覧<i class="fas fa-caret-right"></i></a></li>
+                            <li><span class="g-nav-link uk-padding-remove uk-text-small uk-margin-left">（本家/S杯/他）</span></li>
+                        </div>
+                        <div>
+                            <p>探</p>
+                            <li><a class="g-nav-link" href="/tag.html"><img src="img/icon-tag-white.svg" alt="" class="g-nav-contents-img">エアレ関連タグ<i class="fas fa-caret-right"></i></a></li>
+                            <li><a class="g-nav-link" href="/related-sites.html"><img src="img/icon-related-sites-white.svg" alt="" class="g-nav-contents-img">各種リンク<i class="fas fa-caret-right"></i></a></li>
+                        </div>
+                        <div>
+                            <p>催</p>
+                            <li><a class="g-nav-link" href="/documents.html"><img src="img/icon-documents-white.svg" alt="" class="g-nav-contents-img">企画者向け情報<i class="fas fa-caret-right"></i></a></li>
+                            <li><a class="g-nav-link" href="/belief.html"><img src="img/icon-belief-white.svg" alt="" class="g-nav-contents-img">エアレ理念 -とらのこ<i class="fas fa-caret-right"></i></a></li>
+                        </div>
+                        <div class="uk-margin-large-top uk-margin-xlarge-bottom">
+                            <li class="uk-padding-remove"><a class="g-nav-link uk-text-small" href="/thanks.html">Special Thanks<i class="fas fa-caret-right"></i></a></li>
+                            <li class="uk-padding-remove"><a class="g-nav-link uk-text-small" href="/about.html">サイト概要・挨拶・お問合せ<i class="fas fa-caret-right"></i></a></li>
+                            <li class="uk-padding-remove"><a class="g-nav-link uk-text-small" href="/terms.html">利用規約<i class="fas fa-caret-right"></i></a></li>
+                        </div>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main class="main toranoko">
+        <!-- <div class="common__title-icon">
+            <img src="img/icon-original.svg" alt="">
+        </div> -->
+        <h1 class="common__title">コントローラー/コース解説</h1>
+        <p class="common__text">とらのこコース、S3（S杯10回）、Artfest、クロクラ2026A、ペアマッチのコントローラー向けコース解説です。</p>
+        <!-- <p class="common__text">動画が再生できない方は<a class="common__link-external" href="https://drive.google.com/drive/u/2/folders/1FH8B5V5rMUXxIN0oEltkJGcLW7mhpALt" target="_blank" rel="noopener noreferrer">こちら<img class="common__material-icon" src="img/open_in_new.svg" alt=""></a></p> -->
+        <div class="common___img-wrap">
+            <div class="common__mural"><img class="" src="img/mural1.png" alt=""></div>
+            <div class="common__fixed uk-flex uk-flex-right uk-flex-top">
+                <div class="common__fixed--tab-icon">
+                    <img src="img/chevron-down-solid.svg" alt="" class="common__fixed--toggle-btn">
+                    <img src="img/icon-original.svg" alt="" class="common__fixed--tab-img">
+                </div>
+                <div class="toranoko__muralno-wrap">
+                    <div class="toranoko__muralno">
+                        <a href="#toranoko-no1" class="toranoko__muralno-img"><img src="img/mural-no1.png" alt="" class="uk-width-1-1"></a>
+                        <a href="#toranoko-no2" class="toranoko__muralno-img"><img src="img/mural-no2.png" alt="" class="uk-width-1-1"></a>
+                        <a href="#toranoko-no3" class="toranoko__muralno-img"><img src="img/mural-no3.png" alt="" class="uk-width-1-1"></a>
+                        <a href="#toranoko-no4" class="toranoko__muralno-img"><img src="img/mural-no4.png" alt="" class="uk-width-1-1"></a>
+                    </div>
+                    <div class="toranoko__muralno">
+                        <a class="toranoko__muralno-img"></a>
+                        <a href="#toranoko-no5" class="toranoko__muralno-img"><img src="img/mural-no5.png" alt="" class="uk-width-1-1"></a>
+                        <a href="#toranoko-no6" class="toranoko__muralno-img"><img src="img/mural-no6.png" alt="" class="uk-width-1-1"></a>
+                        <a href="#toranoko-no7" class="toranoko__muralno-img"><img src="img/mural-no7.png" alt="" class="uk-width-1-1"></a>
+                    </div>
+                    <div class="toranoko__muralno">
+                        <a class="toranoko__muralno-img toranoko__muralno-img-empty"></a>
+                        <a href="#toranoko-no8" class="toranoko__muralno-img"><img src="img/mural-no8.png" alt="" class="uk-width-1-1"></a>
+                        <a href="#toranoko-no9" class="toranoko__muralno-img"><img src="img/mural-no9.png" alt="" class="uk-width-1-1"></a>
+                        <a href="#toranoko-no10" class="toranoko__muralno-img toranoko__muralno-img--10"><img src="img/mural-no10.png" alt="" class="uk-width-1-1"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="common__contents">
+
+<!-- とらのこコース　テンプレ -->
+            <!-- <div id="toranoko-no〇" class="toranoko__wrap">
+                <div class="common__index">
+                    <div class="uk-flex uk-flex-between uk-flex-middle toranoko__index">
+                        <h2 class="toranoko__title">第〇回大会 〇th<span class="toranoko__title--crs">(コース<span class="toranoko__title--no">No.〇</span>)</span></h2>
+                        <div class="toranoko__about">
+                            <p><i class="fas fa-tag"></i>#skyairrace〇〇</p>
+                            <p><i class="fas fa-map-marker-alt"></i>〇〇/〇〇エリア</p>
+                            <p>一次予選足切り<i class="fas fa-stopwatch"></i>〇.〇秒</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="toranoko__video-wrap">
+                    <iframe class="toranoko__video-content" src="https://drive.google.com/file/d/1oHP2RFQ3UjJMkoSJVPSBquMo7pF24h52/preview" allow="autoplay"></iframe>
+                </div>
+                <div class="toranoko__contents-wrap">
+                    <div class="toranoko__KK-wrap">
+                        <img class="toranoko__KK-text" src="img/KK_text.png" alt="">
+                        <p class="toranoko__KK-title">KONNAKANJI図</p>
+                        <img class="" src="img/KKno〇.jpg" alt="">
+                        <figcaption class="common__caption toranoko__KK-caption">（作成：<img src="img/nikosan_name.png" alt="ニコ" class="nicosan">）</figcaption>
+                    </div>
+                    <div class="ac-course">
+                        <div class="ac-course__index">　No.〇　詳細を見る</div>
+                        <div class="ac-course__contents">
+                            <h3 class="common__headline">チェックポイント</h3>
+                            <div class="common__sentence common__list">
+                                <p><span class="mark uk-margin-small-right">PREP</span>〇〇〇〇〇〇</p>
+                                <p><span class="mark">START</span>/<span class="mark uk-margin-small-right">GOAL</span>〇〇〇〇〇〇</p>
+                                <p class="common__list--child">〇〇〇〇〇〇<span class="note">※〇〇〇〇〇〇</span></p>
+                                <p class="common__list--child">〇〇〇〇〇〇</p>
+                                <p class="common__list--child">〇〇〇〇〇〇</p>
+                                <p class="common__list--child">〇〇〇〇〇〇</p>
+                                <p class="common__list--child">〇〇〇〇〇〇</p>
+                            </div>
+                            <div class="toranoko__side-note">
+                                <h4 class="toranoko__side-note--title">No.〇補足</h4>
+                                <p>・〇〇〇〇〇〇</p>
+                                <p>・〇〇〇〇〇〇</p>
+                            </div>
+                            <h3 class="common__headline">テクニック紹介</h3>
+                            <div class="common__sentence">
+                                <p>このコースの過去の予選や本戦でよく使われていた技術の紹介です。</p>
+                            </div>
+                            <div class="toranoko__tech uk-margin-top">
+                                <div class="toranoko__tech-index uk-flex uk-flex-middle uk-flex-between">
+                                    <div class="uk-width-1-3">技術名</div>
+                                    <div class="uk-width-1-2">このコースに<br>おける難易度</div>
+                                </div>
+                                <div class="toranoko__tech-contents-wrap">
+                                    <div class="toranoko__tech-button-wrap"><p class="toranoko__tech-button">見る</p></div>
+                                    <div class="toranoko__tech-contents">
+                                        <div class="uk-flex uk-margin-small-top uk-margin-bottom">
+                                            <div class="uk-width-2-3"><a href="">スライド<i class="fas fa-caret-right uk-margin-small-left"></i></a></div>
+                                            <div class="uk-width-1-3 uk-margin-left">★★</div>
+                                        </div>
+                                        <div class="uk-flex uk-margin-small-bottom">
+                                            <div class="uk-width-2-3"><a href="">フリック上昇<i class="fas fa-caret-right uk-margin-small-left"></i></a></div>
+                                            <div class="uk-width-1-3 uk-margin-left">★</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <h3 class="common__headline">コースQ&A</h3>
+                            <div class="qa__contents">
+                                <h4 class="qa__num">-- Q1 --</h4>
+                                <div class="qa__moth">
+                                    <p class="qa__moth-icon"><img class="" src="img/qa_moth1.jpg" alt=""></p>
+                                    <p class="qa__moth-text">aaa</p>
+                                </div>
+                                <div class="qa__eagle">
+                                    <p class="qa__eagle-icon"><img class="" src="img/qa_eagle1.jpg" alt=""></p>
+                                    <p class="qa__eagle-img"><img src="img/qaNo2-Q1-1.png" alt=""></p>
+                                    <p class="qa__eagle-text">aaa</p>
+                                </div>
+                            </div>
+                            <div class="uk-text-center">
+                                <a class="common__x-button uk-margin-top" href="https://x.com/share?hashtags=skyエアレ " target="_blank" rel="noopener noreferrer">コースを飛んだら<span>#skyエアレ</span>で報告しよう！</a>
+                            </div>
+
+                            <div class="common__link-internal uk-margin-top"><a href="/past.html#vol〇">第〇回大会本戦情報を見る <i class="fas fa-caret-right"></i></a></div>
+                            <div class="common__link-internal"><a href="/regulation.html#rule">レギュレーション（基本ルール）を見る <i class="fas fa-caret-right"></i></a></div>
+                            <div class="toranoko__fixed-close"><img src="img/chevron-down-solid-white.svg" alt="">No.〇 閉じる</div>
+                        </div>
+                        <div class="ac-course__index--close close">　No.〇　詳細を閉じる</div>
+                    </div>
+                </div>
+            </div> -->
+
+<!-- とらのこコースNo.1 草原/村エリア -->
+            <div id="toranoko-no1" class="toranoko__wrap">
+                <div class="common__index">
+                    <div class="uk-flex uk-flex-between uk-flex-middle toranoko__index">
+                        <h2 class="toranoko__title">第1回大会 1st<span class="toranoko__title--crs">(コース<span class="toranoko__title--no">No.1</span>)</span></h2>
+                        <div class="toranoko__about">
+                            <p><i class="fas fa-tag"></i>#skyairrace1st</p>
+                            <p><i class="fas fa-map-marker-alt"></i>草原/村エリア</p>
+                            <p>一次予選足切り<i class="fas fa-stopwatch"></i>57.50秒</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="toranoko__video-wrap"> -->
+                    <!-- google drive動画埋め込み方法　右クリ→アプリで開く→プレビュー→：→新しいウィンドウで開く→：→アイテムを埋め込む -->
+                    <!-- <iframe class="toranoko__video-content"
+                        src="https://drive.google.com/file/d/1oHP2RFQ3UjJMkoSJVPSBquMo7pF24h52/preview"
+                        allow="autoplay"></iframe>
+                </div> -->
+                <div class="toranoko__contents-wrap">
+                    <div class="toranoko__KK-wrap">
+                        <p class="toranoko__KK-title">KONNAKANJI図</p>
+                        <img class="" src="img/kari-cntr-no1.png" alt="">
+                        <figcaption class="common__caption toranoko__KK-caption">（元図作成：<img src="img/nikosan_name.png"
+                                alt="ニコ" class="nicosan">）</figcaption>
+                    </div>
+                    <div class="common__sentence common__list">
+                        <p><span class="mark uk-margin-small-right">PREP</span>マンタを出す</p>
+                        <p><span class="mark">START</span>/<span class="mark uk-margin-small-right">GOAL</span>洞窟近くの島の石板の上</p>
+                        <p class="common__list--child">塔の左を回る<span class="note">※塔の高さより上を通らない</span></p>
+                        <p class="common__list--child">エリア中央を通る鳥の道もしくはその下を潜る</p>
+                        <p class="common__list--child" style="display: inline-flex;
+    align-items: center;">蝶々扉の島の穴を上から入り、もう一つの穴から抜ける<span style="padding-left: 5px;
+    width: 40px;"><img src="img/cntr-1.png" alt=""></span></p>
+                        <div style="
+    border-left: 1px solid #84D1C9;
+    margin-left: 10px;
+    padding: 0 20px 10px;
+">
+                            <div>
+                                <p style="display: inline-flex;
+                                align-items: center;">★教えて飛ぶコツ！（仮）　洞窟に入る際のねじり旋回<span style="padding-left: 5px;
+                                width: 30px;"><img src="img/cntr-updown.png" alt=""></span><span style="padding-left: 5px;
+                                width: 30px;"><img src="img/cntr-curve.png" alt=""></span></p>
+                            </div>
+                            <div class="qa__eagle">
+                                <p class="qa__eagle-icon"><img class="" src="img/qa_eagle1.jpg" alt=""></p>
+                                <p class="qa__eagle-text">コツの解説が入ります。コツの解説が入ります。コツの解説が入ります。
+                                    <br>コツの解説が入ります。コツの解説が入ります。コツの解説が入ります。コツの解説が入ります。</p>
+                                <!-- <p class="qa__eagle-text">コツの解説が入ります。コツの解説が入ります。コツの解説が入ります。コツの解説が入ります。コツの解説が入ります。
+                                    <br>コツの解説が入ります。コツの解説が入ります。
+                                    <br>コツの解説が入ります。コツの解説が入ります。コツの解説が入ります。
+                                </p> -->
+                            </div>
+                        </div>
+                        <p class="common__list--child" style="display: inline-flex;
+    align-items: center;">洞窟のある崖へ向かい、崖の上の草地部分に設置する<span style="padding-left: 5px;
+    width: 40px;"><img src="img/cntr-2.png" alt=""></span></p>
+                        <p class="common__list--child" style="display: inline-flex;
+    align-items: center;">最初に回った塔を高さを合わせて回り、ゴール<span style="padding-left: 5px;
+    width: 40px;"><img src="img/cntr-3.png" alt=""></span></p>
+                    </div>
+                    <div class="toranoko__side-note">
+                        <h4 class="toranoko__side-note--title">No.1補足</h4>
+                        <p>・チェックポイント４、洞窟のある崖までのルートに制限はありません。</p>
+                        <p>・マンタ等を使ってもいいです。</p>
+                    </div>
+                    <div class="ac-course">
+                        <div class="ac-course__index">　No.1　詳細を見る</div>
+                        <div class="ac-course__contents">
+                            <h3 class="common__headline">チェックポイント</h3>
+                            
+                            <h3 class="common__headline">テクニック紹介</h3>
+                            <div class="common__sentence">
+                                <p>このコースの過去の予選や本戦でよく使われていた技術の紹介です。</p>
+                            </div>
+                            <div class="toranoko__tech uk-margin-top">
+                                <div class="toranoko__tech-index uk-flex uk-flex-middle uk-flex-between">
+                                    <div class="uk-width-1-3">技術名</div>
+                                    <div class="uk-width-1-2">このコースに<br>おける難易度</div>
+                                </div>
+                                <div class="toranoko__tech-contents-wrap">
+                                    <div class="toranoko__tech-button-wrap"><p class="toranoko__tech-button">見る</p></div>
+                                    <div class="toranoko__tech-contents">
+                                        <div class="uk-flex uk-margin-small-top uk-margin-bottom">
+                                            <div class="uk-width-2-3"><a href="/technique.html#slide">スライド<i class="fas fa-caret-right uk-margin-small-left"></i></a></div>
+                                            <div class="uk-width-1-3 uk-margin-left">★★</div>
+                                        </div>
+                                        <div class="uk-flex uk-margin-small-top uk-margin-bottom">
+                                            <div class="uk-width-2-3"><a href="/technique.html#slip">滑り降り<i class="fas fa-caret-right uk-margin-small-left"></i></a></div>
+                                            <div class="uk-width-1-3 uk-margin-left">★★</div>
+                                        </div>
+                                        <div class="uk-flex uk-margin-bottom">
+                                            <div class="uk-width-2-3"><a href="/technique.html#vertical-flight">垂直飛行<i class="fas fa-caret-right uk-margin-small-left"></i></a></div>
+                                            <div class="uk-width-1-3 uk-margin-left">★★★</div>
+                                        </div>
+                                        <div class="uk-flex uk-margin-bottom">
+                                            <div class="uk-width-2-3"><a href="/technique.html#wind-wall-power">風壁加速<i class="fas fa-caret-right uk-margin-small-left"></i></a></div>
+                                            <div class="uk-width-1-3 uk-margin-left">★★</div>
+                                        </div>
+                                        <div class="uk-flex uk-margin-small-bottom">
+                                            <div class="uk-width-2-3"><a href="/technique.html#pitatoma">ぴたとま<i class="fas fa-caret-right uk-margin-small-left"></i></a></div>
+                                            <div class="uk-width-1-3 uk-margin-left">★★</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <h3 class="common__headline">コースQ&A</h3>
+                            <div class="qa__contents">
+                                <h4 class="qa__num">-- Q1 --</h4>
+                                <div class="qa__moth">
+                                    <p class="qa__moth-icon"><img class="" src="img/qa_moth1.jpg" alt=""></p>
+                                    <p class="qa__moth-text">最後の崖登りからゴールまでのタイムが伸びず、どんな風に飛んだら速いですか。</p>
+                                </div>
+                                <div class="qa__eagle">
+                                    <p class="qa__eagle-icon"><img class="" src="img/qa_eagle1.jpg" alt=""></p>
+                                    <p class="qa__eagle-text">崖からゴールまでについてですが、以前までは風壁を利用して加速できたのですが、今はそれができなくなっているようです。</p>
+                                    <p class="qa__eagle-text">なので定番ですが<a href="/technique.html#slip" class="common__word-link">滑り降り</a>からは塔を膨らみすぎないように羽ばたくのが速いのではないかと思います。
+                                        <br><br>（気を付けること：
+                                        <br>・スライドが入った状態で、ある程度下向きの角度で飛んでいる時に羽ばたくと逆に遅くなってしまいます。→<a href="/technique.html#downward" class="common__word-link">下向き羽ばたき減速</a>
+                                        <br>・グライドの操作で画面に触れて離すということをすればするほど減速します。→<a href="/technique.html#flicked-deboost" class="common__word-link">フリック減速</a>）</p>
+                                    <p class="qa__eagle-text">そのように考えると崖降り時点である程度エナジーが貯まっている必要があるので、崖までのルートには、マンタを利用するか、鳥の道付近から直線で省エネ気味に羽ばたくか（<a href="/technique.html#slide" class="common__word-link">スライド</a>必須）、になるかなと思います。</p>
+                                    <p class="qa__eagle-icon"><img class="" src="img/qa_eagle4.jpg" alt=""></p>
+                                    <p class="qa__eagle-text">大穴の後はエナジーを全快しておくのが理想です。
+                                        <br>また、崖接地の時は崖の向きに沿った接地ではなく、ゴールの方を向いて接地できるのが良いです。</p>
+                                    <p class="qa__eagle-text">接地の後にスライドが切れたら：
+                                        <br>ゴールまでに羽を使い切る感じで下向きに一定間隔で羽ばたく
+                                        <br>切れなかったら：
+                                        <br>塔の高さあたりまで滑り降りた後にグライドモードに切り替えてすぐに羽ばたく
+                                        <br>をおすすめします。
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="qa__contents">
+                                <h4 class="qa__num">-- Q2 --</h4>
+                                <div class="qa__moth">
+                                    <p class="qa__moth-icon"><img class="" src="img/qa_moth2.jpg" alt=""></p>
+                                    <p class="qa__moth-text">今の仕様になってからのチェックポイント通過のコツや加速ポイントなどありましたら知りたいです。</p>
+                                </div>
+                                <div class="qa__eagle">
+                                    <p class="qa__eagle-icon"><img class="" src="img/qa_eagle1.jpg" alt=""></p>
+                                    <p class="qa__eagle-text">チェックポイントのコツ：<br>建物やオブジェクトを回る際に膨らみすぎないことを気をつけましょう。
+                                        <br>特に3つ目のポイントである穴については穴に入る際にどの辺に出る穴があるのか、位置感覚が身につくと無駄な動きを減らせます。</p>
+                                    <p class="qa__eagle-text">崖について、よくあるのが崖の高さより遥か高くを大回りで飛んでタイムロスになることです。<br>崖の上を頂点としたルートではなく、崖の気持ち手前あたりを頂点として飛行できるとロスを減らせるかと思います。</p>
+                                    <p class="qa__eagle-text">加速ポイント：<br>マンタです。<br>タイミングは固定なので、いつスタートすればどの子が使えそうか、ご自身の飛行に合うタイミングを探してみてください。</p>
+                                    <p class="qa__eagle-text">減速ムーブ：
+                                        <br>全てに言えることですが、グライド操作時に画面に触れたり離したりすればするほど減速します（<a href="/technique.html#flicked-deboost" class="common__word-link">フリック減速</a>）。
+                                        <br>特に羽ばたいていない時に無駄に触って離してを繰り返していないか気をつけてみてください。</p>
+                                        <p class="qa__eagle-icon"><img class="" src="img/qa_eagle4.jpg" alt=""></p>
+                                    <p class="qa__eagle-text">このコースは<a href="/technique.html#slip" class="common__word-link">滑り降り</a>ができると早くなります。
+                                        <br>技術だけで滑り降りを安定させるのは難しいため、滑り降りしやすい条件を使えるなら使いましょう。
+                                        <br>
+                                        <br>・高身長でやる
+                                        <br>・20か30fpsでやる
+                                        <br>
+                                        <br>これだけでもだいぶ滑り降りの確率が高くなります。
+                                    </p>
+                                    <p class="qa__eagle-text">さらに安定感を増やすなら、以下の操作もおすすめです。
+                                        <br>
+                                        <br>・着地と同時に移動入力をいれる「着地スライド」を狙う
+                                        <br>・着地の直前にホバーモードに変える
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="qa__contents">
+                                <h4 class="qa__num">-- Q3 --</h4>
+                                <div class="qa__moth">
+                                    <p class="qa__moth-icon"><img class="" src="img/qa_moth3.jpg" alt=""></p>
+                                    <p class="qa__moth-text">大穴に潜る時に、穴の縁に触れてしまい星の子が止まってしまいます。<br>接触せずに通るコツがあれば知りたいです。</p>
+                                </div>
+                                <div class="qa__eagle">
+                                    <p class="qa__eagle-icon"><img class="" src="img/qa_eagle1.jpg" alt=""></p>
+                                    <p class="qa__eagle-text">手前で触れるのか、抜ける際に触れるのかで対応も変わってくるかと思いますが、大きな方針としてはまずは速度を落として飛べるイメージを掴むのがいいかと思います。</p>
+                                    <p class="qa__eagle-text">手前で触れる場合は下がるのが少し早かったり、穴に対しての角度が浅かったりするのだと思います。<br>なので高い位置から少し遅めに下向きに向かうと、縁に立ち止まることはなくなるかと思います。</p>
+                                    <p class="qa__eagle-text">そして、逆に抜ける際にぶつかるのであれば、下降角度をもう少し急にしたり、内部の構造の位置関係を把握するのが大切になると思います。
+                                        <br>また、速度が速くなりすぎると普段のような小回りが効かなくなることがあります。</p>
+                                    <p class="qa__eagle-text">速度を保って飛びたい場合にはその速さでの飛び方を身につけること、確実に飛ぶためには速度を敢えて落としていつも通りに飛ぶようにしましょう。</p>
+                                </div>
+                            </div>
+                            <div class="qa__contents">
+                                <h4 class="qa__num">-- Q4 --</h4>
+                                <div class="qa__moth">
+                                    <p class="qa__moth-icon"><img class="" src="img/qa_moth1.jpg" alt=""></p>
+                                    <p class="qa__moth-text">このコースの魅力を一言で教えてください！</p>
+                                </div>
+                                <div class="qa__eagle">
+                                    <p class="qa__eagle-icon"><img class="" src="img/qa_eagle1.jpg" alt=""></p>
+                                    <p class="qa__eagle-text">このコースではマンタを使いこなすことが大きなポイントになります。マンタを上手に使えるか、マンタで出た速度を維持できるかが大きな腕の見せ所です。（→<a href="/technique.html#manta" class="common__word-link">マンタ</a>）</p>
+                                    <p class="qa__eagle-text">ただ、大穴を抜ける時や、崖でのUターンなどの細かいところでも意外と大きな差になります。</p>
+                                    <p class="qa__eagle-text">タイムを縮めるポイントが複数あるという意味で非常に面白いコースだと思います。<br>ひとりでタイムを縮めるのも良し。複数人でやってマンタでの大逆転劇を目指すのも良し。<br>エアレの一番初めのコースにして、奥深さが詰まったコースです。</p>
+                                </div>
+                            </div>
+                            <div class="uk-text-center">
+                                <a class="common__x-button uk-margin-top" href="https://x.com/share?hashtags=skyエアレ " target="_blank" rel="noopener noreferrer">コースを飛んだら<span>#skyエアレ</span>で報告しよう！</a>
+                            </div>                
+                            <div class="common__link-internal uk-margin-top"><a href="/past.html#vol1">第1回大会本戦情報を見る <i class="fas fa-caret-right"></i></a></div>
+                            <div class="common__link-internal"><a href="/regulation.html#rule">レギュレーション（基本ルール）を見る <i class="fas fa-caret-right"></i></a></div>
+                            <div class="toranoko__fixed-close"><img src="img/chevron-down-solid-white.svg" alt="">No.1 閉じる</div>
+                        </div>
+                        <div class="ac-course__index--close close">　No.1　詳細を閉じる</div>
+                    </div>
+                </div>
+            </div>
+     
+<!-- とらのこコースNo.2 草原/鳥の巣エリア -->       
+            <div id="toranoko-no2" class="toranoko__wrap">
+                <div class="common__index">
+                    <div class="uk-flex uk-flex-between uk-flex-middle toranoko__index">
+                        <h2 class="toranoko__title">第1回大会 2nd<span class="toranoko__title--crs">(コース<span class="toranoko__title--no">No.2</span>)</span></h2>
+                        <div class="toranoko__about">
+                            <p><i class="fas fa-tag"></i>#skyairrace2nd</p>
+                            <p><i class="fas fa-map-marker-alt"></i>草原/鳥の巣エリア</p>
+                            <p>一次予選足切り<i class="fas fa-stopwatch"></i>34.50秒</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="toranoko__video-wrap">
+                    <!-- google drive動画埋め込み方法　右クリ→アプリで開く→プレビュー→：→新しいウィンドウで開く→：→アイテムを埋め込む -->
+                    <iframe class="toranoko__video-content" src="https://drive.google.com/file/d/1TwLxyY9wJO-XJ9Pd2Kq_CvR_mKDzWaEr/preview" allow="autoplay"></iframe>
+                </div>
+                <div class="toranoko__contents-wrap">
+                    <div class="toranoko__KK-wrap">
+                        <img class="toranoko__KK-text" src="img/KK_text.png" alt="">
+                        <p class="toranoko__KK-title">KONNAKANJI図</p>
+                        <img class="" src="img/KKno2.jpg" alt="">
+                        <figcaption class="common__caption toranoko__KK-caption">（作成：<img src="img/nikosan_name.png" alt="ニコ" class="nicosan">）</figcaption>
+                    </div>
+                    <div class="ac-course">
+                        <div class="ac-course__index">　No.2　詳細を見る</div>
+                        <div class="ac-course__contents">
+                            <h3 class="common__headline">チェックポイント</h3>
+                            <div class="common__sentence common__list">
+                                <p><span class="mark">START</span>/<span class="mark uk-margin-small-right">GOAL</span>ワープ場所脇の石版<span class="note">（足が離れるか、出た時点でスタート）</span></p>
+                                <p class="common__list--child">桟橋を潜ってトンネルへ入る</p>
+                                <p class="common__list--child">通り抜けたら上に上がり、石版の横の橋を回る</p>
+                                <p class="common__list--child">前方の島の穴へ向かう</p>
+                                <p class="common__list--child">穴を抜けたら旋回して、建物の間を抜ける<span class="note">※高さ設定無し</span></p>
+                                <p class="common__list--child">竪穴に真上から入る<span class="note">（<a href="/technique.html#hole-in-one" class="common__word-link">ホールインワン</a>）</span></p>
+                                <p class="uk-margin-top">→FINISH</p>
+                            </div>
+                            <h3 class="common__headline">テクニック紹介</h3>
+                            <div class="common__sentence">
+                                <p>このコースの過去の予選や本戦でよく使われていた技術の紹介です。</p>
+                            </div>
+                            <div class="toranoko__tech uk-margin-top">
+                                <div class="toranoko__tech-index uk-flex uk-flex-middle uk-flex-between">
+                                    <div class="uk-width-1-3">技術名</div>
+                                    <div class="uk-width-1-2">このコースに<br>おける難易度</div>
+                                </div>
+                                <div class="toranoko__tech-contents-wrap">
+                                    <div class="toranoko__tech-button-wrap"><p class="toranoko__tech-button">見る</p></div>
+                                    <div class="toranoko__tech-contents">
+                                        <div class="uk-flex uk-margin-small-top uk-margin-bottom">
+                                            <div class="uk-width-2-3"><a href="/technique.html#slip">滑り降り<i class="fas fa-caret-right uk-margin-small-left"></i></a></div>
+                                            <div class="uk-width-1-3 uk-margin-left">★★</div>
+                                        </div>
+                                        <div class="uk-flex uk-margin-bottom">
+                                            <div class="uk-width-2-3"><a href="/technique.html#quick-turn">クイックターン<i class="fas fa-caret-right uk-margin-small-left"></i></a></div>
+                                            <div class="uk-width-1-3 uk-margin-left">★★</div>
+                                        </div>
+                                        <div class="uk-flex uk-margin-small-bottom">
+                                            <div class="uk-width-2-3"><a href="/technique.html#corrected-jump">補正ジャンプ<i class="fas fa-caret-right uk-margin-small-left"></i></a></div>
+                                            <div class="uk-width-1-3 uk-margin-left">★★</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <h3 class="common__headline">コースQ&A</h3>
+                            <div class="qa__contents">
+                                <h4 class="qa__num">-- Q1 --</h4>
+                                <div class="qa__moth">
+                                    <p class="qa__moth-icon"><img class="" src="img/qa_moth1.jpg" alt=""></p>
+                                    <p class="qa__moth-text">最後、塔にある穴の中に入れません(<a href="/technique.html#hole-in-one" class="common__word-link">ホールインワン</a>)。<br>通り過ぎたり、ぶつかって立ってしまいます。<br>真っ直ぐ入るにはどうすればいいですか？</p>
+                                </div>
+                                <div class="qa__eagle">
+                                    <p class="qa__eagle-icon"><img class="" src="img/qa_eagle2.jpg" alt=""></p>
+                                    <p class="qa__eagle-text">おそらくこのコースの大きな壁となるポイントですね。</p>
+                                    <p class="qa__eagle-text">まずは速度を落として練習するといいかもしれません。<br>穴への入る角度については、気持ち急な角度にすると入りやすいように思います。</p>
+                                    <p class="qa__eagle-text">その際、鳥で出来ている輪の下側付近を通過するイメージです。</p>
+                                    <p class="qa__eagle-img"><img src="img/qaNo2-Q1-1.png" alt=""></p>
+                                    <p class="qa__eagle-text">穴に向けては星の子と穴のほんの少し手前が重なるようにして近づいていきます。<br>穴に入る手前で穴の先に見える壁を目標に微妙に調整します。</p>
+                                    <p class="qa__eagle-text">失敗した際に、なぜ手前すぎたのか、なぜ奥に行き過ぎてしまったのかを探ってみるといいかもしれません。<br>よくあるのは手前過ぎは角度が浅いパターン、行き過ぎは速度が出過ぎていて降下するのが遅すぎるパターンなどがあります。</p>
+                                </div>
+                            </div>
+                            <div class="qa__contents">
+                                <h4 class="qa__num">-- Q2 --</h4>
+                                <div class="qa__moth">
+                                    <p class="qa__moth-icon"><img class="" src="img/qa_moth2.jpg" alt=""></p>
+                                    <p class="qa__moth-text">ホールインワン後、自分がどこを向いているのかわからなくなり上手くゴールに向かえません。<br>操作のコツがあれば教えてください。</p>
+                                </div>
+                                <div class="qa__eagle">
+                                    <p class="qa__eagle-icon"><img class="" src="img/qa_eagle2.jpg" alt=""></p>
+                                    <p class="qa__eagle-text">一つの方法として、単純に画面を明るくして壁がどう動いているのかを見やすくするという方法があります。</p>
+                                    <p class="qa__eagle-text">また、ホールインワンをした後、穴の中に入った時点で操作を中断してしまいがちですが、
+                                        <br>ホールインワンが全て終わるまで急降下した時からじっと手を止めておくのも一つの手です。
+                                        <br>（=移動入力を左右にぶらさず、入れっぱなしにする）
+                                    </p>
+                                    <p class="qa__eagle-text">その際、星の子の左右への体の捻れ具合を見ておいてあげると、向きが変化していないかを確認、微調整できます。</p>
+                                    <p class="qa__eagle-icon"><img class="" src="img/qa_eagle4.jpg" alt=""></p>
+                                    <p class="qa__eagle-text">かなり上手くなると、穴を通っている時にわざと移動スティックを左右にわずかにずらして、グライドモードのままゴールへ向かうこともできます。</p>
+                                </div>
+                            </div>
+                            <div class="qa__contents">
+                                <h4 class="qa__num">-- Q3(上級) --</h4>
+                                <div class="qa__moth">
+                                    <p class="qa__moth-icon"><img class="" src="img/qa_moth3.jpg" alt=""></p>
+                                    <p class="qa__moth-text">コース序盤の<a href="/technique.html#side-hole" class="common__word-link">横穴</a>を抜けて橋下から次のチェックポイントへ向かう際、橋下をくぐっての方向転換で切り返しを使っていますが<span class="qa__marker">島の補正に引っ張られて中断してしまう</span>ことが多々あります。
+                                        <br>補正が掛からないように工夫している点などありましたら、是非お聞きしたいです。
+                                    </p>
+                                    <p class="qa__moth-text">島(橋)から少し距離を置いて切り返す、もしくは星の子を若干右に操作して逃がしてすぐに左へ切り返すことで対策していますが、
+                                        <br>やはりギリギリを狙って好タイムを狙いたいです。
+                                    </p>
+                                </div>
+                                <div class="qa__eagle uk-margin-remove">
+                                    <p class="qa__eagle-icon"><img class="" src="img/qa_eagle2.jpg" alt=""></p>
+                                    <p class="qa__eagle-text">概ね今の方針でいいと思います。
+                                        <br>切り返す前に無理に上昇するのではなく、切り返し後の飛行込みで橋を越えるようにしましょう。
+                                    </p>
+                                    <p class="qa__eagle-text">Twitter（現X）で「#skyairrace2nd until:2021-11-5」などで検索すると、当時の上位者の飛行も見れるので、そちらも参考にしつつタイムを縮めていけるといいと思います。</p>
+                                </div>
+                                <div class="qa__eagle">
+                                    <p class="qa__eagle-icon"><img class="" src="img/qa_eagle4.jpg" alt=""></p>
+                                    <p class="qa__eagle-text">好タイムを狙うためにギリギリのホバー切り返しを狙うなら、補正ジャンプがかからない島より若干低い位置を狙うしかないです。
+                                        <br>
+                                        <br>その直前にグライドでの羽ばたきがあるとホバー切り返しの瞬間に慣性で橋の上まで星の子が上昇します。グライド羽ばたき→直後にホバー切り返し、慣性で上昇する→直後にグライドで島スレスレを飛行する流れです。
+                                        <br>
+                                        <br>→<a href="/technique.html#corrected-jump" class="common__word-link">補正ジャンプ</a>
+                                        <br>→<a href="/technique.html#quick-turn" class="common__word-link">クイックターン</a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="qa__contents">
+                                <h4 class="qa__num">-- Q4 --</h4>
+                                <div class="qa__moth">
+                                    <p class="qa__moth-icon"><img class="" src="img/qa_moth1.jpg" alt=""></p>
+                                    <p class="qa__moth-text">このコースの魅力を一言で教えてください！</p>
+                                </div>
+                                <div class="qa__eagle">
+                                    <p class="qa__eagle-icon"><img class="" src="img/qa_eagle2.jpg" alt=""></p>
+                                    <p class="qa__eagle-text">個人的にこのコースは上昇気流があることもあり、速度が出るうえに、細い道を通ったり、180度ターンをしたりでエアレの楽しさが詰まったコースだと思っています。
+                                        <br>
+                                        <br>ただ、速度を出しすぎると操作が著しく難しくなるのも現実なので、適度に速度を出しつつ、ミスなく飛行できるようにするととても気持ちよく飛行できて楽しいです。
+                                        <br>
+                                        <br>ぜひ上達を目指して飛んでみてください！
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="uk-text-center">
+                                <a class="common__x-button uk-margin-top" href="https://x.com/share?hashtags=skyエアレ " target="_blank" rel="noopener noreferrer">コースを飛んだら<span>#skyエアレ</span>で報告しよう！</a>
+                            </div>
+                            <div class="common__link-internal uk-margin-top"><a href="/past.html#vol1">第1回大会本戦情報を見る <i class="fas fa-caret-right"></i></a></div>
+                            <div class="common__link-internal"><a href="/regulation.html#rule">レギュレーション（基本ルール）を見る <i class="fas fa-caret-right"></i></a></div>
+                            <div class="toranoko__fixed-close"><img src="img/chevron-down-solid-white.svg" alt="">No.2 閉じる</div>
+                        </div>
+                        <div class="ac-course__index--close close">　No.2　詳細を閉じる</div>
+                    </div>
+                </div>
+            </div>
+
+<!-- とらのこコースNo.3 峡谷/天球儀エリア --> 
+            <div id="toranoko-no3" class="toranoko__wrap">
+                <div class="common__index">
+                    <div class="uk-flex uk-flex-between uk-flex-middle toranoko__index">
+                        <h2 class="toranoko__title">第1回大会 3rd<span class="toranoko__title--crs">(コース<span class="toranoko__title--no">No.3</span>)</span></h2>
+                        <div class="toranoko__about">
+                            <p><i class="fas fa-tag"></i>#skyairrace3rd</p>
+                            <p><i class="fas fa-map-marker-alt"></i>峡谷/天球儀エリア</p>
+                            <p>一次予選足切り<i class="fas fa-stopwatch"></i>45.00秒</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="toranoko__video-wrap">
+                    <!-- google drive動画埋め込み方法　右クリ→アプリで開く→プレビュー→：→新しいウィンドウで開く→：→アイテムを埋め込む -->
+                    <iframe class="toranoko__video-content" src="https://drive.google.com/file/d/1gpVTonQ8w5t151xTB_wUdoteeMINTBfW/preview" allow="autoplay"></iframe>
+                </div>
+                <div class="toranoko__contents-wrap">
+                    <div class="toranoko__KK-wrap">
+                        <img class="toranoko__KK-text" src="img/KK_text.png" alt="">
+                        <p class="toranoko__KK-title">KONNAKANJI図</p>
+                        <img class="" src="img/KKno3.jpg" alt="">
+                        <figcaption class="common__caption toranoko__KK-caption">（作成：<img src="img/nikosan_name.png" alt="ニコ" class="nicosan">）</figcaption>
+                    </div>
+                    <div class="ac-course">
+                        <div class="ac-course__index">　No.3　詳細を見る</div>
+                        <div class="ac-course__contents">
+                            <h3 class="common__headline">チェックポイント</h3>
+                            <div class="common__sentence common__list">
+                                <p><span class="mark">START</span>/<span class="mark uk-margin-small-right">GOAL</span>エリア中央で回転する石板の、縁石の内側からの離陸、接地</p>
+                                <p class="common__list--child">トンネルをくぐる</p>
+                                <p class="uk-margin-top">※チェックポイント①から②の間のルート取りは自由</p>
+                                <p class="common__list--child">橋の下をくぐる</p>
+                                <p class="common__list--child">2つの建物の間を抜ける</p>
+                                <p class="common__list--child">5つのアーチのスラロームを抜ける</p>
+                                <p class="common__list--child">回転するリングをくぐる</p>
+                                <p class="uk-margin-top">→FINISH</p>
+                            </div>
+                            <div class="toranoko__side-note">
+                                <h4 class="toranoko__side-note--title">No.3補足</h4>
+                                <p>・チェックポイント5の回転するリングは、<a href="/technique.html#tsurikawa" class="common__word-link">吊り革</a>と呼ばれています。</p>
+                            </div>
+                            <h3 class="common__headline">テクニック紹介</h3>
+                            <div class="common__sentence">
+                                <p>このコースの過去の予選や本戦でよく使われていた技術の紹介です。</p>
+                            </div>
+                            <div class="toranoko__tech uk-margin-top">
+                                <div class="toranoko__tech-index uk-flex uk-flex-middle uk-flex-between">
+                                    <div class="uk-width-1-3">技術名</div>
+                                    <div class="uk-width-1-2">このコースに<br>おける難易度</div>
+                                </div>
+                                <div class="toranoko__tech-contents-wrap">
+                                    <div class="toranoko__tech-button-wrap"><p class="toranoko__tech-button">見る</p></div>
+                                    <div class="toranoko__tech-contents">
+                                        <div class="uk-flex uk-margin-small-top uk-margin-bottom">
+                                            <div class="uk-width-2-3"><a href="/technique.html#slide">スライド<i class="fas fa-caret-right uk-margin-small-left"></i></a></div>
+                                            <div class="uk-width-1-3 uk-margin-left">★★</div>
+                                        </div>
+                                        <div class="uk-flex uk-margin-bottom">
+                                            <div class="uk-width-2-3"><a href="/technique.html#flicked-deboost">フリック減速<i class="fas fa-caret-right uk-margin-small-left"></i></a></div>
+                                            <div class="uk-width-1-3 uk-margin-left">★</div>
+                                        </div>
+                                        <div class="uk-flex uk-margin-bottom">
+                                            <div class="uk-width-2-3"><a href="/technique.html#quick-turn">クイックターン<i class="fas fa-caret-right uk-margin-small-left"></i></a></div>
+                                            <div class="uk-width-1-3 uk-margin-left">★</div>
+                                        </div>
+                                        <div class="uk-flex uk-margin-small-bottom">
+                                            <div class="uk-width-2-3"><a href="/technique.html#pitatoma">ぴたとま<i class="fas fa-caret-right uk-margin-small-left"></i></a></div>
+                                            <div class="uk-width-1-3 uk-margin-left">★</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <h3 class="common__headline">コースQ&A</h3>
+                            <div class="qa__contents">
+                                <h4 class="qa__num">-- Q1 --</h4>
+                                <div class="qa__moth">
+                                    <p class="qa__moth-icon"><img class="" src="img/qa_moth1.jpg" alt=""></p>
+                                    <p class="qa__moth-text"><a href="/technique.html#slalom" class="common__word-link">スラローム</a>をうまく小回りできません。<br>コツなどあれば教えてください。</p>
+                                </div>
+                                <div class="qa__eagle">
+                                    <p class="qa__eagle-icon"><img class="" src="img/qa_eagle3.jpg" alt=""></p>
+                                    <p class="qa__eagle-text">進入するときの速度が大事です。
+                                        <br>速すぎると曲がり切れなくなり、遅すぎると次のアーチに届かず羽ばたきを入れることになります。
+                                        <br>最初の大きなアーチ（右から左）をくぐったくらいで一度羽ばたくのを我慢してみて普段より遅いスピードでスラロームを開始すると新しい世界がひらけるかもしれません。
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="qa__contents">
+                                <h4 class="qa__num">-- Q2 --</h4>
+                                <div class="qa__moth">
+                                    <p class="qa__moth-icon"><img class="" src="img/qa_moth2.jpg" alt=""></p>
+                                    <p class="qa__moth-text">天球儀の輪(<a href="/technique.html#tsurikawa" class="common__word-link">吊り革</a>)を通るとき、引っかかりやすいです。<br>どうしたら通りやすいですか？</p>
+                                </div>
+                                <div class="qa__eagle">
+                                    <p class="qa__eagle-icon"><img class="" src="img/qa_eagle3.jpg" alt=""></p>
+                                    <p class="qa__eagle-text">自分の飛行の軌道と天球輪の軌道を脳内シュミレーションして少し先の未来を予測する力が必要になります。
+                                        <br>こればっかりは慣れと訓練なので意識しながら練習を繰り返すしかありません。
+                                        <br>コツを一つ上げるならば天球輪をなるべく早く視界に捉え、潜り抜けるまでの時間を長くすることが大事です。
+                                        <br>スラロームの最後のアーチを抜けた後、前に進むよりも早く上に上がる事を意識すると良きです。
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="qa__contents">
+                                <h4 class="qa__num">-- Q3 --</h4>
+                                <div class="qa__moth">
+                                    <p class="qa__moth-icon"><img class="" src="img/qa_moth3.jpg" alt=""></p>
+                                    <p class="qa__moth-text">このコースの魅力を一言で教えてください！</p>
+                                </div>
+                                <div class="qa__eagle">
+                                    <p class="qa__eagle-icon"><img class="" src="img/qa_eagle3.jpg" alt=""></p>
+                                    <p class="qa__eagle-text">チェックポイントの間隔が短く細かいため連続カーブあり、加えて縦にも大きく移動があるため立体的を味わえる飛び応えのあるコースです。</p>
+                                </div>
+                            </div>
+                            <div class="uk-text-center">
+                                <a class="common__x-button uk-margin-top" href="https://x.com/share?hashtags=skyエアレ " target="_blank" rel="noopener noreferrer">コースを飛んだら<span>#skyエアレ</span>で報告しよう！</a>
+                            </div>
+
+                            <div class="common__link-internal uk-margin-top"><a href="/past.html#vol1">第1回大会本戦情報を見る <i class="fas fa-caret-right"></i></a></div>
+                            <div class="common__link-internal"><a href="/regulation.html#rule">レギュレーション（基本ルール）を見る <i class="fas fa-caret-right"></i></a></div>
+                            <div class="toranoko__fixed-close"><img src="img/chevron-down-solid-white.svg" alt="">No.3 閉じる</div>
+                        </div>
+                        <div class="ac-course__index--close close">　No.3　詳細を閉じる</div>
+                    </div>
+                </div>
+            </div>
+
+<!-- とらのこコースNo.4 雨林/風の街道エリア --> 
+            <div id="toranoko-no4" class="toranoko__wrap">
+                <div class="common__index">
+                    <div class="uk-flex uk-flex-between uk-flex-middle toranoko__index">
+                        <h2 class="toranoko__title">第1回大会 4th<span class="toranoko__title--crs">(コース<span class="toranoko__title--no">No.4</span>)</span></h2>
+                        <div class="toranoko__about">
+                            <p><i class="fas fa-tag"></i>#skyairrace4th</p>
+                            <p><i class="fas fa-map-marker-alt"></i>雨林/風の街道エリア</p>
+                            <p>一次予選足切り<i class="fas fa-stopwatch"></i>44.50秒</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="toranoko__video-wrap">
+                    <!-- google drive動画埋め込み方法　右クリ→アプリで開く→プレビュー→：→新しいウィンドウで開く→：→アイテムを埋め込む -->
+                    <iframe class="toranoko__video-content" src="https://drive.google.com/file/d/1zNpS-ZakSWBcmf-_rPWBgnIN7Vy4PfwG/preview" allow="autoplay"></iframe>
+                </div>
+                <div class="toranoko__contents-wrap">
+                    <div class="toranoko__KK-wrap">
+                        <img class="toranoko__KK-text" src="img/KK_text.png" alt="">
+                        <p class="toranoko__KK-title">KONNAKANJI図</p>
+                        <img class="" src="img/KKno4.jpg" alt="">
+                        <figcaption class="common__caption toranoko__KK-caption">（作成：<img src="img/nikosan_name.png" alt="ニコ" class="nicosan">）</figcaption>
+                    </div>
+                    <div class="ac-course">
+                        <div class="ac-course__index">　No.4　詳細を見る</div>
+                        <div class="ac-course__contents">
+                            <h3 class="common__headline">チェックポイント</h3>
+                            <div class="common__sentence common__list">
+                                <p><span class="mark">START</span>/<span class="mark uk-margin-small-right">GOAL</span>石台<span class="note">※補足あり</span></p>
+                                <p class="common__list--child">トンネルに入り、右の穴から抜ける</p>
+                                <p class="common__list--child">振り返ったところにあるトンネルを抜ける</p>
+                                <p class="common__list--child">頂上の門の高さまで上がって裏を回る<br><span class="note">※門の側面に回る前に高度を確保して下さい。</span></p>
+                                <p class="common__list--child">下のアーチをくぐる</p>
+                                <p class="common__list--child">黄色い布の石柱の左側を高さを合わせて通過する</p>
+                                <p class="common__list--child">右の穴に入る</p>
+                                <p class="uk-margin-top">→FINISH</p>
+                            </div>
+                            <div class="toranoko__side-note">
+                                <h4 class="toranoko__side-note--title">No.4補足</h4>
+                                <p>・腕利きの工匠の精霊開放途中にある石台がスタートとゴール</p>
+                                <p>・【質問】チェックポイント5について、柱より低ければいいのか、黄色い布より低くないといけないのか<br>【回答】石柱に高さを合わせて下さい</p>
+                            </div>
+                            <h3 class="common__headline">テクニック紹介</h3>
+                            <div class="common__sentence">
+                                <p>このコースの過去の予選や本戦でよく使われていた技術の紹介です。</p>
+                            </div>
+                            <div class="toranoko__tech uk-margin-top">
+                                <div class="toranoko__tech-index uk-flex uk-flex-middle uk-flex-between">
+                                    <div class="uk-width-1-3">技術名</div>
+                                    <div class="uk-width-1-2">このコースに<br>おける難易度</div>
+                                </div>
+                                <div class="toranoko__tech-contents-wrap">
+                                    <div class="toranoko__tech-button-wrap"><p class="toranoko__tech-button">見る</p></div>
+                                    <div class="toranoko__tech-contents">
+                                        <div class="uk-flex uk-margin-small-top uk-margin-bottom">
+                                            <div class="uk-width-2-3"><a href="/technique.html#slide">スライド<i class="fas fa-caret-right uk-margin-small-left"></i></a></div>
+                                            <div class="uk-width-1-3 uk-margin-left">★★</div>
+                                        </div>
+                                        <div class="uk-flex uk-margin-bottom">
+                                            <div class="uk-width-2-3"><a href="/technique.html#climbing-flight">上向飛行<i class="fas fa-caret-right uk-margin-small-left"></i></a></div>
+                                            <div class="uk-width-1-3 uk-margin-left">★</div>
+                                        </div>
+                                        <div class="uk-flex uk-margin-bottom">
+                                            <div class="uk-width-2-3"><a href="/technique.html#level-flight">水平飛行<i class="fas fa-caret-right uk-margin-small-left"></i></a></div>
+                                            <div class="uk-width-1-3 uk-margin-left">★</div>
+                                        </div>
+                                        <div class="uk-flex uk-margin-bottom">
+                                            <div class="uk-width-2-3"><a href="/technique.html#corrected-jump">補正ジャンプ<i class="fas fa-caret-right uk-margin-small-left"></i></a></div>
+                                            <div class="uk-width-1-3 uk-margin-left">★★</div>
+                                        </div>
+                                        <div class="uk-flex uk-margin-small-bottom">
+                                            <div class="uk-width-2-3"><a href="/technique.html#pitatoma">ぴたとま<i class="fas fa-caret-right uk-margin-small-left"></i></a></div>
+                                            <div class="uk-width-1-3 uk-margin-left">★★★</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <h3 class="common__headline">コースQ&A</h3>
+                            <div class="qa__contents">
+                                <h4 class="qa__num">-- Q1 --</h4>
+                                <div class="qa__moth">
+                                    <p class="qa__moth-icon"><img class="" src="img/qa_moth1.jpg" alt=""></p>
+                                    <p class="qa__moth-text">2個目のトンネルをくぐってから島の頂上のチェックポイントの門の裏を通る時、高く飛べずにホバーで昇って通ってます泣。<br>滑空モードでかっこよく通過するコツを教えてください!!</p>
+                                    <p class="qa__moth-text">それから素早く頂上まで行くにはどのような軌道が良いですか？また何回羽ばたきますか？</p>
+                                </div>
+                                <div class="qa__eagle">
+                                    <p class="qa__eagle-icon"><img class="" src="img/qa_eagle1.jpg" alt=""></p>
+                                    <p class="qa__eagle-text">まずは<a href="/technique.html#keep-slide" class="common__word-link">スライド状態</a>をキープしていることが大前提になります。
+                                        <br>スマホに限ってになりますが、スライドが入っている状態であれば、羽ばたくと同時に右斜め上へのフリックと画面を回転させるだけで頂上まで上ることが可能です。（→<a href="/technique.html#climbing-flight" class="common__word-link">上向飛行</a>）
+                                        <br>羽ばたきは5回で登れます。
+                                    </p>
+                                    <p class="qa__eagle-text">スライドが切れてしまっている場合はトンネルの出口で一度接地し、スライド状態を作ります。<br>この場合、<a href="/technique.html#vertical-flight" class="common__word-link">垂直飛行</a>で登るのも有りです。</p>
+                                </div>
+                            </div>
+                            <div class="qa__contents">
+                                <h4 class="qa__num">-- Q2 --</h4>
+                                <div class="qa__moth">
+                                    <p class="qa__moth-icon"><img class="" src="img/qa_moth2.jpg" alt=""></p>
+                                    <p class="qa__moth-text">最後の穴(チェックポイント6) をはいるのが苦手なのと、くぐってからスタート地点に戻る時に膨らんでしまいます。<br>綺麗にスタート地点まで戻るコツはありますか？</p>
+                                </div>
+                                <div class="qa__eagle">
+                                    <p class="qa__eagle-icon"><img class="" src="img/qa_eagle1.jpg" alt=""></p>
+                                    <p class="qa__eagle-text">スマホ限定になってしまいますが、滑空のまま穴を抜けた後、左フリックを入れることで壁ギリギリを通ってゴールに向かうコースに乗れます。</p>
+                                    <p class="qa__eagle-text">羽ばたきを入れる場合はゴールを正面に捉えてから行うのがコツです。
+                                        <br>スピードに乗っている状態で羽ばたくと非常に曲がりにくくなるため、それた方向に羽ばたいてしまうと曲がり切れずにゴールを通り過ぎてしまいます。
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="qa__contents">
+                                <h4 class="qa__num">-- Q3 --</h4>
+                                <div class="qa__moth">
+                                    <p class="qa__moth-icon"><img class="" src="img/qa_moth2.jpg" alt=""></p>
+                                    <p class="qa__moth-text">このコースの魅力を一言で教えてください！</p>
+                                </div>
+                                <div class="qa__eagle">
+                                    <p class="qa__eagle-icon"><img class="" src="img/qa_eagle1.jpg" alt=""></p>
+                                    <p class="qa__eagle-text">沢山の狭い箇所を通過する激ムズコースですが、飛べたときの爽快感はもうヤミツキ！
+                                        <br>操作の緩急のバランスも良くずーっと飛んでいられる素晴らしいコースです。
+                                        <br>羽を気にせず好きなだけ羽ばたけるのも魅力の一つ。
+                                        <br>このコースを安定して飛べるようになったとき、あなたの飛行レベルは著しい成長を遂げているでしょう！</p>
+                                </div>
+                            </div>
+                            <div class="uk-text-center">
+                                <a class="common__x-button uk-margin-top" href="https://x.com/share?hashtags=skyエアレ " target="_blank" rel="noopener noreferrer">コースを飛んだら<span>#skyエアレ</span>で報告しよう！</a>
+                            </div>
+
+                            <div class="common__link-internal uk-margin-top"><a href="/past.html#vol1">第1回大会本戦情報を見る <i class="fas fa-caret-right"></i></a></div>
+                            <div class="common__link-internal"><a href="/regulation.html#rule">レギュレーション（基本ルール）を見る <i class="fas fa-caret-right"></i></a></div>
+                            <div class="toranoko__fixed-close"><img src="img/chevron-down-solid-white.svg" alt="">No.4 閉じる</div>
+                        </div>
+                        <div class="ac-course__index--close close">　No.4　詳細を閉じる</div>
+                    </div>
+                </div>
+            </div>
+
+<!-- とらのこコースNo.5 雨林/晴れ間エリア --> 
+            <div id="toranoko-no5" class="toranoko__wrap">
+                <div class="common__index">
+                    <div class="uk-flex uk-flex-between uk-flex-middle toranoko__index">
+                        <h2 class="toranoko__title">第2回大会 1st<span class="toranoko__title--crs">(コース<span class="toranoko__title--no">No.5</span>)</span></h2>
+                        <div class="toranoko__about">
+                            <p><i class="fas fa-tag"></i>#skyairrace1st</p>
+                            <p><i class="fas fa-map-marker-alt"></i>雨林/晴れ間エリア</p>
+                            <p>一次予選足切り<i class="fas fa-stopwatch"></i>43.00秒</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="toranoko__video-wrap">
+                    <!-- google drive動画埋め込み方法　右クリ→アプリで開く→プレビュー→：→新しいウィンドウで開く→：→アイテムを埋め込む -->
+                    <iframe class="toranoko__video-content" src="https://drive.google.com/file/d/1xVafqXjcFP9NzT4iDx1wtQfFUUqR4zQJ/preview" allow="autoplay"></iframe>
+                </div>
+                <div class="toranoko__contents-wrap">
+                    <div class="toranoko__KK-wrap">
+                        <img class="toranoko__KK-text" src="img/KK_text.png" alt="">
+                        <p class="toranoko__KK-title">KONNAKANJI図</p>
+                        <img class="" src="img/KKno5.jpg" alt="">
+                        <figcaption class="common__caption toranoko__KK-caption">（作成：<img src="img/nikosan_name.png" alt="ニコ" class="nicosan">）</figcaption>
+                    </div>
+                    <div class="ac-course">
+                        <div class="ac-course__index">　No.5　詳細を見る</div>
+                        <div class="ac-course__contents">
+                            <h3 class="common__headline">チェックポイント</h3>
+                            <div class="common__sentence common__list">
+                                <p><span class="mark uk-margin-small-right">PREP</span>橋を上げる</p>
+                                <p><span class="mark">START</span>/<span class="mark uk-margin-small-right">GOAL</span>光の子がいる円形敷石の上</p>
+                                <p class="common__list--child">橋の下をくぐる</p>
+                                <p class="common__list--child">建物の奥の柱を回る（高さ不問）</p>
+                                <p class="common__list--child">橋の下をもう一度くぐる</p>
+                                <p class="common__list--child">木の右側を通る</p>
+                                <p class="common__list--child">建物の中を通る（柱1本でもok）</p>
+                                <p class="common__list--child">木の間を通る</p>
+                                <p class="common__list--child">同じく木の間を通る</p>
+                                <p class="common__list--child">木の右側を通る</p>
+                                <p class="common__list--child">木の中を通る（入口と出口は別である事）</p>
+                                <p class="common__list--child">木の右側を通る</p>
+                                <p class="uk-margin-top">→FINISH</p>
+                            </div>
+                            <div class="toranoko__side-note">
+                                <h4 class="toranoko__side-note--title">No.5補足</h4>
+                                <p>・パン焼きの時間に飛ぶ場合や、地下洞窟のエモートの協力等、野良さんへの配慮は忘れずにお願いします。</p>
+                                <p>・チェックポイント5「建物」は<a href="/technique.html#azumaya" class="common__word-link">東屋</a>と呼ばれます。</p>
+                            </div>
+                            <h3 class="common__headline">テクニック紹介</h3>
+                            <div class="common__sentence">
+                                <p>このコースの過去の予選や本戦でよく使われていた技術の紹介です。</p>
+                            </div>
+                            <div class="toranoko__tech uk-margin-top">
+                                <div class="toranoko__tech-index uk-flex uk-flex-middle uk-flex-between">
+                                    <div class="uk-width-1-3">技術名</div>
+                                    <div class="uk-width-1-2">このコースに<br>おける難易度</div>
+                                </div>
+                                <div class="toranoko__tech-contents-wrap">
+                                    <div class="toranoko__tech-button-wrap"><p class="toranoko__tech-button">見る</p></div>
+                                    <div class="toranoko__tech-contents">
+                                        <div class="uk-flex uk-margin-small-top uk-margin-bottom">
+                                            <div class="uk-width-2-3"><a href="/technique.html#slip">滑り降り<i class="fas fa-caret-right uk-margin-small-left"></i></a></div>
+                                            <div class="uk-width-1-3 uk-margin-left">★★</div>
+                                        </div>
+                                        <div class="uk-flex uk-margin-bottom">
+                                            <div class="uk-width-2-3"><a href="/technique.html#wind-wall-power">風壁加速<i class="fas fa-caret-right uk-margin-small-left"></i></a></div>
+                                            <div class="uk-width-1-3 uk-margin-left">★★</div>
+                                        </div>
+                                        <div class="uk-flex uk-margin-bottom">
+                                            <div class="uk-width-2-3"><a href="/technique.html#flicked-deboost">フリック減速<i class="fas fa-caret-right uk-margin-small-left"></i></a></div>
+                                            <div class="uk-width-1-3 uk-margin-left">★</div>
+                                        </div>
+                                        <div class="uk-flex uk-margin-small-bottom">
+                                            <div class="uk-width-2-3"><a href="/technique.html#climbing-flight">上向飛行<i class="fas fa-caret-right uk-margin-small-left"></i></a></div>
+                                            <div class="uk-width-1-3 uk-margin-left">★</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <h3 class="common__headline">コースQ&A</h3>
+                            <div class="qa__contents">
+                                <h4 class="qa__num">-- Q1 --</h4>
+                                <div class="qa__moth">
+                                    <p class="qa__moth-icon"><img class="" src="img/qa_moth1.jpg" alt=""></p>
+                                    <p class="qa__moth-text">後半エナジー切れを起こして飛べなくなってしまいます。<br>羽ばたく回数は減らした方がいいですか？<br>また回復ポイントはありますか？</p>
+                                </div>
+                                <div class="qa__eagle">
+                                    <p class="qa__eagle-icon"><img class="" src="img/qa_eagle2.jpg" alt=""></p>
+                                    <p class="qa__eagle-text">羽ばたく回数を減らすというよりは、どの区間で何回羽ばたくかを意識するといいでしょう（<a href="/technique.html#wings-management" class="common__word-link">羽管理</a>）。
+                                        <br>何とかして羽ばたき続ける方が速くなります。
+                                    </p>
+                                    <p class="qa__eagle-text">回復ポイントで一番重要なのは林間（チェックポイント7）上空の雲です。
+                                        <br>おそらく、羽ばたけなくなる星の子はここに触れてないことが原因だと思います。
+                                        <br>ここに触れる&視界不良の中操作が出来れば足切りにぐっと近づけます。
+                                        <br>
+                                        <br>東屋（チェックポイント5）から林間（チェックポイント7）上空の雲にたどり着くためにはスライド滑空&しっかり上スワイプが必須です。
+                                        <br>この区間までに足を着いてしまいスライドが切れることがないようにしましょう。
+                                        <br>また、ここ以前の区間にぶつかるなどで余分に羽ばたいてしまった場合は雲への到達がむずかしくなります。
+                                        <br>繰り返し練習しスムーズに飛べるように心がけましょう。
+                                        <br>
+                                        <br>視界不良の操作は何となくです、自分なりの感覚で覚えましょう。
+                                    </p>
+                                    <p class="qa__eagle-icon"><img class="" src="img/qa_eagle4.jpg" alt=""></p>
+                                    <p class="qa__eagle-text">チェックポイント7の雲で回復した後は下向き飛行になり、食卓を抜けた後は急カーブ1周なので羽ばたきすぎるとかえって遅くなったり大回りになる可能性があります。
+                                        <br>
+                                        <br>→<a href="/technique.html#downward-deboost" class="common__word-link">下向き羽ばたき減速</a>
+                                    </p>
+                                    <p class="qa__eagle-text">2つめの東屋を抜けた後に何回上向きに羽ばたいたら雲で回復ができるかの感覚をつかみ、雲の回復も雲に突っ込むのではなくて雲の真下に沿って回復するのを意識して練習するといい思います。</p>
+                                </div>
+                            </div>
+                            <div class="qa__contents">
+                                <h4 class="qa__num">-- Q2 --</h4>
+                                <div class="qa__moth">
+                                    <p class="qa__moth-icon"><img class="" src="img/qa_moth2.jpg" alt=""></p>
+                                    <p class="qa__moth-text">2個目の建物（<a href="/technique.html#azumaya" class="common__word-link">東屋</a>）の中を抜ける時に、柱にぶつかってしまいます。<br>どこを抜けるのがやりやすいですか？</p>
+                                </div>
+                                <div class="qa__eagle">
+                                    <p class="qa__eagle-icon"><img class="" src="img/qa_eagle2.jpg" alt=""></p>
+                                    <p class="qa__eagle-text">向かって右手前の柱1本のみを回るルートがやりやすいので、挑戦しましょう。ぶつかる原因として、
+                                        <br>
+                                        <br>A 曲がりきれず奥の柱にぶつかる、
+                                        <br>B 上下の高さが合わず屋根にぶつかる、
+                                        <br>C 上昇が間に合わず着地してしまう。
+                                        <br>
+                                        <br>Aの対策としてはフリック旋回で速度を落としてでも曲がりきるしかないです。
+                                        <br>BCの対策としては東屋（チェックポイント5）の手前で星の子の進行ベクトルを上向きに直す必要があります。
+                                        <br>木（チェックポイント4）から東屋（チェックポイント5）までの間に丘があり、東屋（チェックポイント5）は丘よりも低い位置にあります。
+                                        <br>直前の羽ばたきでは東屋（チェックポイント5）の下あたりを狙うように調整し、その後、上スワイプや上フリックで若干の浮遊感が出るように星の子の進行ベクトルを上向きにします。
+                                        <br>これで、東屋（チェックポイント5）の時に上下の調整でもたつくことがなくなり、曲がることだけに集中でき、ミス無く通過する確率が増えることでしょう。
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="qa__contents">
+                                <h4 class="qa__num">-- Q3 --</h4>
+                                <div class="qa__moth">
+                                    <p class="qa__moth-icon"><img class="" src="img/qa_moth3.jpg" alt=""></p>
+                                    <p class="qa__moth-text">東屋を潜った後、羽回復の為上空の雲に向かおうとしますが、なかなか雲にたどり着けません。コツはありますか？</p>
+                                </div>
+                                <div class="qa__eagle">
+                                    <p class="qa__eagle-icon"><img class="" src="img/qa_eagle2.jpg" alt=""></p>
+                                    <p class="qa__eagle-text">質問1で回答した内容のため割愛。
+                                        <br>追加で東屋手前のエリアギリギリのところに雲がちょろっとだけあり、その雲で回復することもできます。
+                                        <br>高低差がきつく、地面すれすれを飛びつつ、雲の反動をコントロールするため、このルートも十分な練習が必要です。
+                                    </p>
+                                    <p class="qa__eagle-text">↓雲回復なしver.</p>
+                                    <p class="qa__eagle-img uk-margin-small-top"><iframe src="https://drive.google.com/file/d/1wOZJI0IQE3q4BhpuNd_JK9mP3SS9qiDk/preview" allow="autoplay"></iframe></p>
+                                    <p class="qa__eagle-text">↓雲回復ありver.</p>
+                                    <p class="qa__eagle-img uk-margin-small-top"><iframe src="https://drive.google.com/file/d/1lTZKyjHoZRpaPdqksVDeAMBCOJazCHg2/preview" allow="autoplay"></iframe></p>
+                                </div>
+                            </div>
+                            <div class="qa__contents">
+                                <h4 class="qa__num">-- Q4 --</h4>
+                                <div class="qa__moth">
+                                    <p class="qa__moth-icon"><img class="" src="img/qa_moth1.jpg" alt=""></p>
+                                    <p class="qa__moth-text">このコースの魅力を一言で教えてください！</p>
+                                </div>
+                                <div class="qa__eagle">
+                                    <p class="qa__eagle-icon"><img class="" src="img/qa_eagle2.jpg" alt=""></p>
+                                    <p class="qa__eagle-text">羽切らさないで速いってかっこいいよね、、！</p>
+                                </div>
+                            </div>
+                            <div class="uk-text-center">
+                                <a class="common__x-button uk-margin-top" href="https://x.com/share?hashtags=skyエアレ " target="_blank" rel="noopener noreferrer">コースを飛んだら<span>#skyエアレ</span>で報告しよう！</a>
+                            </div>
+
+                            <div class="common__link-internal uk-margin-top"><a href="/past.html#vol2">第2回大会本戦情報を見る <i class="fas fa-caret-right"></i></a></div>
+                            <div class="common__link-internal"><a href="/regulation.html#rule">レギュレーション（基本ルール）を見る <i class="fas fa-caret-right"></i></a></div>
+                            <div class="toranoko__fixed-close"><img src="img/chevron-down-solid-white.svg" alt="">No.5 閉じる</div>
+                        </div>
+                        <div class="ac-course__index--close close">　No.5　詳細を閉じる</div>
+                    </div>
+                </div>
+            </div>
+
+<!-- とらのこコースNo.6 草原/鳥の巣エリア --> 
+            <div id="toranoko-no6" class="toranoko__wrap">
+                <div class="common__index">
+                    <div class="uk-flex uk-flex-between uk-flex-middle toranoko__index">
+                        <h2 class="toranoko__title">第2回大会 2nd<span class="toranoko__title--crs">(コース<span class="toranoko__title--no">No.6</span>)</span></h2>
+                        <div class="toranoko__about">
+                            <p><i class="fas fa-tag"></i>#skyairrace2nd</p>
+                            <p><i class="fas fa-map-marker-alt"></i>草原/鳥の巣エリア</p>
+                            <p>一次予選足切り<i class="fas fa-stopwatch"></i>37.00秒</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="toranoko__video-wrap">
+                    <!-- google drive動画埋め込み方法　右クリ→アプリで開く→プレビュー→：→新しいウィンドウで開く→：→アイテムを埋め込む -->
+                    <iframe class="toranoko__video-content" src="https://drive.google.com/file/d/1W-LZ3oDXMvdLuPIwZzD507viWSNd9itz/preview" allow="autoplay"></iframe>
+                </div>
+                <div class="toranoko__contents-wrap">
+                    <div class="toranoko__KK-wrap">
+                        <img class="toranoko__KK-text" src="img/KK_text.png" alt="">
+                        <p class="toranoko__KK-title">KONNAKANJI図</p>
+                        <img class="" src="img/KKno6.jpg" alt="">
+                        <figcaption class="common__caption toranoko__KK-caption">（作成：<img src="img/nikosan_name.png" alt="ニコ" class="nicosan">）</figcaption>
+                    </div>
+                    <div class="ac-course">
+                        <div class="ac-course__index">　No.6　詳細を見る</div>
+                        <div class="ac-course__contents">
+                            <h3 class="common__headline">チェックポイント</h3>
+                            <div class="common__sentence common__list">
+                                <p><span class="mark">START</span>/<span class="mark uk-margin-small-right">GOAL</span>石の桟橋</p>
+                                <p class="common__list--child">橋を縦に1回転する<span class="note">※橋は下から回る</span></p>
+                                <p class="common__list--child">建物の間を楽園側から通る</p>
+                                <p class="common__list--child">穴を楽園側から通る</p>
+                                <p class="common__list--child">穴を通る</p>
+                                <p class="uk-margin-top">→FINISH</p>
+                            </div>
+                            <div class="toranoko__side-note">
+                                <h4 class="toranoko__side-note--title">No.6補足</h4>
+                                <p>・スタート/ゴールは、祝祭の旋舞家の精霊解放時の桟橋</p>
+                                <p>・チェックポイント1について
+                                    <br>橋の下を飛ぶ際、水平真横に浮島がある範囲は橋下とみなす。
+                                    <br>上へ上がった際に、上記の範囲より上に出ても問題ありません。
+                                </p>
+                                <p>・チェックポイント2について
+                                    <br>建物より上飛行した際は、しっかり間を通ってる事が確認できればok。
+                                </p>
+                                <p>・【質問】チェックポイント2～3について
+                                    <br>1度楽園側に抜けてから来た道をUターンで楽園側から抜けるのは規定違反？
+                                    <br>【回答】はい　Uターンや引き返しでの通過は無しでお願いします。
+                                </p>
+                            </div>
+                            <h3 class="common__headline">テクニック紹介</h3>
+                            <div class="common__sentence">
+                                <p>このコースの過去の予選や本戦でよく使われていた技術の紹介です。</p>
+                            </div>
+                            <div class="toranoko__tech uk-margin-top">
+                                <div class="toranoko__tech-index uk-flex uk-flex-middle uk-flex-between">
+                                    <div class="uk-width-1-3">技術名</div>
+                                    <div class="uk-width-1-2">このコースに<br>おける難易度</div>
+                                </div>
+                                <div class="toranoko__tech-contents-wrap">
+                                    <div class="toranoko__tech-button-wrap"><p class="toranoko__tech-button">見る</p></div>
+                                    <div class="toranoko__tech-contents">
+                                        <div class="uk-flex uk-margin-small-top uk-margin-bottom">
+                                            <div class="uk-width-2-3"><a href="/technique.html#slip">滑り降り<i class="fas fa-caret-right uk-margin-small-left"></i></a></div>
+                                            <div class="uk-width-1-3 uk-margin-left">★★</div>
+                                        </div>
+                                        <div class="uk-flex uk-margin-bottom">
+                                            <div class="uk-width-2-3"><a href="/technique.html#flicked-deboost">フリック減速<i class="fas fa-caret-right uk-margin-small-left"></i></a></div>
+                                            <div class="uk-width-1-3 uk-margin-left">★</div>
+                                        </div>
+                                        <div class="uk-flex uk-margin-bottom">
+                                            <div class="uk-width-2-3"><a href="/technique.html#quick-turn">クイックターン<i class="fas fa-caret-right uk-margin-small-left"></i></a></div>
+                                            <div class="uk-width-1-3 uk-margin-left">★★</div>
+                                        </div>
+                                        <div class="uk-flex uk-margin-bottom">
+                                            <div class="uk-width-2-3"><a href="/technique.html#level-flight">水平飛行<i class="fas fa-caret-right uk-margin-small-left"></i></a></div>
+                                            <div class="uk-width-1-3 uk-margin-left">★</div>
+                                        </div>
+                                        <div class="uk-flex uk-margin-bottom">
+                                            <div class="uk-width-2-3"><a href="/technique.html#pitatoma">ぴたとま<i class="fas fa-caret-right uk-margin-small-left"></i></a></div>
+                                            <div class="uk-width-1-3 uk-margin-left">★★</div>
+                                        </div>
+                                        <div class="uk-flex uk-margin-small-bottom">
+                                            <div class="uk-width-2-3"><a href="/technique.html#corrected-jump">補正ジャンプ<i class="fas fa-caret-right uk-margin-small-left"></i></a></div>
+                                            <div class="uk-width-1-3 uk-margin-left">★</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <h3 class="common__headline">コースQ&A</h3>
+                            <div class="qa__contents">
+                                <h4 class="qa__num">-- Q1 --</h4>
+                                <div class="qa__moth">
+                                    <p class="qa__moth-icon"><img class="" src="img/qa_moth1.jpg" alt=""></p>
+                                    <p class="qa__moth-text">浮き島の塔の間、穴を通る時にどうしてももたついてしまいます。<br>塔は右回りと左回りどちらが通りやすいですか？<br>また、大回りにならないためのコツはありますか？</p>
+                                </div>
+                                <div class="qa__eagle">
+                                    <p class="qa__eagle-icon"><img class="" src="img/qa_eagle3.jpg" alt=""></p>
+                                    <p class="qa__eagle-text">もたついてしまう原因は苦しい操作をしているからです。
+                                        <br>
+                                        <br>苦しい操作とは何かというと
+                                        <br>1.下向き移動中の方向転換(捻りの動き)と
+                                        <br>2.視点操作
+                                        <br>です。
+                                        <br>捻りの動きは下入力から左右入力をするのではなく、左右入力から下向きに入力します。
+                                        <br>こうすることで上昇気流の中で左右入力をしたときに浮き上がるような現象を抑制できます。
+                                    </p>
+                                    <p class="qa__eagle-text">視点操作は左手で操作中に行うと星の子の進行ベクトルが狂ってしまいます。
+                                        <br>なるべく定点で理想的な起動を描けるようにしましょう。
+                                        <br>回る方向の通りやすさは個人差があるのですが、「スタートから向かって左側の塔を時計回り」が主流のためそのルートで説明します。
+                                    </p>
+                                    <p class="qa__eagle-text">・宙返り（チェックポイント1）から塔の間（チェックポイント2）の羽ばたきを4回にする。
+                                        <br>・上昇の頂点を塔の間かつ低い塔の高さに持っていくイメージ。
+                                        <br>・急停止からフリックによる方向転換で塔の間に進行ベクトルを向ける。（→<a href="/technique.html#quick-turn" class="common__word-link">クイックターン</a>）
+                                        <br>・すぐさま滑空モードに切り替えて旋回しながら落下。
+                                        <br>・捻りの動きで進行方向を予め整える。
+                                        <br>
+                                        <br>穴を潜る瞬間に一瞬上スワイプするとちょうどよく通り抜けてくれます。
+                                    </p>
+                                    <p class="qa__eagle-text">↓参考動画</p>
+                                    <p class="qa__eagle-img uk-margin-small-top"><iframe src="https://drive.google.com/file/d/1W-LZ3oDXMvdLuPIwZzD507viWSNd9itz/preview" allow="autoplay"></iframe></p>
+                                </div>
+                            </div>
+                            <div class="qa__contents">
+                                <h4 class="qa__num">-- Q2 --</h4>
+                                <div class="qa__moth">
+                                    <p class="qa__moth-icon"><img class="" src="img/qa_moth2.jpg" alt=""></p>
+                                    <p class="qa__moth-text">スタートしてすぐ、橋を一回転が上手く小回り出来ません。何かコツはありますか？</p>
+                                </div>
+                                <div class="qa__eagle">
+                                    <p class="qa__eagle-icon"><img class="" src="img/qa_eagle3.jpg" alt=""></p>
+                                    <p class="qa__eagle-text">うまく小回りできない原因として、気流のコントロールができていないことが主だといます。
+                                        <br>ここは2通りの方法があり、2つの違いは切り返しを使うか使わないかです。
+                                        <br>自分は切り返しを使わない本戦ルートが好きなのでそちらで説明します。</p>
+                                    <p class="qa__eagle-text">この方法のメリットは
+                                        <br>・橋に補正がかかる事故がないこと、
+                                        <br>・視点切り替えが落ち着いてできること、
+                                        <br>・気流のコントロールがしやすいことです。
+                                        <br>
+                                        <br>この方法は縦回転というよりは斜め上の旋回をします。
+                                        <br>スタートから橋の左側の島に目掛けて2回羽ばたきます。
+                                        <br>やや手前から旋回を始め、右側の島と橋のくっついてるところの奥を目標に飛びます。
+                                        <br>旋回しきれない勢いかと思いますので、やや上フリックを連打し速度を落とします。（→<a href="/technique.html#flicked-deboost" class="common__word-link">フリック減速</a>）
+                                        <br>速度が落ちすぎて旋回中に足が着きそうになっても上スワイプをすることで高度を維持できます。
+                                        <br>橋をこえたら捻りの動きで橋の下をくぐります。
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="qa__contents">
+                                <h4 class="qa__num">-- Q3 --</h4>
+                                <div class="qa__moth">
+                                    <p class="qa__moth-icon"><img class="" src="img/qa_moth3.jpg" alt=""></p>
+                                    <p class="qa__moth-text">このコースの魅力を一言で教えてください！</p>
+                                </div>
+                                <div class="qa__eagle">
+                                    <p class="qa__eagle-icon"><img class="" src="img/qa_eagle3.jpg" alt=""></p>
+                                    <p class="qa__eagle-text">涼しい顔してこのコース飛んでたら、、、かっこいいよねぇ！</p>
+                                </div>
+                            </div>
+                            <div class="uk-text-center">
+                                <a class="common__x-button uk-margin-top" href="https://x.com/share?hashtags=skyエアレ " target="_blank" rel="noopener noreferrer">コースを飛んだら<span>#skyエアレ</span>で報告しよう！</a>
+                            </div>
+
+                            <div class="common__link-internal uk-margin-top"><a href="/past.html#vol2">第2回大会本戦情報を見る <i class="fas fa-caret-right"></i></a></div>
+                            <div class="common__link-internal"><a href="/regulation.html#rule">レギュレーション（基本ルール）を見る <i class="fas fa-caret-right"></i></a></div>
+                            <div class="toranoko__fixed-close"><img src="img/chevron-down-solid-white.svg" alt="">No.6 閉じる</div>
+                        </div>
+                        <div class="ac-course__index--close close">　No.6　詳細を閉じる</div>
+                    </div>
+                </div>
+            </div>
+
+<!-- とらのこコースNo.7 峡谷/天球儀エリア --> 
+            <div id="toranoko-no7" class="toranoko__wrap">
+                <div class="common__index">
+                    <div class="uk-flex uk-flex-between uk-flex-middle toranoko__index">
+                        <h2 class="toranoko__title">第2回大会 3rd<span class="toranoko__title--crs">(コース<span class="toranoko__title--no">No.7</span>)</span></h2>
+                        <div class="toranoko__about">
+                            <p><i class="fas fa-tag"></i>#skyairrace3rd</p>
+                            <p><i class="fas fa-map-marker-alt"></i>峡谷/天球儀エリア</p>
+                            <p>一次予選足切り<i class="fas fa-stopwatch"></i>49.50秒</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="toranoko__video-wrap">
+                    <!-- google drive動画埋め込み方法　右クリ→アプリで開く→プレビュー→：→新しいウィンドウで開く→：→アイテムを埋め込む -->
+                    <iframe class="toranoko__video-content" src="https://drive.google.com/file/d/1zUzCPa-1ImuXeU9nIyMxBRDcBV7ndr96/preview" allow="autoplay"></iframe>
+                </div>
+                <div class="toranoko__contents-wrap">
+                    <div class="toranoko__KK-wrap">
+                        <img class="toranoko__KK-text" src="img/KK_text.png" alt="">
+                        <p class="toranoko__KK-title">KONNAKANJI図</p>
+                        <img class="" src="img/KKno7.jpg" alt="">
+                        <figcaption class="common__caption toranoko__KK-caption">（作成：<img src="img/nikosan_name.png" alt="ニコ" class="nicosan">）</figcaption>
+                    </div>
+                    <div class="ac-course">
+                        <div class="ac-course__index">　No.7　詳細を見る</div>
+                        <div class="ac-course__contents">
+                            <h3 class="common__headline">チェックポイント</h3>
+                            <div class="common__sentence common__list">
+                                <p><span class="mark">START</span>/<span class="mark uk-margin-small-right">GOAL</span>エリア入口近くの石台の上</p>
+                                <p class="common__list--child">橋の上を通る</p>
+                                <p class="common__list--child">どちらかの穴を通る</p>
+                                <p class="common__list--child">柱と屋根飾りの間を通る（上のみ）</p>
+                                <p class="common__list--child">穴を通る</p>
+                                <p class="common__list--child">中央側から奥の柱の間を通る（→<a href="/technique.html#prison-gate" class="common__word-link">牢獄</a>）</p>
+                                <p class="common__list--child">大天球儀のいずれかの輪を通る</p>
+                                <p class="common__list--child">石柱の上に接地する</p>
+                                <p class="common__list--child">建物の高さに合わせて壁との間を通る</p>
+                                <p class="uk-margin-top">→FINISH</p>
+                            </div>
+                            <div class="toranoko__side-note">
+                                <h4 class="toranoko__side-note--title">No.7補足</h4>
+                                <p>・チェックポイント5にて、柱の間はどの位置を通ってもひとつのオブジェクトとしてカウントされます。</p>
+                            </div>
+                            <h3 class="common__headline">テクニック紹介</h3>
+                            <div class="common__sentence">
+                                <p>このコースの過去の予選や本戦でよく使われていた技術の紹介です。</p>
+                            </div>
+                            <div class="toranoko__tech uk-margin-top">
+                                <div class="toranoko__tech-index uk-flex uk-flex-middle uk-flex-between">
+                                    <div class="uk-width-1-3">技術名</div>
+                                    <div class="uk-width-1-2">このコースに<br>おける難易度</div>
+                                </div>
+                                <div class="toranoko__tech-contents-wrap">
+                                    <div class="toranoko__tech-button-wrap"><p class="toranoko__tech-button">見る</p></div>
+                                    <div class="toranoko__tech-contents">
+                                        <div class="uk-flex uk-margin-small-top uk-margin-bottom">
+                                            <div class="uk-width-2-3"><a href="/technique.html#slide">スライド<i class="fas fa-caret-right uk-margin-small-left"></i></a></div>
+                                            <div class="uk-width-1-3 uk-margin-left">★★</div>
+                                        </div>
+                                        <div class="uk-flex uk-margin-bottom">
+                                            <div class="uk-width-2-3"><a href="/technique.html#vertical-flight">垂直飛行<i class="fas fa-caret-right uk-margin-small-left"></i></a></div>
+                                            <div class="uk-width-1-3 uk-margin-left">★★★</div>
+                                        </div>
+                                        <div class="uk-flex uk-margin-bottom">
+                                            <div class="uk-width-2-3"><a href="/technique.html#quick-turn">クイックターン<i class="fas fa-caret-right uk-margin-small-left"></i></a></div>
+                                            <div class="uk-width-1-3 uk-margin-left">★★</div>
+                                        </div>
+                                        <div class="uk-flex uk-margin-small-bottom">
+                                            <div class="uk-width-2-3"><a href="/technique.html#pitatoma">ぴたとま<i class="fas fa-caret-right uk-margin-small-left"></i></a></div>
+                                            <div class="uk-width-1-3 uk-margin-left">★★</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <h3 class="common__headline">コースQ&A</h3>
+                            <div class="qa__contents">
+                                <h4 class="qa__num">-- Q1 --</h4>
+                                <div class="qa__moth">
+                                    <p class="qa__moth-icon"><img class="" src="img/qa_moth1.jpg" alt=""></p>
+                                    <p class="qa__moth-text">峡谷の上昇気流に慣れず、足切りタイムをなかなか切れません。<br>タイムを縮めるには、どのチェックポイントを特に練習したらよいですか？</p>
+                                </div>
+                                <div class="qa__eagle">
+                                    <p class="qa__eagle-icon"><img class="" src="img/qa_eagle1.jpg" alt=""></p>
+                                    <p class="qa__eagle-text">前提として、タイムの縮め方には二種類のやり方があると思います。
+                                        <br>
+                                        <br>「簡単にわずかにタイムを短縮できること」
+                                        <br>「難しいけどタイムを大きく短縮できること」
+                                        <br>の二種類です。
+                                    </p>
+                                    <p class="qa__eagle-text">前者の視点で一つ「中央よりやや左側からスタートし、五回飛行でチェックポイント1まで向かう」ことを意識してみてください。
+                                        <br>これで0.1秒は縮まります。
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="qa__contents">
+                                <h4 class="qa__num">-- Q2 --</h4>
+                                <div class="qa__moth">
+                                    <p class="qa__moth-icon"><img class="" src="img/qa_moth2.jpg" alt=""></p>
+                                    <p class="qa__moth-text"><a href="/technique.html#prison-gate" class="common__word-link">牢獄</a>の柱の隙間を抜けるのが苦手でぶつかってしまいます。通るコツはありますか？</p>
+                                </div>
+                                <div class="qa__eagle">
+                                    <p class="qa__eagle-icon"><img class="" src="img/qa_eagle1.jpg" alt=""></p>
+                                    <p class="qa__eagle-text">目指す場所が見えない時は、オブジェクトから脳内で補助線を引いてみるのがコツです。</p>
+                                    <p class="qa__eagle-img"><img src="img/qaNo7-Q2-1.jpg" alt=""></p>
+                                    <p class="qa__eagle-text">画像のように、大きなトンネルちょうど中央の延長線上の片側に柱があります。
+                                        <br>大きなトンネルの半分空レース側を目指して飛ぶことで、成功率は上がるかと思います。
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="qa__contents">
+                                <h4 class="qa__num">-- Q3 --</h4>
+                                <div class="qa__moth">
+                                    <p class="qa__moth-icon"><img class="" src="img/qa_moth3.jpg" alt=""></p>
+                                    <p class="qa__moth-text">このコースの魅力を一言で教えてください！</p>
+                                </div>
+                                <div class="qa__eagle">
+                                    <p class="qa__eagle-icon"><img class="" src="img/qa_eagle1.jpg" alt=""></p>
+                                    <p class="qa__eagle-text">上昇気流に慣れていくほどより速度感が楽しめるコースであることが魅力です。</p>
+                                </div>
+                            </div>
+                            <div class="uk-text-center">
+                                <a class="common__x-button uk-margin-top" href="https://x.com/share?hashtags=skyエアレ " target="_blank" rel="noopener noreferrer">コースを飛んだら<span>#skyエアレ</span>で報告しよう！</a>
+                            </div>
+
+                            <div class="common__link-internal uk-margin-top"><a href="/past.html#vol2">第2回大会本戦情報を見る <i class="fas fa-caret-right"></i></a></div>
+                            <div class="common__link-internal"><a href="/regulation.html#rule">レギュレーション（基本ルール）を見る <i class="fas fa-caret-right"></i></a></div>
+                            <div class="toranoko__fixed-close"><img src="img/chevron-down-solid-white.svg" alt="">No.7 閉じる</div>
+                        </div>
+                        <div class="ac-course__index--close close">　No.7　詳細を閉じる</div>
+                    </div>
+                </div>
+            </div>
+
+<!-- とらのこコースNo.8 雨林/風の街道エリア --> 
+            <div id="toranoko-no8" class="toranoko__wrap">
+                <div class="common__index">
+                    <div class="uk-flex uk-flex-between uk-flex-middle toranoko__index">
+                        <h2 class="toranoko__title">第3回大会 1st<span class="toranoko__title--crs">(コース<span class="toranoko__title--no">No.8</span>)</span></h2>
+                        <div class="toranoko__about">
+                            <p><i class="fas fa-tag"></i>#skyairrace1st</p>
+                            <p><i class="fas fa-map-marker-alt"></i>雨林/風の街道エリア</p>
+                            <p>一次予選足切り<i class="fas fa-stopwatch"></i>54.00秒</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="toranoko__video-wrap">
+                    <!-- google drive動画埋め込み方法　右クリ→アプリで開く→プレビュー→：→新しいウィンドウで開く→：→アイテムを埋め込む -->
+                    <iframe class="toranoko__video-content" src="https://drive.google.com/file/d/1Jl1NA_wr75QoNihmhIFAHWR6FtiHgow9/preview" allow="autoplay"></iframe>
+                </div>
+                <div class="toranoko__contents-wrap">
+                    <div class="toranoko__KK-wrap">
+                        <img class="toranoko__KK-text" src="img/KK_text.png" alt="">
+                        <p class="toranoko__KK-title">KONNAKANJI図</p>
+                        <img class="" src="img/KKno8.jpg" alt="">
+                        <figcaption class="common__caption toranoko__KK-caption">（作成：<img src="img/nikosan_name.png" alt="ニコ" class="nicosan">）</figcaption>
+                    </div>
+                    <div class="ac-course">
+                        <div class="ac-course__index">　No.8　詳細を見る</div>
+                        <div class="ac-course__contents">
+                            <h3 class="common__headline">チェックポイント</h3>
+                            <div class="common__sentence common__list">
+                                <p><span class="mark">START</span>/<span class="mark uk-margin-small-right">GOAL</span>エリア入口（雨林ホーム側）の島</p>
+                                <p class="common__list--child">穴を抜ける</p>
+                                <p class="common__list--child">門の裏から石と門の間を通る</p>
+                                <p class="common__list--child">矢印の方向で穴を抜ける<span class="note">※入り口の島から見て奥から手前の方向</span></p>
+                                <p class="common__list--child">1番奥の石標を回る</p>
+                                <p class="common__list--child">大きな石標の右側を高さを合わせて通る</p>
+                                <p class="uk-margin-top">→GOAL</p>
+                                <p class="uk-margin-top"><span class="mark uk-margin-small-right">CHOICE</span>CHALLENGE ROUTE：門の通過でチェックポイント3の代替ルートとします。</p>
+                                
+                            </div>
+                            <div class="toranoko__side-note">
+                                <h4 class="toranoko__side-note--title">No.8補足</h4>
+                                <p>・スタートは雲の内側で立てる場所全て</p>
+                                <p>・チェックポイント4は動画の通りの回り方に限定します。</p>
+                            </div>
+                            <h3 class="common__headline">テクニック紹介</h3>
+                            <div class="common__sentence">
+                                <p>このコースの過去の予選や本戦でよく使われていた技術の紹介です。</p>
+                            </div>
+                            <div class="toranoko__tech uk-margin-top">
+                                <div class="toranoko__tech-index uk-flex uk-flex-middle uk-flex-between">
+                                    <div class="uk-width-1-3">技術名</div>
+                                    <div class="uk-width-1-2">このコースに<br>おける難易度</div>
+                                </div>
+                                <div class="toranoko__tech-contents-wrap">
+                                    <div class="toranoko__tech-button-wrap"><p class="toranoko__tech-button">見る</p></div>
+                                    <div class="toranoko__tech-contents">
+                                        <div class="uk-flex uk-margin-small-top uk-margin-bottom">
+                                            <div class="uk-width-2-3"><a href="/technique.html#slip">滑り降り<i class="fas fa-caret-right uk-margin-small-left"></i></a></div>
+                                            <div class="uk-width-1-3 uk-margin-left">★★</div>
+                                        </div>
+                                        <div class="uk-flex uk-margin-bottom">
+                                            <div class="uk-width-2-3"><a href="/technique.html#flicked-deboost">フリック減速<i class="fas fa-caret-right uk-margin-small-left"></i></a></div>
+                                            <div class="uk-width-1-3 uk-margin-left">★</div>
+                                        </div>
+                                        <div class="uk-flex uk-margin-bottom">
+                                            <div class="uk-width-2-3"><a href="/technique.html#climbing-flight">上向飛行<i class="fas fa-caret-right uk-margin-small-left"></i></a></div>
+                                            <div class="uk-width-1-3 uk-margin-left">★</div>
+                                        </div>
+                                        <div class="uk-flex uk-margin-bottom">
+                                            <div class="uk-width-2-3"><a href="/technique.html#corrected-jump">補正ジャンプ<i class="fas fa-caret-right uk-margin-small-left"></i></a></div>
+                                            <div class="uk-width-1-3 uk-margin-left">★</div>
+                                        </div>
+                                        <div class="uk-flex uk-margin-small-bottom">
+                                            <div class="uk-width-2-3"><a href="/technique.html#pitatoma">ぴたとま<i class="fas fa-caret-right uk-margin-small-left"></i></a></div>
+                                            <div class="uk-width-1-3 uk-margin-left">★★</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <h3 class="common__headline">コースQ&A</h3>
+                            <div class="qa__contents">
+                                <h4 class="qa__num">-- Q1 --</h4>
+                                <div class="qa__moth">
+                                    <p class="qa__moth-icon"><img class="" src="img/qa_moth1.jpg" alt=""></p>
+                                    <p class="qa__moth-text">最後、ゴールの島まで上がるのに、高さが足らず困ることがあります。<br>その原因と、成功しやすい解決方法を知りたいです。</p>
+                                </div>
+                                <div class="qa__eagle">
+                                    <p class="qa__eagle-icon"><img class="" src="img/qa_eagle2.jpg" alt=""></p>
+                                    <p class="qa__eagle-text">原因は
+                                        <br>1.非スライド状態での飛行
+                                        <br>2.上フリックが足りていないこと
+                                        <br>が挙げられると思います。
+                                        <br>
+                                        <br>→<a href="/technique.html#keep-slide" class="common__word-link">スライド状態の維持</a>
+                                        <br>→<a href="/technique.html#climbing-flight" class="common__word-link">上向飛行</a>
+                                    </p>
+                                    <p class="qa__eagle-text">逆に言うと、スライド状態で上フリックをすると基本的には解決できるかと思います。
+                                        <br>ゴールまでの視点操作はエアレの中では比較的簡単な部類に入ると思います。
+                                        <br>ゴールに視点を向けることで目的地を視覚化できますから、行き先に目を向けた上で目一杯上フリックをすると良いかもしれません。
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="qa__contents">
+                                <h4 class="qa__num">-- Q2 --</h4>
+                                <div class="qa__moth">
+                                    <p class="qa__moth-icon"><img class="" src="img/qa_moth1.jpg" alt=""></p>
+                                    <p class="qa__moth-text">チェックポイント4で石標を折り返すときに、タイムを縮めようと思って接地すると星の子が前のめりになって減速してしまいます。<br>なんででしょうか？</p>
+                                </div>
+                                <div class="qa__eagle">
+                                    <p class="qa__eagle-icon"><img class="" src="img/qa_eagle2.jpg" alt=""></p>
+                                    <p class="qa__eagle-text">前傾による減速理由は「fps値の設定が高いこと」「星の子の身長が低いこと」に起因するスライド切れです。
+                                        <br>他方で、タイムを縮めるためにはチェックポイント4で接地をしない飛び方をすることが良いかと思います。
+                                        <br>と言うのも、レース開催当時とゲーム自体の仕様が変更されており、接地後の方向転換が上手くいかなくなっています。
+                                        <br>星の子の体の向きはチェックポイント5の方向を向いてもグライド切り替え時には別方向に飛んでいってしまうこともあるので、飛んだまま方向転換するやり方が現実的かと思います。
+                                        <br>
+                                        <br>→<a href="/technique.html#performance" class="common__word-link">fps値</a>
+                                        <br>→<a href="/technique.html#height" class="common__word-link">身長</a>
+                                        <br>→<a href="/technique.html#remove-slide" class="common__word-link">スライド切れ</a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="qa__contents">
+                                <h4 class="qa__num">-- Q3 --</h4>
+                                <div class="qa__moth">
+                                    <p class="qa__moth-icon"><img class="" src="img/qa_moth2.jpg" alt=""></p>
+                                    <p class="qa__moth-text">チャレンジルートの門が通れません！コツを教えてください！</p>
+                                </div>
+                                <div class="qa__eagle">
+                                    <p class="qa__eagle-icon"><img class="" src="img/qa_eagle2.jpg" alt=""></p>
+                                    <p class="qa__eagle-text">チャレンジルートの門の直前まで星の子は下向きに飛んでいます。
+                                        <br>いざ門の手前で角度を変えようと思ってもすぐに姿勢は変えられないので、門のやや手前から操作を開始すると高さの調節はやや容易になります。
+                                        <br>左右の調節はどうしても慣れが必要です。
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="qa__contents">
+                                <h4 class="qa__num">-- Q4 --</h4>
+                                <div class="qa__moth">
+                                    <p class="qa__moth-icon"><img class="" src="img/qa_moth3.jpg" alt=""></p>
+                                    <p class="qa__moth-text">このコースの魅力を一言で教えてください！</p>
+                                </div>
+                                <div class="qa__eagle">
+                                    <p class="qa__eagle-icon"><img class="" src="img/qa_eagle2.jpg" alt=""></p>
+                                    <p class="qa__eagle-text">ロングコースのため、長い時間ミスなく飛ぶ必要がある緊張感が魅力です。 </p>
+                                </div>
+                            </div>
+                            <div class="uk-text-center">
+                                <a class="common__x-button uk-margin-top" href="https://x.com/share?hashtags=skyエアレ " target="_blank" rel="noopener noreferrer">コースを飛んだら<span>#skyエアレ</span>で報告しよう！</a>
+                            </div>
+
+                            <div class="common__link-internal uk-margin-top"><a href="/past.html#vol3">第3回大会本戦情報を見る <i class="fas fa-caret-right"></i></a></div>
+                            <div class="common__link-internal"><a href="/regulation.html#rule">レギュレーション（基本ルール）を見る <i class="fas fa-caret-right"></i></a></div>
+                            <div class="toranoko__fixed-close"><img src="img/chevron-down-solid-white.svg" alt="">No.8 閉じる</div>
+                        </div>
+                        <div class="ac-course__index--close close">　No.8　詳細を閉じる</div>
+                    </div>
+                </div>
+            </div>
+
+<!-- とらのこコースNo.9 雨林/晴れ間エリア --> 
+            <div id="toranoko-no9" class="toranoko__wrap">
+                <div class="common__index">
+                    <div class="uk-flex uk-flex-between uk-flex-middle toranoko__index">
+                        <h2 class="toranoko__title">第3回大会 2nd<span class="toranoko__title--crs">(コース<span class="toranoko__title--no">No.9</span>)</span></h2>
+                        <div class="toranoko__about">
+                            <p><i class="fas fa-tag"></i>#skyairrace2nd</p>
+                            <p><i class="fas fa-map-marker-alt"></i>雨林/晴れ間エリア</p>
+                            <p>一次予選足切り<i class="fas fa-stopwatch"></i>42.00秒</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="toranoko__video-wrap">
+                    <!-- google drive動画埋め込み方法　右クリ→アプリで開く→プレビュー→：→新しいウィンドウで開く→：→アイテムを埋め込む -->
+                    <iframe class="toranoko__video-content" src="https://drive.google.com/file/d/1HA79hduEqZy0ubXZpmbk2pXvSQiry3Tv/preview" allow="autoplay"></iframe>
+                </div>
+                <div class="toranoko__contents-wrap">
+                    <div class="toranoko__KK-wrap">
+                        <img class="toranoko__KK-text" src="img/KK_text.png" alt="">
+                        <p class="toranoko__KK-title">KONNAKANJI図</p>
+                        <img class="" src="img/KKno9.jpg" alt="">
+                        <figcaption class="common__caption toranoko__KK-caption">（作成：<img src="img/nikosan_name.png" alt="ニコ" class="nicosan">）</figcaption>
+                    </div>
+                    <div class="ac-course">
+                        <div class="ac-course__index">　No.9　詳細を見る</div>
+                        <div class="ac-course__contents">
+                            <h3 class="common__headline">チェックポイント</h3>
+                            <div class="common__sentence common__list">
+                                <p><span class="mark">START</span>/<span class="mark uk-margin-small-right">GOAL</span>地下洞からの出口</p>
+                                <p class="common__list--child">木の間の橋/足場の上を通る</p>
+                                <p class="common__list--child">木の左側を通る</p>
+                                <p class="common__list--child">木の右側を通る</p>
+                                <p class="common__list--child">木の左側を通る</p>
+                                <p class="common__list--child">木を左回りで一周する</p>
+                                <p class="common__list--child">建物の橋側の2本の柱より左側を通る</p>
+                                <p class="uk-margin-top">→GOAL</p>
+                                <p class="uk-margin-top"><span class="mark uk-margin-small-right">CHOICE</span>CHALLENGE ROUTE：奥の木の左側を通ることで<span class="qa__marker">チェックポイント3+4</span>の代替ルートとします。</p>
+                            </div>
+                            <div class="uk-width-4-5 uk-width-1-1@m uk-margin-auto uk-margin-top">
+                                <div class="uk-child-width-1-3@m common__list" uk-grid uk-lightbox="animation: slide">
+                                    <div>
+                                        <a class="uk-inline" href="img/KKno9-1.jpg">
+                                            <img class="" src="img/KKno9-1.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <a class="uk-inline" href="img/KKno9-2.jpg">
+                                            <img class="" src="img/KKno9-2.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <a class="uk-inline" href="img/KKno9-3.jpg" data-caption="チャレンジルートではSKIP">
+                                            <img class="" src="img/KKno9-3.jpg" alt="">
+                                        </a>
+                                        <figcaption class="common__caption">※チャレンジルートではSKIP</figcaption>
+                                    </div>
+                                    <div>
+                                        <a class="uk-inline" href="img/KKno9-4.jpg" data-caption="チャレンジルートではSKIP">
+                                            <img class="" src="img/KKno9-4.jpg" alt="">
+                                            <figcaption class="common__caption">※チャレンジルートではSKIP</figcaption>
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <a class="uk-inline" href="img/KKno9-5.jpg">
+                                            <img class="" src="img/KKno9-5.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <a class="uk-inline" href="img/KKno9-6.jpg">
+                                            <img class="" src="img/KKno9-6.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <p class="uk-margin-remove uk-text-small uk-text-center"><span class="mark uk-margin-small-right">CHOICE</span>チャレンジルート</p>
+                                        <a class="uk-inline" href="img/KKno9-c1.jpg" data-caption="この場合、通常ルートの3,4をSKIP">
+                                            <img class="" src="img/KKno9-c1.jpg" alt="">
+                                        </a>
+                                        <figcaption class="common__caption">この場合、通常ルートの3,4をSKIP</figcaption>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="toranoko__side-note">
+                                <h4 class="toranoko__side-note--title">No.9補足</h4>
+                                <p>・スタート/ゴールは階段より上の平な場所。ゲートの正面から入って着地（静止）することが条件になります。</p>
+                                <p>・スタートとゴール共に正面のみ飛行することが可能で、横抜けは禁止です。</p>
+                                <p>・【質問】階段は含まずって解釈でいいですか？<br>【回答】最上段の石の部分のみ階段とみなさず、上の平な場所とみなしスタートとゴールの判定の条件として含みます。</p>
+                                <p>・本コースに限り、エリア全域の上の雲を使うことは全てペナルティ+3秒の対象になります。</p>
+                            </div>
+                            <h3 class="common__headline">テクニック紹介</h3>
+                            <div class="common__sentence">
+                                <p>このコースの過去の予選や本戦でよく使われていた技術の紹介です。</p>
+                            </div>
+                            <div class="toranoko__tech uk-margin-top">
+                                <div class="toranoko__tech-index uk-flex uk-flex-middle uk-flex-between">
+                                    <div class="uk-width-1-3">技術名</div>
+                                    <div class="uk-width-1-2">このコースに<br>おける難易度</div>
+                                </div>
+                                <div class="toranoko__tech-contents-wrap">
+                                    <div class="toranoko__tech-button-wrap"><p class="toranoko__tech-button">見る</p></div>
+                                    <div class="toranoko__tech-contents">
+                                        <div class="uk-flex uk-margin-small-top uk-margin-bottom">
+                                            <div class="uk-width-2-3"><a href="/technique.html#slide">スライド<i class="fas fa-caret-right uk-margin-small-left"></i></a></div>
+                                            <div class="uk-width-1-3 uk-margin-left">★★</div>
+                                        </div>
+                                        <div class="uk-flex uk-margin-bottom">
+                                            <div class="uk-width-2-3"><a href="/technique.html#pitatoma">ぴたとま<i class="fas fa-caret-right uk-margin-small-left"></i></a></div>
+                                            <div class="uk-width-1-3 uk-margin-left">★★</div>
+                                        </div>
+                                        <div class="uk-flex uk-margin-small-bottom">
+                                            <div class="uk-width-2-3"><a href="/technique.html#wind-wall-power">風壁加速<i class="fas fa-caret-right uk-margin-small-left"></i></a></div>
+                                            <div class="uk-width-1-3 uk-margin-left">★★★</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <h3 class="common__headline">コースQ&A</h3>
+                            <div class="qa__contents">
+                                <h4 class="qa__num">-- Q1 --</h4>
+                                <div class="qa__moth">
+                                    <p class="qa__moth-icon"><img class="" src="img/qa_moth1.jpg" alt=""></p>
+                                    <p class="qa__moth-text">終盤の左旋回360°(チェックポイント5)は、ラインかスピードどちらに重きを置いていましたか？</p>
+                                </div>
+                                <div class="qa__eagle">
+                                    <p class="qa__eagle-icon"><img class="" src="img/qa_eagle3.jpg" alt=""></p>
+                                    <p class="qa__eagle-text">チェックポイント5手前の雲でバウンドした時のスピードを保ったまま、できるだけ木に沿って回ることを意識していました。
+                                        <br>旋回中ずっと羽ばたくのではなく、羽ばたきをやめた後でもしばらくスピードが出ている状態を生かして回るといいと思います。
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="qa__contents">
+                                <h4 class="qa__num">-- Q2(上級) --</h4>
+                                <div class="qa__moth">
+                                    <p class="qa__moth-icon"><img class="" src="img/qa_moth2.jpg" alt=""></p>
+                                    <p class="qa__moth-text">最初にスタートしてすぐ<a href="/technique.html#wind-wall-power" class="common__word-link">風壁</a>を使いたいのですが、弾き飛ばされてしまいます。<br>成功率を上げるにはどうしたらいいですか？</p>
+                                </div>
+                                <div class="qa__eagle">
+                                    <p class="qa__eagle-icon"><img class="" src="img/qa_eagle3.jpg" alt=""></p>
+                                    <p class="qa__eagle-text">まず、該当する風壁と木幹の間の距離を確認する為に反対方向から入ってみてください。
+                                        <br>この時、風壁に弾かれない範囲は星の子1人分程度、しかし上にいくにつれてその範囲が広くなるのが実感出来るかと思います。
+                                        <br>基本はこの隙間に入るイメージを持って、その直前から木に沿う態勢で突入することが出来ると上昇の為の羽ばたきで風に乗ることが出来ます。
+                                        <br>
+                                        <br>成功率を上げるという点で、ここの風壁は角度がきつい場所でもあるのでスワイプではなく右方向へ2、3回フリック操作をして羽ばたくと成功しやすくなるかと思います。
+                                        <br>風壁に頭ではなく腹を擦る角度を狙うと自ずとスタート時の離陸の角度も変わってくるので、是非試してみてください。
+                                    </p>
+                                    <p class="qa__eagle-icon"><img class="" src="img/qa_eagle4.jpg" alt=""></p>
+                                    <p class="qa__eagle-text">晴れ間の風壁はタイムアタックで使われている風壁の中で最もシビアで跳ね返されやすい風壁です。
+                                        <br>もし初めて風壁を使った飛行をするなら、孤島やエアレNo10の草原の風壁で練習もおすすめです。</p>
+                                </div>
+                            </div>
+                            <div class="qa__contents">
+                                <h4 class="qa__num">-- Q3 --</h4>
+                                <div class="qa__moth">
+                                    <p class="qa__moth-icon"><img class="" src="img/qa_moth3.jpg" alt=""></p>
+                                    <p class="qa__moth-text">このコースの魅力を一言で教えてください！</p>
+                                </div>
+                                <div class="qa__eagle">
+                                    <p class="qa__eagle-icon"><img class="" src="img/qa_eagle3.jpg" alt=""></p>
+                                    <p class="qa__eagle-text">狭いところをくぐる場面があまりないため初心者でも飛びやすいコースです。
+                                        <br>それでいてタイムを縮めるには技術の習熟が必要であり、やりがいのあるコースです。
+                                        <br>コース取りや<a href="/technique.html#wings-management" class="common__word-link">羽管理</a>など飛行の基本的な技術を学ぶことができます。
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="uk-text-center">
+                                <a class="common__x-button uk-margin-top" href="https://x.com/share?hashtags=skyエアレ " target="_blank" rel="noopener noreferrer">コースを飛んだら<span>#skyエアレ</span>で報告しよう！</a>
+                            </div>
+
+                            <div class="common__link-internal uk-margin-top"><a href="/past.html#vol3">第3回大会本戦情報を見る <i class="fas fa-caret-right"></i></a></div>
+                            <div class="common__link-internal"><a href="/regulation.html#rule">レギュレーション（基本ルール）を見る <i class="fas fa-caret-right"></i></a></div>
+                            <div class="toranoko__fixed-close"><img src="img/chevron-down-solid-white.svg" alt="">No.9 閉じる</div>
+                        </div>
+                        <div class="ac-course__index--close close">　No.9　詳細を閉じる</div>
+                    </div>
+                </div>
+            </div>
+
+<!-- とらのこコースNo.10 草原/村エリア -->
+            <div id="toranoko-no10" class="toranoko__wrap">
+                <div class="common__index">
+                    <div class="uk-flex uk-flex-between uk-flex-middle toranoko__index">
+                        <h2 class="toranoko__title">第3回大会 3rd<span class="toranoko__title--crs">(コース<span class="toranoko__title--no">No.10</span>)</span></h2>
+                        <div class="toranoko__about">
+                            <p><i class="fas fa-tag"></i>#skyairrace3rd</p>
+                            <p><i class="fas fa-map-marker-alt"></i>草原/村エリア</p>
+                            <p>一次予選足切り<i class="fas fa-stopwatch"></i>56.00秒</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="toranoko__video-wrap">
+                    <!-- google drive動画埋め込み方法　右クリ→アプリで開く→プレビュー→：→新しいウィンドウで開く→：→アイテムを埋め込む -->
+                    <iframe class="toranoko__video-content" src="https://drive.google.com/file/d/1t2nY9w50M586icKUlegBHxYWPv4Ui3v_/preview" allow="autoplay"></iframe>
+                </div>
+                <div class="toranoko__contents-wrap">
+                    <div class="toranoko__KK-wrap">
+                        <img class="toranoko__KK-text" src="img/KK_text.png" alt="">
+                        <p class="toranoko__KK-title">KONNAKANJI図</p>
+                        <img class="" src="img/KKno10.jpg" alt="">
+                        <figcaption class="common__caption toranoko__KK-caption">（作成：<img src="img/nikosan_name.png" alt="ニコ" class="nicosan">）</figcaption>
+                    </div>
+                    <div class="ac-course">
+                        <div class="ac-course__index">　No.10　詳細を見る</div>
+                        <div class="ac-course__contents">
+                            <h3 class="common__headline">チェックポイント</h3>
+                            <div class="common__sentence common__list">
+                                <p><span class="mark">START</span>/<span class="mark uk-margin-small-right">GOAL</span>洞窟側の石板の上</p>
+                                <p class="common__list--child">石の柱の間を通る<span class="note">（高さ制限なし）</span></p>
+                                <p class="common__list--child">神殿側の桟橋の下を通る</p>
+                                <p class="common__list--child">神殿前の橋の下を通る</p>
+                                <p class="common__list--child">崖の上で接地する</p>
+                                <p class="uk-margin-top">→GOAL</p>
+                                <p class="uk-margin-top"><span class="mark uk-margin-small-right">CHOICE</span>CHALLENGE ROUTE：中央側の桟橋の下を通ることで、チェックポイント2の代替ルートとします。</p>
+                            </div>
+                            <div class="toranoko__side-note">
+                                <h4 class="toranoko__side-note--title">No.10補足</h4>
+                                <p>・スタート/ゴールは賞賛する鐘の造り手の精霊がいる島</p>
+                            </div>
+                            <h3 class="common__headline">テクニック紹介</h3>
+                            <div class="common__sentence">
+                                <p>このコースの過去の予選や本戦でよく使われていた技術の紹介です。</p>
+                            </div>
+                            <div class="toranoko__tech uk-margin-top">
+                                <div class="toranoko__tech-index uk-flex uk-flex-middle uk-flex-between">
+                                    <div class="uk-width-1-3">技術名</div>
+                                    <div class="uk-width-1-2">このコースに<br>おける難易度</div>
+                                </div>
+                                <div class="toranoko__tech-contents-wrap">
+                                    <div class="toranoko__tech-button-wrap"><p class="toranoko__tech-button">見る</p></div>
+                                    <div class="toranoko__tech-contents">
+                                        <div class="uk-flex uk-margin-small-top uk-margin-bottom">
+                                            <div class="uk-width-2-3"><a href="/technique.html#slide">スライド<i class="fas fa-caret-right uk-margin-small-left"></i></a></div>
+                                            <div class="uk-width-1-3 uk-margin-left">★★</div>
+                                        </div>
+                                        <div class="uk-flex uk-margin-bottom">
+                                            <div class="uk-width-2-3"><a href="/technique.html#wind-wall-power">風壁加速<i class="fas fa-caret-right uk-margin-small-left"></i></a></div>
+                                            <div class="uk-width-1-3 uk-margin-left">★★</div>
+                                        </div>
+                                        <div class="uk-flex uk-margin-bottom">
+                                            <div class="uk-width-2-3"><a href="/technique.html#slip">滑り降り<i class="fas fa-caret-right uk-margin-small-left"></i></a></div>
+                                            <div class="uk-width-1-3 uk-margin-left">★★</div>
+                                        </div>
+                                        <div class="uk-flex uk-margin-small-bottom">
+                                            <div class="uk-width-2-3"><a href="/technique.html#climbing-flight">上向飛行<i class="fas fa-caret-right uk-margin-small-left"></i></a></div>
+                                            <div class="uk-width-1-3 uk-margin-left">★</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <h3 class="common__headline">コースQ&A</h3>
+                            <div class="qa__contents">
+                                <h4 class="qa__num">-- Q1 --</h4>
+                                <div class="qa__moth">
+                                    <p class="qa__moth-icon"><img class="" src="img/qa_moth1.jpg" alt=""></p>
+                                    <p class="qa__moth-text">神殿の先、風壁を利用するところで上手く加速が出来ません。<br>風壁で加速を得るコツはありますか？（→<a href="/technique.html#wind-wall-power" class="common__word-link">風壁加速</a>）</p>
+                                </div>
+                                <div class="qa__eagle">
+                                    <p class="qa__eagle-icon"><img class="" src="img/qa_eagle1.jpg" alt=""></p>
+                                    <p class="qa__eagle-text">風壁使用時は、基本的には風の形に沿ってから反対方向に移動入力＋羽ばたきを入れることで加速します。
+                                        <br>擦って掴んだ風を弾くように手放し加速する、というと少しイメージしやすいでしょうか。
+                                    </p>
+                                    <p class="qa__eagle-img"><img src="img/qaNo10-Q1-1.jpg" alt=""></p>
+                                    <p class="qa__eagle-text">↑ここで用いる風壁の形です。凹凸を掴む操作は無理にせず、まずは感覚を養う為に、風に乗っては弾いて加速するという方法を取ってみて下さい。
+                                        <br>以下、成功例と失敗例です。
+                                    </p>
+                                    <p class="qa__eagle-text">成功例↓</p>
+                                    <p class="qa__eagle-img uk-margin-small-top"><iframe src="https://drive.google.com/file/d/1QAsZAW8T4mjalr3JrpqWGM1wz2zGAOD_/preview" allow="autoplay"></iframe></p>
+                                    <p class="qa__eagle-text">失敗例↓</p>
+                                    <p class="qa__eagle-img uk-margin-small-top"><iframe src="https://drive.google.com/file/d/1IiQDh_cSZy7UQWVqWT18AaL4DHqEjr4I/preview" allow="autoplay"></iframe></p>
+                                    <p class="qa__eagle-text">成功例はバタバタ、ビューッという風の音がしているので風壁への十分な接触があり、移動入力＋羽ばたきのタイミングが噛み合っています。
+                                        <br>
+                                        <br>それらが噛み合わなかったのが失敗例ですが、同じルートを通っていても風壁の使用により約4秒の差が出ているのが分かります。参考にしてみてください。
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="qa__contents">
+                                <h4 class="qa__num">-- Q2 --</h4>
+                                <div class="qa__moth">
+                                    <p class="qa__moth-icon"><img class="" src="img/qa_moth1.jpg" alt=""></p>
+                                    <p class="qa__moth-text">チャレンジルートからチェックポイント3の橋の下をくぐるまでの間、雲を使って上がるのが苦手で軌道がブレてしまいます。<br><br>どんなルートで上がると安定しますか？</p>
+                                </div>
+                                <div class="qa__eagle">
+                                    <p class="qa__eagle-icon"><img class="" src="img/qa_eagle1.jpg" alt=""></p>
+                                    <p class="qa__eagle-text">雲を使って神殿前に飛ぶ際、向かって右端にある雲を使うと神殿前の橋に向けて急旋回することになるので軌道がブレやすくなります。それを避けた上で比較的簡単なルートを動画で紹介します。</p>
+                                    <p class="qa__eagle-text">星の子が雲に触れた瞬間に真っ直ぐ上に羽ばたいてから左に旋回すると、雲に触れる時間が短いので軌道がブレにくく、しかも上昇力も得られるためお薦めです。
+                                        <br>
+                                        <br>軌道がブレるということは雲を使った加速が出来ているということなので、速度に慣れつつまずはこのルートで練習すると良いかと思います。
+                                    </p>
+                                    <p class="qa__eagle-img uk-margin-small-top"><iframe src="https://drive.google.com/file/d/1ZFQnxerBkXnQs0E60UZgyjr_5Rf2seCt/preview" allow="autoplay"></iframe></p>
+                                </div>
+                            </div>
+                            <div class="qa__contents">
+                                <h4 class="qa__num">-- Q3 --</h4>
+                                <div class="qa__moth">
+                                    <p class="qa__moth-icon"><img class="" src="img/qa_moth1.jpg" alt=""></p>
+                                    <p class="qa__moth-text">崖から<a href="/technique.html#slip" class="common__word-link">滑り落ち</a>ができず、止まっちゃいます。<br>どうしたら勢いを殺さずに接地〜滑り降りできますか？</p>
+                                </div>
+                                <div class="qa__eagle">
+                                    <p class="qa__eagle-icon"><img class="" src="img/qa_eagle1.jpg" alt=""></p>
+                                    <p class="qa__eagle-text">崖上で止まってしまう要因は、主に以下の二つが考えられます。
+                                        <br>
+                                        <br>1.速度が足りていないこと
+                                        <br>2.接地の際の操作で崖に対し補正がかかっていること
+                                    </p>
+                                    <p class="qa__eagle-text">これらは<a href="/technique.html#wind-wall-power" class="common__word-link">風壁</a>の利用や、崖方向にフリック操作を行わないことである程度の回避が出来ますが、その他に滑り落ち(＝接地でのスライド)を成功させやすい条件があるので紹介します。
+                                        <br>
+                                        <br>・高身長
+                                        <br>・20fpsもしくは30fps
+                                        <br>・接地と同時に移動入力をいれる
+                                        <br>・接地の直前にホバーモードに切り替える
+                                        <br>
+                                        <br>以上の設定や操作を行うことで、滑り落ちの確率を上げることが出来るので、どれかを取り入れて、ご自身に合うスタイルを見つけてみてください。
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="qa__contents">
+                                <h4 class="qa__num">-- Q4 --</h4>
+                                <div class="qa__moth">
+                                    <p class="qa__moth-icon"><img class="" src="img/qa_moth1.jpg" alt=""></p>
+                                    <p class="qa__moth-text">このコースの魅力を一言で教えてください！</p>
+                                </div>
+                                <div class="qa__eagle">
+                                    <p class="qa__eagle-icon"><img class="" src="img/qa_eagle1.jpg" alt=""></p>
+                                    <p class="qa__eagle-text">橋くぐりや滑り落ち、風壁利用、雲利用、速度のある着地まで。様々なテクニックを応用出来る楽しいコースです。</p>
+                                </div>
+                            </div>
+                            <div class="uk-text-center">
+                                <a class="common__x-button uk-margin-top" href="https://x.com/share?hashtags=skyエアレ " target="_blank" rel="noopener noreferrer">コースを飛んだら<span>#skyエアレ</span>で報告しよう！</a>
+                            </div>
+
+                            <div class="common__link-internal uk-margin-top"><a href="/past.html#vol3">第3回大会本戦情報を見る <i class="fas fa-caret-right"></i></a></div>
+                            <div class="common__link-internal"><a href="/regulation.html#rule">レギュレーション（基本ルール）を見る <i class="fas fa-caret-right"></i></a></div>
+                            <div class="toranoko__fixed-close"><img src="img/chevron-down-solid-white.svg" alt="">No.10 閉じる</div>
+                        </div>
+                        <div class="ac-course__index--close close">　No.10　詳細を閉じる</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <footer class="l-footer">
+        <ul class="l-footer__list">
+            <li><a href="/about.html">サイト概要</a></li>
+            <li><a href="/terms.html">利用規約</a></li>
+            <li><a href="/thanks.html">Special Thanks</a></li>
+        </ul>
+        <div class="l-footer__logo">
+            <a href="/"><img src="img/logo_footer.svg" alt="エアレライブラリ"></a>
+        </div>
+    </footer>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script src="js/uikit.min.js"></script>
+    <script src="js/g-nav.js"></script>
+    <script src="js/common.js"></script>
+</body>
+</html>
