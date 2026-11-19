@@ -463,6 +463,12 @@ a:hover {
 .l-footer__list li a {
   color: #FFF;
 }
+@media (min-width: 460px) {
+  .l-footer__list {
+    margin: 0 auto;
+    gap: 60px;
+  }
+}
 .l-footer__logo {
   display: flex;
   margin: 1.5vh 0 40px;

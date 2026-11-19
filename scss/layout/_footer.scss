@@ -16,11 +16,15 @@
         display: flex;
         justify-content: space-evenly;
         font-size: 0.625rem;
-    
 
         li a {
             color: #FFF;
         }
+
+        @media(min-width: 460px){
+                margin: 0 auto;
+                gap: 60px;
+            }
     }
 
     &__logo {
